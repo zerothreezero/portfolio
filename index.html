@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#100d0a">
+  <meta name="description" content="0 3 0 — independent portfolio of digital illustrations and visual experiments.">
+  <meta property="og:title" content="0 3 0 — Portfolio">
+  <meta property="og:description" content="Independent visual archive.">
+  <title>0 3 0 — Portfolio V15</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310110f'/%3E%3Ctext x='50%25' y='54%25' font-size='21' font-family='sans-serif' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23eeece5'%3E030%3C/text%3E%3C/svg%3E">
+  <script src="./assets/js/browser.js"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body data-theme="ember" data-gallery-size="small">
+<div class="sunset-environment" aria-hidden="true"><div class="sunset-night"></div><div class="sunset-daylight"><div class="sunset-sun"></div><div class="sunset-wisp sunset-wisp-a"></div><div class="sunset-wisp sunset-wisp-b"></div><div class="sunset-dust-cloud"><i class="sunset-particle-01"></i><i class="sunset-particle-02"></i><i class="sunset-particle-03"></i><i class="sunset-particle-04"></i><i class="sunset-particle-05"></i><i class="sunset-particle-06"></i><i class="sunset-particle-07"></i><i class="sunset-particle-08"></i><i class="sunset-particle-09"></i><i class="sunset-particle-10"></i><i class="sunset-particle-11"></i><i class="sunset-particle-12"></i><i class="sunset-particle-13"></i><i class="sunset-particle-14"></i><i class="sunset-particle-15"></i><i class="sunset-particle-16"></i><i class="sunset-particle-17"></i><i class="sunset-particle-18"></i><i class="sunset-particle-19"></i><i class="sunset-particle-20"></i><i class="sunset-particle-21"></i><i class="sunset-particle-22"></i><i class="sunset-particle-23"></i><i class="sunset-particle-24"></i><i class="sunset-particle-25"></i><i class="sunset-particle-26"></i><i class="sunset-particle-27"></i><i class="sunset-particle-28"></i><i class="sunset-particle-29"></i><i class="sunset-particle-30"></i><i class="sunset-particle-31"></i><i class="sunset-particle-32"></i><i class="sunset-particle-33"></i><i class="sunset-particle-34"></i><i class="sunset-particle-35"></i><i class="sunset-particle-36"></i><i class="sunset-particle-37"></i><i class="sunset-particle-38"></i><i class="sunset-particle-39"></i><i class="sunset-particle-40"></i></div></div><div id="night-stars" class="sunset-starfield"></div></div>
+  <div class="shell">
+    <header class="topbar" aria-label="Portfolio header" data-i18n-aria="headerAria"><a class="logo" href="#home" id="home-link" aria-label="Home" data-i18n-aria="home">0 3 0 <small data-i18n="visualArchive">Visual archive</small></a><nav class="site-tabs" aria-label="Portfolio sections" data-i18n-aria="sections"><button type="button" id="tab-gallery" class="site-tab" aria-pressed="true" data-i18n="gallery">Gallery</button><button type="button" id="tab-stats" class="site-tab" aria-pressed="false" data-i18n="statistics">Statistics</button></nav><select id="theme" class="theme-select" aria-label="Color theme" data-i18n-aria="themeLabel"><option value="ember" data-i18n="themeEmber">Ember</option><option value="light" data-i18n="themeLight">Light</option><option value="golden" data-i18n="themeGolden">Golden Hour</option></select><select id="language" class="language-select" aria-label="Interface language" data-i18n-aria="language"><option value="en">EN · English</option><option value="ja">日本語</option><option value="es">ES · Español</option><option value="fr">FR · Français</option><option value="zh-CN">简体中文</option><option value="uk">UA · Українська</option></select></header>
+    <main id="home">
+      <section class="intro" id="gallery-intro" aria-label="Introduction" data-i18n-aria="introduction">
+        <div><div class="eyebrow" data-i18n="eyebrowGallery">Digital illustration / Visual archive</div><h1><span data-i18n="hero1">Ideas turned</span><br><span data-i18n="hero2">into</span> <i data-i18n="hero3">images.</i></h1></div>
+        <div class="intro-side"><p data-i18n="intro">A place for digital drawings, illustrations and visual experiments. Nothing unnecessary — just art.</p></div>
+      </section>
+      <div class="rule" id="gallery-rule"></div>
+      <section id="work" aria-label="Artwork gallery" data-i18n-aria="galleryAria">
+        <div class="gallery-head"><div><div class="gallery-heading"><span data-i18n="selected">Selected works</span> <span id="count" class="count"></span></div><div class="gallery-sub" id="gallery-sub">Artworks, from newest to oldest</div></div><div class="gallery-actions"><select class="sort" id="sort" aria-label="Sort artworks" data-i18n-aria="sortAria"><option value="recent" data-i18n="newest">Newest first</option><option value="oldest" data-i18n="oldest">Oldest first</option></select><label class="size-picker"><span data-i18n="artworkSize">Artwork size</span><select id="gallery-size" class="size-select" aria-label="Artwork size" data-i18n-aria="artworkSize"><option value="normal" data-i18n="sizeNormal">Original</option><option value="compact" data-i18n="sizeCompact">Compact</option><option value="small" data-i18n="sizeSmall" selected>Smaller</option></select></label></div></div>
+        <div class="filter-row"><button type="button" id="toggle-dates" class="filter-button" aria-expanded="false" aria-controls="date-filters"><span data-i18n="filterDates">Filter by date</span><span id="dates-active" class="filter-active-dot" hidden></span> <span class="chevron" aria-hidden="true">⌄</span></button><div class="date-filters" id="date-filters" hidden><label class="filter-field"><span data-i18n="yearFilter">Year</span><select id="year-filter" class="date-input"><option value="all" data-i18n="allYears">All years</option></select></label><label class="filter-field"><span data-i18n="fromDate">From</span><input id="date-from" class="date-input" type="date"></label><label class="filter-field"><span data-i18n="toDate">To</span><input id="date-to" class="date-input" type="date"></label><button id="clear-dates" type="button" class="clear-dates" data-i18n="clearDates" hidden>Clear dates</button></div><button type="button" id="toggle-tags" class="filter-button" aria-expanded="false" aria-controls="tag-panel"><span data-i18n="filterTags">Filter by tags</span> <span class="chevron" aria-hidden="true">⌄</span></button><button id="clear-tag" type="button" class="clear-tag" hidden></button></div>
+        <div class="tag-panel" id="tag-panel" hidden><input class="tag-search" type="search" id="tag-search" aria-label="Search tags" data-i18n-aria="searchTags" placeholder="Find a tag…" data-i18n-placeholder="tagPlaceholder"><div class="tag-list" id="tag-list" role="group" aria-label="Tag filters" data-i18n-aria="tagFilters"></div></div>
+          <div id="gallery" class="masonry" aria-live="polite"></div>
+        <div id="empty" class="empty" hidden></div>
+        <div id="gallery-sentinel" class="gallery-sentinel" aria-hidden="true" hidden></div>
+        <div class="status" aria-live="polite"><span id="load-status" class="status-line loading">Loading artworks…</span><span id="updated"></span></div>
+      </section>
+      <section id="statistics" aria-label="Artwork statistics" data-i18n-aria="statsAria" hidden>
+        <div class="stats-intro"><div class="eyebrow" data-i18n="eyebrowStats">Art archive / Data overview</div><h1><span data-i18n="statHero1">Art in</span> <i data-i18n="statHero2">numbers.</i></h1><p data-i18n="statsIntro">An overview of creation dates and hashtags from your artworks.</p></div>
+        <div class="rule"></div>
+        <div class="stats-wrap">
+          <div class="stat-cards" id="stat-cards"></div>
+          <div class="stat-grid">
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="productivity">Monthly productivity</h3><div class="stat-help" id="months-hint"></div></div><select id="stats-year" class="stat-select" aria-label="Statistics year" data-i18n-aria="statsYear"></select></div><div id="months-bars" class="bars"></div></section>
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="topTags">Most used tags</h3><div class="stat-help" data-i18n="uniqueTagCount">Number of unique artworks with each tag</div></div></div><div class="bars" id="tags-bars"></div></section>
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="byYear">Artworks by year</h3><div class="stat-help" data-i18n="datedOnly">Only works with known creation dates</div></div></div><div class="bars" id="years-bars"></div></section>
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="aboutStats">About these statistics</h3></div></div><div class="stat-help" id="stats-explainer"></div></section>
+          </div>
+          <p class="stats-footnote" data-i18n="statsFootnote">Years and months use the artwork creation code (YYMMDD), not the publication date. Time and strokes are counted only when recorded, e.g. 1h 25m 9212s (s = strokes).</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>© <span id="year"></span> 0 3 0 · <span data-i18n="rights">All works belong to their creator.</span></span><span data-i18n="tagline">Made for the art, not the algorithm.</span></footer>
+  </div>
+  <button id="floating-first" class="floating-first" type="button" hidden><span aria-hidden="true">⇤</span> <span data-i18n="backToTop">Back to top</span></button>
+  <div id="viewer" class="viewer" role="dialog" aria-modal="true" aria-label="Artwork viewer" data-i18n-aria="viewerAria" aria-hidden="true">
+    <div class="viewer-art"><button type="button" class="viewer-arrow viewer-prev" id="prev" aria-label="Previous image" data-i18n-aria="prevImage">‹</button><div class="viewer-image-stage"><img id="viewer-img" class="viewer-slide is-active" alt=""><img id="viewer-img-next" class="viewer-slide" alt="" aria-hidden="true"></div><span id="viewer-loading" class="viewer-loading" aria-hidden="true"></span><button type="button" class="viewer-arrow viewer-next" id="next" aria-label="Next image" data-i18n-aria="nextImage">›</button><div id="viewer-step" class="viewer-step"></div></div>
+    <div class="viewer-side"><button class="viewer-close" type="button" id="close" aria-label="Close" data-i18n-aria="close">×</button><div class="marker" data-i18n="viewerMarker">Artwork / 0 3 0</div><h2 id="viewer-title"></h2><div class="desc" id="viewer-description"></div><div class="viewer-date" id="viewer-date"></div><div class="viewer-details" id="viewer-details" hidden></div><div class="viewer-tags" id="viewer-tags"></div><div class="viewer-bottom"><span data-i18n="viewerKeys">← → — another artwork or image</span><br><span data-i18n="viewerClose">Esc — close</span></div></div>
+  </div>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
