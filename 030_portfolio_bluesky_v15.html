@@ -1,0 +1,1596 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#100d0a">
+  <meta name="description" content="0 3 0 — independent portfolio of digital illustrations and visual experiments.">
+  <meta property="og:title" content="0 3 0 — Portfolio">
+  <meta property="og:description" content="Independent visual archive.">
+  <title>0 3 0 — Portfolio V15</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310110f'/%3E%3Ctext x='50%25' y='54%25' font-size='21' font-family='sans-serif' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='%23eeece5'%3E030%3C/text%3E%3C/svg%3E">
+  <script>if (/Firefox\/|FxiOS\//i.test(navigator.userAgent)) document.documentElement.classList.add('is-firefox');</script>
+  <style>
+    :root{color-scheme:dark;--bg:#10110f;--surface:#181a17;--surface2:#22241f;--fg:#eeece5;--muted:#999c94;--faint:#73776f;--accent:#d2d6aa;--border:#34372f;--radius:7px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}a{color:inherit;text-decoration:none}[hidden]{display:none!important}
+    .shell{width:min(1560px,calc(100% - 96px));margin:auto}
+    .topbar{height:86px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+    .logo{font-size:24px;font-weight:750;letter-spacing:-.14em;white-space:nowrap}.logo small{font-size:10px;letter-spacing:.19em;color:var(--muted);margin-left:20px;font-weight:600;text-transform:uppercase}.topnote{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+    .intro{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;padding:83px 0 78px;align-items:end}.eyebrow{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.22em;font-weight:700;display:flex;align-items:center;gap:12px}.eyebrow::before{content:"";display:inline-block;width:23px;height:1px;background:var(--accent)}h1{font-weight:520;letter-spacing:-.065em;font-size:clamp(55px,7.2vw,117px);line-height:1.02;margin:21px 0 0}h1 i{font-family:Georgia,serif;font-weight:normal;color:var(--accent)}.intro-side{padding:0 0 8px max(0px,4vw)}.intro-side p{max-width:360px;color:#bdc0b6;line-height:1.85;font-size:15px;margin:0}.rule{height:1px;background:var(--border)}
+    .gallery-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;padding:39px 0 22px}.gallery-heading{font-size:15px;font-weight:650;margin-bottom:9px}.gallery-sub{color:var(--muted);font-size:12px;line-height:1.6}.count{color:var(--accent)}.sort{appearance:none;background:var(--surface);border:1px solid var(--border);border-radius:4px;color:var(--fg);padding:12px 36px 12px 13px;font-size:12px;min-width:176px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999c94' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-position:right 12px center;background-repeat:no-repeat}
+    .tag-bar{display:flex;align-items:flex-start;gap:15px;margin-bottom:27px;padding:0 0 8px}.tag-label{flex:none;padding-top:11px;text-transform:uppercase;font-size:10px;font-weight:650;letter-spacing:.16em;color:var(--faint)}.tag-list{display:flex;flex-wrap:wrap;gap:7px}.tag-chip{display:inline-flex;align-items:center;gap:8px;color:var(--muted);border:1px solid var(--border);border-radius:3px;background:transparent;padding:9px 12px;font-size:11px;transition:background .15s,border-color .15s,color .15s}.tag-chip:hover{color:var(--fg);border-color:#777c69}.tag-chip[aria-pressed="true"]{color:var(--bg);border-color:var(--accent);background:var(--accent)}.tag-chip .chip-count{opacity:.65;font-variant-numeric:tabular-nums;font-size:10px}
+    .masonry{column-count:4;column-gap:16px;min-height:160px}.work{display:inline-block;width:100%;margin-bottom:24px;break-inside:avoid;vertical-align:top}.art-button{display:block;width:100%;border:0;padding:0;background:var(--surface2);position:relative;overflow:hidden;border-radius:var(--radius);text-align:left}.art-button img{display:block;width:100%;height:auto;max-height:720px;object-fit:cover;transition:transform .45s ease,filter .45s ease}.art-button:hover img{transform:scale(1.025);filter:brightness(.73)}.art-button .view{position:absolute;inset:auto 12px 12px auto;display:flex;align-items:center;gap:9px;background:rgba(18,19,16,.86);border:1px solid #77786d55;padding:10px 12px;border-radius:3px;font-size:11px;opacity:0;transform:translateY(5px);transition:all .2s}.art-button:hover .view,.art-button:focus-visible .view{opacity:1;transform:translateY(0)}.image-count{position:absolute;left:10px;bottom:10px;padding:6px 8px;background:rgba(18,19,16,.88);border:1px solid #77786d55;border-radius:3px;font-size:10px;letter-spacing:.05em}
+    .art-meta{padding:11px 2px 0}.art-name{font-size:12px;line-height:1.5;color:#e0e0d8;font-weight:600;overflow-wrap:anywhere}.art-date{font-size:11px;color:var(--faint);padding-top:4px}.art-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.art-tag{background:transparent;border:0;color:var(--muted);font-size:10px;padding:2px 3px;text-align:left}.art-tag:hover{color:var(--accent)}
+    .empty{border:1px dashed var(--border);background:var(--surface);padding:60px 26px;text-align:center;border-radius:6px;color:var(--muted);font-size:13px;line-height:1.9}.empty h3{font-size:18px;font-weight:550;color:var(--fg);margin:0 0 8px}.empty button{margin-top:20px;background:var(--surface2);border:1px solid var(--border);color:var(--fg);padding:11px 17px;border-radius:3px}.empty button:hover{border-color:var(--accent)}
+    .status{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--border);padding:19px 0 55px;font-size:11px;color:var(--faint)}.status-line{display:inline-flex;align-items:center;gap:8px}.status-line::before{content:"";width:5px;height:5px;background:#8a9d76;border-radius:50%}.status-line.loading::before{background:var(--accent)}.status-line.warn::before{background:#c19b6a}.footer{padding:25px 0 40px;border-top:1px solid var(--border);font-size:10px;letter-spacing:.07em;color:var(--faint);display:flex;justify-content:space-between;gap:15px}
+    .viewer{position:fixed;inset:0;z-index:50;background:rgba(6,7,6,.96);display:none;grid-template-columns:minmax(0,1fr) min(360px,32vw);overflow:auto}.viewer.open{display:grid}.viewer-art{position:relative;display:flex;align-items:center;justify-content:center;padding:56px 70px 80px;min-height:100vh}.viewer-art img{max-width:100%;max-height:calc(100vh - 150px);width:auto;height:auto;object-fit:contain;box-shadow:0 35px 90px #0005}.viewer-side{border-left:1px solid var(--border);padding:92px 32px 35px;position:relative;display:flex;flex-direction:column}.viewer-side .marker{font-size:11px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}.viewer-side h2{font-size:clamp(24px,3vw,40px);line-height:1.25;letter-spacing:-.045em;font-weight:550;margin:23px 0 15px;overflow-wrap:anywhere}.viewer-side .desc{white-space:pre-line;font-size:13px;color:var(--muted);line-height:1.85;max-width:360px}.viewer-date{font-size:12px;color:var(--faint);margin-top:22px}.viewer-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.viewer-tag{background:var(--surface2);border:1px solid var(--border);border-radius:3px;color:var(--fg);padding:9px 11px;font-size:11px}.viewer-tag:hover{border-color:var(--accent)}.viewer-close{position:absolute;z-index:3;right:25px;top:28px;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--fg);width:38px;height:38px;font-size:23px}.viewer-arrow{position:absolute;top:48%;border:1px solid var(--border);background:var(--surface);color:var(--fg);width:38px;height:40px;border-radius:3px;font-size:19px}.viewer-prev{left:17px}.viewer-next{right:17px}.viewer-bottom{margin-top:auto;padding-top:50px;color:var(--faint);font-size:11px;line-height:1.9}.viewer-step{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted)}body.modal-open{overflow:hidden}
+    @media(max-width:1250px){.masonry{column-count:3}.shell{width:min(100% - 64px,1560px)}}
+    @media(max-width:850px){.topbar{height:72px}.intro{grid-template-columns:1fr;gap:24px;padding:56px 0}.intro-side{padding:0}.intro-side p{max-width:640px}.gallery-head{align-items:flex-start;flex-direction:column}.masonry{column-count:2}.viewer{grid-template-columns:1fr}.viewer-art{min-height:55vh;padding:60px 55px 45px}.viewer-art img{max-height:55vh}.viewer-side{min-height:unset;border-left:0;border-top:1px solid var(--border);padding:25px 28px 45px}.viewer-side .viewer-close{position:fixed;top:16px;right:17px}.viewer-bottom{display:none}}
+    @media(max-width:520px){.shell{width:calc(100% - 34px)}.logo small{display:none}.intro{padding:55px 0 49px}.intro h1{font-size:clamp(50px,13vw,77px)}.intro-side p{font-size:13px}.gallery-head{padding:26px 0 19px}.tag-bar{display:block}.tag-label{padding:0 0 12px}.tag-chip{padding:8px 10px;font-size:10px}.masonry{column-gap:10px}.work{margin-bottom:20px}.art-name{font-size:11px}.art-meta{padding:9px 1px 0}.art-button .view{display:none}.footer{flex-direction:column}.viewer-art{padding:65px 43px 28px;min-height:45vh}.viewer-art img{max-height:50vh}.viewer-arrow{width:29px;height:36px}.viewer-prev{left:6px}.viewer-next{right:6px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.art-button img,.art-button .view{transition:none}}
+
+    /* Stable grid: fixed-size image frames prevent layout shifts on scroll. */
+    .topbar{gap:20px}.site-tabs{display:flex;gap:5px;align-items:center;margin-left:auto}.site-tab{background:transparent;border:1px solid transparent;border-radius:3px;color:var(--muted);font-size:12px;font-weight:600;padding:11px 15px;transition:color .15s,background .15s}.site-tab:hover{color:var(--fg)}.site-tab[aria-pressed="true"]{border-color:var(--border);background:var(--surface);color:var(--fg)}
+    .masonry{display:grid;column-count:unset;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 16px;align-items:start;min-height:unset}.work{margin:0;display:block;width:auto;min-width:0;break-inside:auto}.art-button{width:100%;aspect-ratio:4 / 5;display:flex;align-items:center;justify-content:center;border:1px solid #282b25;background:#1b1d19}.art-button img{width:100%;height:100%;max-height:none;object-fit:contain;position:relative}.art-button:hover img{transform:none;filter:brightness(.8)}.art-meta{min-height:57px}.art-name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:18px}.art-date{min-height:17px}.image-unavailable{color:var(--faint);font-size:11px;text-align:center;padding:22px;line-height:1.6}
+    .filter-row{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:0 0 23px}.filter-button,.clear-tag{border:1px solid var(--border);background:var(--surface);border-radius:4px;color:var(--fg);padding:10px 13px;font-size:11px}.filter-button:hover,.clear-tag:hover{border-color:#777c69}.filter-button .chevron{display:inline-block;margin-left:14px;transition:transform .2s}.filter-button[aria-expanded="true"] .chevron{transform:rotate(180deg)}.clear-tag{background:transparent;color:var(--accent)}.tag-panel{border:1px solid var(--border);border-radius:5px;background:#171915;margin:0 0 24px;padding:14px}.tag-search{display:block;width:100%;background:var(--bg);border:1px solid var(--border);border-radius:3px;color:var(--fg);padding:10px 12px;font-size:12px;margin-bottom:12px}.tag-panel .tag-list{max-height:190px;overflow-y:auto;align-content:flex-start;padding-right:6px}.tag-chip{padding:8px 11px}
+    .pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:11px;padding:44px 0 32px}.page-button{padding:10px 15px;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--fg);font-size:12px}.page-button:hover:not(:disabled){border-color:var(--accent)}.page-button:disabled{opacity:.32;cursor:default}.page-label{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:95px;text-align:center}
+    .stats-intro{padding:78px 0 54px}.stats-intro h1{font-size:clamp(49px,6.4vw,94px)}.stats-intro p{color:var(--muted);font-size:13px;margin:22px 0 0;line-height:1.75}.stats-wrap{padding:38px 0 65px}.stat-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:24px 21px;min-width:0}.stat-label{font-size:11px;color:var(--muted);line-height:1.5}.stat-value{font-size:clamp(23px,2.3vw,38px);line-height:1.12;letter-spacing:-.045em;color:var(--fg);padding:22px 0 8px;font-weight:570;overflow-wrap:anywhere}.stat-note{font-size:11px;color:var(--faint);line-height:1.6}.stat-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:18px;margin-top:18px}.stat-panel{border:1px solid var(--border);border-radius:6px;background:var(--surface);padding:25px 24px;min-width:0}.stat-panel-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:25px}.stat-panel h3{font-weight:550;font-size:15px;margin:0}.stat-help{font-size:11px;color:var(--faint);line-height:1.7;margin-top:8px}.stat-select{background:var(--surface2);border:1px solid var(--border);padding:9px;border-radius:3px;color:var(--fg);font-size:11px}.bars{display:grid;gap:14px}.bar-row{display:grid;gap:7px}.bar-line{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted)}.bar-count{font-variant-numeric:tabular-nums;color:var(--fg)}.bar-track{width:100%;height:7px;background:#30332c;border-radius:8px;overflow:hidden}.bar-fill{height:100%;border-radius:8px;background:var(--accent);min-width:0}.stats-empty{border:1px dashed var(--border);padding:25px;color:var(--muted);font-size:12px;line-height:1.8}.stats-footnote{font-size:11px;line-height:1.9;color:var(--faint);padding-top:24px}
+    @media(max-width:1250px){.masonry{grid-template-columns:repeat(3,minmax(0,1fr))}.stat-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:850px){.masonry{grid-template-columns:repeat(2,minmax(0,1fr))}.stat-grid{grid-template-columns:1fr}.stats-intro{padding:52px 0 38px}.site-tab{padding:10px 12px}}
+    @media(max-width:520px){.topnote{display:none}.masonry{gap:20px 10px}.site-tabs{gap:0}.site-tab{font-size:11px;padding:10px 9px}.stat-cards{gap:9px}.stat-card{padding:18px 15px}.stat-value{font-size:25px}.stat-panel{padding:19px 16px}.stats-intro h1{font-size:54px}.pagination{gap:7px}.page-button{padding:9px 11px}.art-button .image-count{font-size:9px}}
+    /* v4: software labels and recorded work metrics are compact card metadata. */
+    .art-attributes{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;align-items:center}
+    .software-badge{display:inline-flex;align-items:center;border:1px solid #6d73534d;border-radius:3px;padding:5px 8px;background:#272c20;color:#d5dcb9;font-size:10px;font-weight:650;line-height:1.3}
+    .work-info{font-size:10px;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+    .viewer-details{display:flex;flex-wrap:wrap;gap:7px 12px;align-items:center;margin-top:16px}
+    .viewer-details .software-badge{padding:7px 10px;font-size:11px}
+    .viewer-details .work-info{font-size:12px}
+    .viewer-details[hidden]{display:none}
+    @media(min-width:851px){.stat-cards{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+    /* v5: variable-size, borderless free-flowing artwork columns */
+    .topbar{gap:16px}.site-tabs{flex-shrink:0}.language-select{appearance:none;border:1px solid var(--border);color:var(--fg);background:var(--surface);padding:10px 25px 10px 12px;border-radius:4px;font-size:11px;cursor:pointer;max-width:138px}
+    .masonry{display:grid;grid-template-columns:repeat(var(--columns,4),minmax(0,1fr));gap:clamp(12px,1.6vw,26px);align-items:start;min-height:0}
+    .gallery-column{display:flex;flex-direction:column;gap:clamp(22px,2.3vw,39px);min-width:0}
+    .work{margin:0;min-width:0;width:100%;perspective:1200px;contain:layout style}
+    .art-button{--float-x:0px;--float-y:0px;--float-rx:0deg;--float-ry:0deg;display:block;position:relative;width:100%;height:auto;aspect-ratio:var(--ratio,4 / 5);background:transparent!important;border:0!important;outline-offset:4px;border-radius:0;box-shadow:none!important;overflow:hidden;isolation:isolate;transform:translate3d(var(--float-x),var(--float-y),0) rotateX(var(--float-rx)) rotateY(var(--float-ry));transition:transform .29s cubic-bezier(.2,.75,.3,1),filter .24s ease;transform-style:preserve-3d;will-change:transform}
+    .art-button img{position:absolute;inset:0;display:block;width:100%;height:100%;max-height:none;object-fit:cover;transition:filter .28s ease,transform .42s ease;transform:none}
+    .art-button:hover img,.art-button:focus-visible img{filter:brightness(.81);transform:scale(1.012)}
+    .art-button::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(6,7,6,.9) 0%,rgba(6,7,6,.65) 34%,rgba(6,7,6,0) 78%);opacity:0;transition:opacity .25s ease}
+    .art-button:is(:hover,:focus-visible)::after{opacity:1}
+    .art-overlay{position:absolute;z-index:3;bottom:0;left:0;right:0;padding:clamp(14px,1.6vw,24px);display:flex;flex-direction:column;gap:8px;max-height:92%;overflow:hidden;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .3s ease;pointer-events:none;text-shadow:0 1px 7px #0009}
+    .art-button:is(:hover,:focus-visible) .art-overlay{opacity:1;transform:translateY(0)}
+    .overlay-title{font-size:clamp(12px,1.18vw,17px);font-weight:650;letter-spacing:-.02em;line-height:1.35;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .overlay-date,.overlay-metrics,.overlay-description{font-size:11px;line-height:1.48;color:#e7e8e0}
+    .overlay-description{color:#ddd;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-line}
+    .overlay-tags{display:flex;gap:5px;flex-wrap:wrap;max-height:36px;overflow:hidden}
+    .overlay-tag{font-size:10px;line-height:1.4;color:#f2f2e9;border:1px solid #ffffff4a;background:#0003;padding:3px 6px;border-radius:2px}
+    .software-stack{display:flex;position:absolute;z-index:4;top:10px;right:10px;flex-direction:column;align-items:flex-end;gap:4px;pointer-events:none;max-width:80%}
+    .software-stack .software-badge{display:block;background:#141712b8;color:#f2f4e5;border:1px solid #ffffff22;border-radius:2px;padding:4px 6px;font-size:9px;font-weight:600;letter-spacing:.01em;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;box-shadow:0 2px 12px #0002;backdrop-filter:blur(5px)}
+    .art-meta{display:none!important}.art-button .view,.art-button .image-count{display:none!important}
+    .overlay-count{font-size:10px;color:#dfe2d7;letter-spacing:.04em}
+    .floating-first{position:fixed;right:24px;bottom:25px;z-index:20;border:1px solid #d2d6aa4a;border-radius:4px;padding:11px 16px;background:#181b16ee;color:var(--fg);box-shadow:0 10px 28px #0005;font-size:12px;backdrop-filter:blur(10px)}.floating-first:hover{background:#30342b}
+    .page-first{color:var(--accent)}.empty{border:0;border-radius:0;background:transparent}
+    @media(max-width:850px){.logo small{display:none}.language-select{max-width:124px}}
+    @media(max-width:600px){.topbar{gap:6px}.logo{font-size:20px}.site-tabs{margin-left:auto}.site-tab{padding:8px}.language-select{font-size:10px;padding:8px;max-width:91px}.masonry{gap:0}.gallery-column{gap:27px}.art-overlay{padding:18px}.overlay-title{font-size:16px}.overlay-description{font-size:12px}.software-stack .software-badge{font-size:9px}.floating-first{right:15px;bottom:16px}}
+    @media(hover:none){.art-button:hover img{filter:none;transform:none}.art-button:hover::after{opacity:0}.art-button:hover .art-overlay{opacity:0;transform:translateY(8px)}.art-button:focus-visible::after,.art-button:focus-visible .art-overlay{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:reduce){.art-button,.art-button img,.art-button::after,.art-overlay{transition:none!important;transform:none!important}html{scroll-behavior:auto}}
+
+/* v6: soft, image-derived edge fill under a gently overscanned artwork. */
+.art-button{--float-scale:1;transform:translate3d(var(--float-x),var(--float-y),0) rotateX(var(--float-rx)) rotateY(var(--float-ry)) scale(var(--float-scale));backface-visibility:hidden}
+.art-button img.art-backdrop{z-index:0;inset:-10%;width:120%;height:120%;object-fit:cover;filter:blur(15px) brightness(.7);transform:scale(1.07);opacity:.96;pointer-events:none;transition:none}
+.art-button img.art-main{z-index:1;object-fit:cover;transform:scale(1.032);backface-visibility:hidden;will-change:transform;transition:filter .28s ease,transform .36s ease}
+.art-button:is(:hover,:focus-visible) img.art-main{filter:brightness(.81);transform:scale(1.047)}
+@media(hover:none){.art-button:hover img.art-main{filter:none;transform:scale(1.032)}}
+@media(prefers-reduced-motion:reduce){.art-button img.art-backdrop{transform:scale(1.07)!important}.art-button img.art-main{transform:scale(1.032)!important}}
+  
+
+/* V7 — soft gallery motion, curved edges and local adaptive caption glass. */
+.art-button{border-radius:12px}
+.art-button::after{display:none!important} /* Never dim the entire artwork on hover. */
+.art-button img.art-main{transition:filter .55s cubic-bezier(.2,.75,.3,1),transform .36s ease}
+.art-button:is(:hover,:focus-visible) img.art-main{filter:none;transform:scale(1.047)}
+.art-overlay{inset:auto 12px 12px 12px;padding:0;max-height:calc(100% - 24px);overflow:visible;text-shadow:none}
+.overlay-glass{display:flex;flex-direction:column;gap:7px;width:fit-content;max-width:100%;max-height:100%;overflow:hidden;
+  padding:12px 14px;border-radius:10px;background:rgba(13,17,17,.48);
+  -webkit-backdrop-filter:blur(14px) brightness(.76) saturate(1.15);backdrop-filter:blur(14px) brightness(.76) saturate(1.15);
+  box-shadow:0 5px 18px rgba(0,0,0,.14);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.overlay-glass .overlay-title,.overlay-glass .overlay-date,.overlay-glass .overlay-metrics,
+.overlay-glass .overlay-description,.overlay-glass .overlay-count{color:#f5f6f2}
+.overlay-glass .overlay-tag{background:rgba(255,255,255,.13);border:0;border-radius:4px;color:#fff}
+.nsfw-indicator{position:absolute;z-index:5;top:10px;left:10px;display:inline-flex;align-items:center;
+  color:#ff757b;background:rgba(32,10,14,.85);border-radius:5px;padding:5px 8px;font-size:10px;
+  font-weight:750;letter-spacing:.09em;line-height:1.25;pointer-events:none;box-shadow:0 3px 12px #0004}
+.art-button.is-nsfw img.art-main{filter:blur(8px) saturate(.83);transform:scale(1.075)}
+.art-button.is-nsfw:is(:hover,:focus-visible) img.art-main,
+.art-button.is-nsfw.nsfw-revealed img.art-main{filter:none;transform:scale(1.047)}
+@media(hover:none){
+  .art-button.is-nsfw:hover img.art-main{filter:blur(8px) saturate(.83);transform:scale(1.075)}
+  .art-button.is-nsfw.nsfw-revealed img.art-main,
+  .art-button.is-nsfw:focus-visible img.art-main{filter:none;transform:scale(1.047)}
+}
+@media(max-width:600px){.art-overlay{inset:auto 10px 10px 10px;max-height:calc(100% - 20px)}
+  .overlay-glass{padding:10px 12px;border-radius:9px}}
+@media(prefers-reduced-motion:reduce){
+  .art-button img.art-main{transition:none!important}
+  .art-button.is-nsfw img.art-main{transform:scale(1.075)!important}
+}
+
+
+/* V8 — steady captions, artwork proximity zoom, subtle neighbour spacing. */
+.work{position:relative;z-index:0}
+.work.is-focal,.work:focus-within{z-index:5}
+.art-button{
+  --zoom:1;--push-x:0px;--push-y:0px;
+  transform:translate3d(var(--push-x),var(--push-y),0) scale(var(--zoom));
+  transform-origin:center center;
+  transition:transform .37s cubic-bezier(.2,.72,.21,1);
+  transform-style:flat;
+}
+/* No moving backdrop filter behind hover captions: this avoids first-hover flashes. */
+.overlay-glass{
+  background:rgba(14,17,17,.78);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.23);
+  text-shadow:0 1px 3px #000c;
+}
+.art-overlay{transition:opacity .23s ease,transform .23s ease}
+.art-button:hover .art-overlay{opacity:0;transform:translateY(8px)}
+.work:hover .art-overlay,.art-button:focus-visible .art-overlay{opacity:1;transform:translateY(0)}
+.art-button img.art-main,
+.art-button:is(:hover,:focus-visible) img.art-main{transform:scale(1.036);filter:none}
+.art-button.is-nsfw img.art-main{filter:blur(8px) saturate(.83);transform:scale(1.075)}
+.art-button.is-nsfw:is(:hover,:focus-visible) img.art-main,
+.art-button.is-nsfw.nsfw-revealed img.art-main{filter:none;transform:scale(1.036)}
+.image-count-badge{
+  position:absolute;right:10px;bottom:10px;z-index:7;
+  display:flex;justify-content:center;align-items:center;
+  min-width:25px;height:25px;padding:0 7px;
+  border-radius:7px;border:0;
+  color:#fafaf8;background:rgba(12,16,18,.57);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  box-shadow:0 2px 8px rgba(0,0,0,.16);
+  font-size:11px;font-weight:650;line-height:1;font-variant-numeric:tabular-nums;
+  pointer-events:none;
+}
+@media(hover:none){
+  .art-button:hover .art-overlay,.work:hover .art-overlay{opacity:0;transform:translateY(8px)}
+  .art-button:focus-visible .art-overlay{opacity:1;transform:translateY(0)}
+  .art-button.is-nsfw:hover img.art-main{filter:blur(8px) saturate(.83);transform:scale(1.075)}
+  .art-button.is-nsfw.nsfw-revealed img.art-main,
+  .art-button.is-nsfw:focus-visible img.art-main{filter:none;transform:scale(1.036)}
+}
+@media(prefers-reduced-motion:reduce){
+  .art-button{transform:none!important;transition:none!important}
+  .art-overlay{transition:none!important}
+}
+
+
+/* V9 — blended spatial flight (half of V7), V8 focus zoom and true caption glass. */
+.art-button{
+  --flight-x:0px;--flight-y:0px;--flight-rx:0deg;--flight-ry:0deg;
+  --combined-scale:1;
+  transform:translate3d(calc(var(--push-x) + var(--flight-x)),calc(var(--push-y) + var(--flight-y)),0)
+    rotateX(var(--flight-rx)) rotateY(var(--flight-ry)) scale(var(--combined-scale));
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+}
+/* Restrict frosted glass to the information panel, keeping the artwork bright. */
+.overlay-glass{
+  background:rgba(18,21,20,.36);
+  -webkit-backdrop-filter:blur(13px) saturate(1.12);
+  backdrop-filter:blur(13px) saturate(1.12);
+  box-shadow:0 5px 22px rgba(0,0,0,.16);
+  backface-visibility:hidden;
+  transform:translateZ(0);
+  will-change:opacity;
+  -webkit-font-smoothing:antialiased;
+}
+/* The stationary work wrapper owns hover, not the animated picture edge. */
+.art-button:hover .art-overlay{opacity:0;transform:translateY(8px)}
+.work:hover .art-overlay,.art-button:focus-visible .art-overlay{opacity:1;transform:translateY(0)}
+/* Permanently visible only when an artwork has multiple images. */
+.image-count-badge{
+  right:10px;bottom:10px;
+  width:26px;min-width:26px;height:26px;padding:0;
+  border-radius:50%;
+  background:rgba(16,19,20,.30);
+  -webkit-backdrop-filter:blur(12px) saturate(1.12);
+  backdrop-filter:blur(12px) saturate(1.12);
+  box-shadow:0 1px 8px rgba(0,0,0,.11);
+  font-size:11px;font-weight:650;
+}
+@media(prefers-reduced-motion:reduce){
+  .art-button{transform:none!important}
+  .overlay-glass,.image-count-badge{will-change:auto}
+}
+
+  
+/* V10 — breathable proximity, consistent translucent glass, Telegram-inspired spoiler. */
+.masonry{gap:clamp(22px,2.5vw,38px)}
+.gallery-column{gap:clamp(34px,3.25vw,54px)}
+@media(max-width:600px){.masonry{gap:0}.gallery-column{gap:32px}}
+/* Flat composition avoids an intermittent solid-black backdrop-filter surface
+   when caption glass is nested in a rotating GPU-composited tile. */
+.art-button{transform-style:flat}
+.overlay-glass{
+  background-color:rgba(0,0,0,.20)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(1.1)!important;
+  backdrop-filter:blur(14px) saturate(1.1)!important;
+  box-shadow:0 3px 15px rgba(0,0,0,.1);
+  backface-visibility:visible;
+  transform:none;
+  will-change:auto;
+  isolation:auto;
+}
+/* All always-visible over-image labels share the same frosted treatment. */
+.software-stack .software-badge,
+.nsfw-indicator,
+.image-count-badge{
+  background-color:rgba(0,0,0,.20)!important;
+  -webkit-backdrop-filter:blur(13px) saturate(1.1)!important;
+  backdrop-filter:blur(13px) saturate(1.1)!important;
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:0 2px 10px rgba(0,0,0,.09);
+  backface-visibility:visible;
+}
+.nsfw-indicator{color:#ff777d;letter-spacing:.06em;border-color:rgba(255,140,145,.28)}
+.image-count-badge{
+  width:27px;min-width:27px;height:27px;border-radius:50%;padding:0;
+  background-color:rgba(0,0,0,.20)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(1.1)!important;
+  backdrop-filter:blur(14px) saturate(1.1)!important;
+}
+/* Blur the picture itself and float luminous, fine particles above it. */
+.art-button.is-nsfw img.art-main{
+  filter:blur(23px) saturate(.65) brightness(.78);
+  transform:scale(1.19);
+  transition:filter .53s cubic-bezier(.22,.75,.25,1),transform .53s cubic-bezier(.22,.75,.25,1);
+}
+.art-button.is-nsfw:is(:hover,:focus-visible) img.art-main,
+.art-button.is-nsfw.nsfw-revealed img.art-main{
+  filter:none;transform:scale(1.036);
+}
+.spoiler-veil{
+  position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;
+  opacity:1;transition:opacity .53s cubic-bezier(.22,.75,.25,1);
+  background:rgba(32,34,40,.14);
+}
+.spoiler-veil::before{
+  content:"";position:absolute;inset:-70%;opacity:.6;
+  background:radial-gradient(ellipse at 50% 50%,rgba(240,245,255,.14),transparent 43%);
+  animation:spoiler-shift 9s ease-in-out infinite alternate;
+}
+.spoiler-particles{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.art-button.is-nsfw:is(:hover,:focus-visible) .spoiler-veil,
+.art-button.is-nsfw.nsfw-revealed .spoiler-veil{opacity:0}
+@keyframes spoiler-shift{from{transform:translate3d(-12%,7%,0)}to{transform:translate3d(12%,-7%,0)}}
+@media(hover:none){
+  .art-button.is-nsfw:hover img.art-main{filter:blur(23px) saturate(.65) brightness(.78);transform:scale(1.19)}
+  .art-button.is-nsfw:hover .spoiler-veil{opacity:1}
+  .art-button.is-nsfw.nsfw-revealed img.art-main,
+  .art-button.is-nsfw:focus-visible img.art-main{filter:none;transform:scale(1.036)}
+  .art-button.is-nsfw.nsfw-revealed .spoiler-veil,
+  .art-button.is-nsfw:focus-visible .spoiler-veil{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){.spoiler-veil::before{animation:none}.spoiler-veil{transition:none}.art-button.is-nsfw img.art-main{transition:none}}
+
+
+/* V11: ember / daylight / the animated golden hour. */
+:root{--bg:#100d0b;--surface:#1c1612;--surface2:#30251d;--fg:#faf1e6;--muted:#bea99b;--faint:#947d70;--accent:#ffab62;--border:#4a3327;--radius:12px}
+body[data-theme="ember"]{--bg:#100d0b;--surface:#1c1612;--surface2:#30251d;--fg:#faf1e6;--muted:#bea99b;--faint:#947d70;--accent:#ffab62;--border:#4a3327;color-scheme:dark}
+body[data-theme="light"]{--bg:#faf7f2;--surface:#fffdf9;--surface2:#f2e8de;--fg:#35271e;--muted:#79665a;--faint:#9b887c;--accent:#a45424;--border:#e0cec1;color-scheme:light}
+body[data-theme="golden"]{--bg:#1d1020;--surface:#281928;--surface2:#3b2735;--fg:#fff4e8;--muted:#dfb8b1;--faint:#ae8d9a;--accent:#ffc17a;--border:#704a5a;color-scheme:dark}
+body{transition:background-color .3s ease,color .3s ease}
+body[data-theme="golden"]{background:linear-gradient(161deg,#2b1428 0%,#1e1325 40%,#281523 78%,#21101a 100%)}
+body[data-theme="light"]{background:var(--bg)}
+.shell{position:relative;z-index:1}
+.sunset-environment{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .8s ease,visibility .8s}
+body[data-theme="golden"] .sunset-environment{visibility:visible;opacity:1;background:radial-gradient(ellipse 65% 48% at 82% 28%,#b94d5070 0%,transparent 78%),radial-gradient(ellipse 70% 45% at 7% 90%,#783a6366 0%,transparent 75%)}
+.sunset-sun{position:absolute;width:min(72vw,820px);aspect-ratio:1;border-radius:50%;right:-8vw;top:-19vw;background:radial-gradient(circle at 50% 50%,#ffdc9e99 0%,#ffa86178 17%,#ff995a38 37%,#fd708e18 55%,transparent 72%);filter:blur(9px);animation:sun-pulse 14s ease-in-out infinite alternate}
+.sunset-sun::after{content:"";position:absolute;inset:30%;border-radius:50%;background:radial-gradient(circle,#fff5cbb9 0%,#ffd1a67b 27%,transparent 75%);filter:blur(22px)}
+.sunset-wisp{position:absolute;width:105vw;height:44vh;left:-7%;border-radius:50%;filter:blur(65px);opacity:.26;mix-blend-mode:screen;transform:rotate(-8deg);animation:wisp-float 22s ease-in-out infinite alternate}
+.sunset-wisp-a{top:49%;background:linear-gradient(110deg,transparent 12%,#fc855965,#e881904e 46%,transparent 82%)}
+.sunset-wisp-b{top:71%;left:-22%;opacity:.19;background:linear-gradient(110deg,transparent 10%,#a982ba8c 38%,#ffc78d48 58%,transparent 85%);animation-duration:29s;animation-direction:alternate-reverse}
+.sunset-dust{position:absolute;inset:0;opacity:.38;background-image:radial-gradient(circle,#ffe0b996 0.65px,transparent 1.5px),radial-gradient(circle,#ffaf8f7b .8px,transparent 1.9px);background-size:147px 183px,207px 229px;background-position:17px 30px,95px 58px;animation:dust-drift 24s linear infinite}
+@keyframes sun-pulse{0%{transform:scale(.94) translateY(-1%);opacity:.8}100%{transform:scale(1.09) translateY(2%);opacity:1}}
+@keyframes wisp-float{0%{transform:translate3d(-2%,0,0) rotate(-8deg)}100%{transform:translate3d(8%,-14%,0) rotate(2deg)}}
+@keyframes dust-drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(23px,-32px,0)}}
+body[data-theme="golden"] .eyebrow::before{box-shadow:0 0 18px #ffaf6f}
+body[data-theme="golden"] h1 i{color:#ffd299;text-shadow:0 0 38px #ffab5860}
+body[data-theme="golden"] .stat-card,body[data-theme="golden"] .stat-panel{background:#2b1a2caa;backdrop-filter:blur(9px)}
+body[data-theme="golden"] .topbar{border-color:#f7a97039}
+body[data-theme="light"] .intro-side p{color:#80695b}
+body[data-theme="golden"] .intro-side p{color:#e7bbab}
+body[data-theme="light"] .tag-panel{background:#fffaf5}
+body[data-theme="golden"] .tag-panel{background:#2a1928e8}
+body[data-theme="light"] .bar-track{background:#e9d8c8}
+body[data-theme="golden"] .bar-track{background:#553646}
+body[data-theme="light"] .floating-first{background:#fffbf0ef;color:#35271e;border-color:var(--border);box-shadow:0 8px 30px #67432824}
+body[data-theme="golden"] .floating-first{background:#2e1a30dc;border-color:#f7b17e73}
+body[data-theme="light"] .viewer{background:rgba(248,240,232,.975)}
+body[data-theme="golden"] .viewer{background:rgba(26,13,27,.97)}
+body[data-theme="light"] .logo small{color:var(--muted)}
+.theme-select{appearance:none;min-width:120px;max-width:145px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--fg);padding:10px 12px;font-size:11px;cursor:pointer}
+.topbar{gap:12px}.topbar .site-tabs{margin-left:auto}
+.date-filters{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin-right:auto}
+.filter-field{display:flex;flex-direction:column;gap:7px;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.06em}
+.date-input{background:var(--surface);color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:9px 10px;font:inherit;font-size:12px;min-height:36px;max-width:160px}
+#year-filter{min-width:112px}
+.clear-dates{background:transparent;border:1px solid var(--border);border-radius:6px;padding:10px 12px;color:var(--accent);font-size:11px;min-height:36px}
+.clear-dates:hover{border-color:var(--accent)}
+.filter-row{align-items:flex-end;row-gap:16px;justify-content:space-between}
+.filter-row .filter-button{min-height:36px}
+.page-last{color:var(--accent)}
+/* Firefox and Chromium: avoid animating opacity on a backdrop-filter ancestor.
+   Such opacity animation creates a backdrop root and can make the blur appear late. */
+.art-button{transition:none!important;transform-style:flat;contain:paint}
+.art-overlay{opacity:1!important;transform:none!important;transition:none!important;visibility:hidden;backface-visibility:visible}
+.art-button:hover .art-overlay,.work:hover .art-overlay,.art-button:focus-visible .art-overlay{visibility:visible;opacity:1!important;transform:none!important}
+.overlay-glass{position:relative;opacity:1!important;transform:none!important;filter:none!important;background-color:rgba(0,0,0,.2)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(1.08)!important;backdrop-filter:blur(14px) saturate(1.08)!important;backface-visibility:visible!important;box-shadow:0 3px 15px #0002}
+/* Only text moves slightly when appearing; glass itself is stable. */
+.overlay-glass>*{animation:caption-text-in .22s ease-out both}
+@keyframes caption-text-in{from{transform:translateY(3px);opacity:.4}to{transform:none;opacity:1}}
+/* A dark fallback remains legible if graphics acceleration / blur is unavailable. */
+@supports not (backdrop-filter:blur(1px)){.overlay-glass,.image-count-badge,.nsfw-indicator,.software-stack .software-badge{background-color:rgba(16,13,14,.68)!important}}
+/* Spoilers reveal via an expanding radial window from the pointer landing point. */
+.art-button.is-nsfw img.art-main,
+.art-button.is-nsfw:is(:hover,:focus-visible) img.art-main,
+.art-button.is-nsfw.nsfw-revealed img.art-main{filter:blur(23px) saturate(.65) brightness(.8)!important;transform:scale(1.19)!important}
+.art-button img.art-reveal{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:cover;
+  transform:scale(1.036)!important;filter:none!important;pointer-events:none;
+  clip-path:circle(0px at 50% 50%);backface-visibility:hidden;will-change:clip-path}
+.spoiler-veil{z-index:3;opacity:1!important;transition:none!important;
+  -webkit-mask-image:radial-gradient(circle at var(--reveal-x,50%) var(--reveal-y,50%),transparent max(0px,calc(var(--reveal-r,0px) - 10px)),#000 calc(var(--reveal-r,0px) + 9px));
+  mask-image:radial-gradient(circle at var(--reveal-x,50%) var(--reveal-y,50%),transparent max(0px,calc(var(--reveal-r,0px) - 10px)),#000 calc(var(--reveal-r,0px) + 9px));}
+.art-button.is-nsfw:is(:hover,:focus-visible) .spoiler-veil,.art-button.is-nsfw.nsfw-revealed .spoiler-veil{opacity:1!important}
+.art-overlay{z-index:5}.software-stack{z-index:7}.nsfw-indicator{z-index:7}.image-count-badge{z-index:8}
+@media(max-width:850px){.topbar{flex-wrap:wrap;height:auto;min-height:72px;padding:14px 0}.site-tabs{order:2}.theme-select{max-width:118px;min-width:105px;order:3}.language-select{order:4}.filter-row{align-items:flex-start}.date-filters{width:100%}}
+@media(max-width:520px){.topbar{gap:8px}.logo{flex:1}.site-tabs{order:3;margin:0!important}.theme-select{order:2;min-width:110px}.language-select{order:4;max-width:115px}.filter-field{flex:1;min-width:95px}.date-input{width:100%;max-width:none}.date-filters{gap:8px}.filter-row .filter-button{width:100%}}
+@media(max-width:520px){.topbar{display:grid;grid-template-columns:minmax(35px,1fr) auto auto;grid-template-areas:"logo theme lang" "tabs tabs tabs";gap:10px 8px;align-items:center}.topbar .logo{grid-area:logo}.topbar .site-tabs{grid-area:tabs;order:unset;justify-content:flex-start;margin:0!important}.topbar .theme-select{grid-area:theme;min-width:100px;max-width:110px;order:unset}.topbar .language-select{grid-area:lang;max-width:110px;order:unset}.filter-field{min-width:85px}}
+@media(prefers-reduced-motion:reduce){.sunset-sun,.sunset-wisp,.sunset-dust,.overlay-glass>*{animation:none!important}.sunset-environment{transition:none}}
+
+
+/* V12 - persistent and correctly timed caption layers. */
+.art-overlay{visibility:hidden!important;opacity:1!important;transform:none!important;transition:none!important}
+.work:hover .art-overlay,.art-button:focus-visible .art-overlay{visibility:visible!important}
+/* The glass surface is never opacity-animated in Chromium, avoiding delayed blur.
+   Only its content crossfades with a small, polished upward motion. */
+.overlay-glass>*{opacity:0;transform:translateY(5px);animation:none!important;
+  transition:opacity .30s cubic-bezier(.22,1,.36,1),transform .34s cubic-bezier(.22,1,.36,1)!important}
+.work:hover .overlay-glass>*,.art-button:focus-visible .overlay-glass>*{opacity:1;transform:translateY(0)}
+/* Firefox has no animated backdrop on the caption: translucent charcoal only.
+   The whole panel can therefore fade together without compositor timing glitches. */
+.is-firefox .overlay-glass{
+  background:rgba(10,9,8,.57)!important;
+  -moz-backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  box-shadow:0 7px 22px rgba(0,0,0,.18)!important;
+}
+.is-firefox .art-overlay{visibility:visible!important;opacity:0!important;
+  transition:opacity .28s cubic-bezier(.2,.72,.24,1)!important}
+.is-firefox .work:hover .art-overlay,.is-firefox .art-button:focus-visible .art-overlay{opacity:1!important}
+.is-firefox .overlay-glass>*{opacity:1;transform:none;transition:none!important}
+/* Golden Hour: sun-warmed copper, caramel and honey without the former purple cast. */
+body[data-theme="golden"]{
+  --bg:#261307;--surface:#321d0d;--surface2:#4b2d15;
+  --fg:#fff4df;--muted:#ecc89d;--faint:#bb9571;
+  --accent:#ffc568;--border:#76502a;
+  background:linear-gradient(157deg,#341a0a 0%,#291309 42%,#3b1d0b 75%,#201108 100%);
+}
+body[data-theme="golden"] .sunset-environment{
+  background:
+    radial-gradient(ellipse 52% 56% at 81% 21%,rgba(255,181,73,.33),transparent 86%),
+    radial-gradient(ellipse 68% 58% at 22% 77%,rgba(175,79,18,.22),transparent 85%),
+    linear-gradient(175deg,rgba(103,43,11,.42),rgba(51,23,10,.17) 55%,rgba(16,10,7,.05));
+}
+/* Shared geometry keeps the motes orbiting around the actual sun, not the page. */
+.sunset-sun,.sunset-dust-cloud{
+  position:absolute;width:min(72vw,820px);height:auto;aspect-ratio:1;
+  right:-6vw;top:-12vw;border-radius:50%;
+}
+.sunset-sun{
+  background:radial-gradient(circle at center,
+    rgba(255,242,196,.67) 0%,rgba(255,199,104,.52) 12%,
+    rgba(255,159,55,.37) 28%,rgba(243,120,23,.17) 50%,
+    rgba(224,107,27,.04) 68%,transparent 78%);
+  filter:blur(9px);
+  animation:sun-pulse 18s ease-in-out infinite alternate;
+}
+.sunset-sun::before{
+  content:"";position:absolute;inset:35%;border-radius:50%;
+  background:radial-gradient(circle at 48% 42%,#fff2c9 0%,#ffe1a1 38%,#ffc469 75%,#f8a544 100%);
+  filter:blur(11px);box-shadow:0 0 85px 33px rgba(255,169,65,.36);
+}
+.sunset-sun::after{
+  content:"";position:absolute;inset:25%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,211,136,.39),rgba(255,169,57,.10) 40%,transparent 70%);
+  filter:blur(35px);
+}
+.sunset-wisp{mix-blend-mode:screen;opacity:.23;filter:blur(76px)}
+.sunset-wisp-a{top:49%;background:linear-gradient(110deg,transparent 10%,#f7ab3f75,#eb873b51 44%,transparent 84%)}
+.sunset-wisp-b{top:73%;left:-17%;opacity:.17;background:linear-gradient(110deg,transparent 10%,#ffce7c6e 32%,#e3893452 59%,transparent 85%)}
+.sunset-dust{display:none!important} /* Old full-screen drifting dotted texture removed. */
+.sunset-dust-cloud{z-index:2;pointer-events:none;overflow:visible;animation:none!important}
+.sunset-dust-cloud i{
+  position:absolute;left:var(--x);top:var(--y);display:block;
+  width:var(--size);height:var(--size);border-radius:50%;
+  background:#ffe2a4;box-shadow:0 0 5px 1px rgba(255,207,118,.48);
+  opacity:var(--alpha);transform:translate3d(0,0,0);
+  animation:sun-dust-float var(--dur) ease-in-out var(--delay) infinite alternate;
+}
+@keyframes sun-dust-float{
+  0%{transform:translate3d(calc(var(--dx)*-.5),calc(var(--dy)*-.5),0) scale(.72);opacity:calc(var(--alpha)*.45)}
+  52%{opacity:var(--alpha)}
+  100%{transform:translate3d(var(--dx),var(--dy),0) scale(1.25);opacity:calc(var(--alpha)*.66)}
+}
+body[data-theme="golden"] .stat-card,body[data-theme="golden"] .stat-panel{
+  background:rgba(61,34,14,.65);backdrop-filter:blur(9px);
+}
+body[data-theme="golden"] .tag-panel{background:rgba(56,32,13,.93)}
+body[data-theme="golden"] .bar-track{background:#694321}
+body[data-theme="golden"] .floating-first{background:rgba(69,37,13,.88);border-color:#f7b76c73}
+body[data-theme="golden"] .viewer{background:rgba(33,17,8,.97)}
+body[data-theme="golden"] .intro-side p{color:#eaca9e}
+body[data-theme="golden"] h1 i{color:#ffce7d;text-shadow:0 0 42px rgba(255,170,58,.43)}
+body[data-theme="golden"] .topbar{border-color:#f7bd703b}
+@media(max-width:650px){
+  .sunset-sun,.sunset-dust-cloud{width:95vw;right:-35vw;top:-19vw}
+  .sunset-dust-cloud i{box-shadow:0 0 3px 1px rgba(255,207,118,.36)}
+}
+@media(prefers-reduced-motion:reduce){
+  .overlay-glass>*,.is-firefox .art-overlay,.sunset-dust-cloud i{transition:none!important;animation:none!important}
+}
+
+/* V13 — softer typography, collapsible date controls, uninterrupted art stream. */
+.overlay-glass>*{transition-duration:.42s,.46s!important;transition-timing-function:cubic-bezier(.22,.78,.27,1)!important}
+.is-firefox .art-overlay{transition-duration:.39s!important}
+.filter-row{justify-content:flex-start;align-items:center;column-gap:10px}
+.date-filters[hidden]{display:none!important}
+.date-filters{order:3;width:100%;padding:17px 16px;margin:3px 0 2px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface);box-shadow:0 12px 30px #0002}
+#toggle-dates{order:0}#toggle-tags{order:1}#clear-tag{order:2}
+.filter-active-dot{display:inline-block;width:6px;height:6px;margin-left:7px;
+  border-radius:50%;background:var(--accent);vertical-align:middle}
+.gallery-sentinel{height:2px;pointer-events:none}
+body[data-theme="golden"]{--bg:#1c0c06;--surface:#271409;--surface2:#40200d;
+  --fg:#fff3df;--muted:#e8bd8d;--faint:#bd8f68;--accent:#ffb551;--border:#70401f;
+  background:linear-gradient(159deg,#241006 0%,#170b05 41%,#291207 74%,#120905 100%)}
+body[data-theme="golden"] .sunset-environment{
+  background:radial-gradient(ellipse 52% 54% at 81% 20%,rgba(255,162,42,.27),transparent 84%),
+    radial-gradient(ellipse 68% 58% at 21% 78%,rgba(148,57,10,.14),transparent 82%),
+    linear-gradient(175deg,rgba(84,30,7,.24),rgba(34,14,6,.09) 55%,rgba(8,5,3,.1))}
+body[data-theme="golden"] .sunset-sun{
+  background:radial-gradient(circle at center,rgba(255,222,151,.72) 0%,rgba(255,178,66,.56) 12%,
+    rgba(255,132,24,.42) 28%,rgba(238,92,10,.19) 50%,rgba(201,78,10,.05) 68%,transparent 78%)}
+body[data-theme="golden"] .sunset-sun::before{
+  background:radial-gradient(circle at 48% 42%,#ffebbf 0%,#ffd28a 36%,#ffa947 73%,#ef8723 100%);
+  box-shadow:0 0 88px 32px rgba(255,137,31,.42)}
+body[data-theme="golden"] .sunset-sun::after{
+  background:radial-gradient(circle,rgba(255,185,92,.43),rgba(255,126,20,.12) 43%,transparent 73%)}
+body[data-theme="golden"] .stat-card,body[data-theme="golden"] .stat-panel{background:rgba(45,22,9,.74)}
+body[data-theme="golden"] .tag-panel{background:rgba(40,20,8,.94)}
+body[data-theme="golden"] .bar-track{background:#553017}
+body[data-theme="golden"] .floating-first{background:rgba(46,22,8,.89)}
+@media(max-width:600px){.date-filters{padding:14px 12px}}
+@media(prefers-reduced-motion:reduce){.overlay-glass>*{transition:none!important}.is-firefox .art-overlay{transition:none!important}}
+
+
+/* V14 — gently expanding filters, gallery density, and responsive viewer. */
+.gallery-head{flex-wrap:wrap}
+.gallery-actions{display:flex;align-items:end;gap:10px;flex-wrap:wrap}
+.size-picker{display:flex;flex-direction:column;gap:5px;font-size:10px;color:var(--muted);line-height:1.3}
+.size-select{background:var(--surface);color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:10px 12px;min-width:120px;max-width:156px;cursor:pointer;font-size:12px;min-height:40px}
+.size-select:hover{border-color:var(--accent)}
+/* Panels remain in the flow; no display:none toggle, which cannot transition. */
+.animated-filter-panel{
+  box-sizing:border-box;max-height:0!important;opacity:0;visibility:hidden;
+  overflow:hidden;pointer-events:none;transform:translateY(-8px);
+  padding-top:0!important;padding-bottom:0!important;margin-top:0!important;
+  margin-bottom:0!important;border-top-width:0!important;border-bottom-width:0!important;
+  transition:max-height .42s cubic-bezier(.2,.72,.22,1),opacity .27s ease,
+    transform .37s cubic-bezier(.2,.72,.22,1),visibility 0s linear .42s,
+    padding .37s ease,margin .37s ease,border-width .37s ease!important;
+}
+.animated-filter-panel.is-open{
+  max-height:340px!important;opacity:1;visibility:visible;overflow:hidden;pointer-events:auto;
+  transform:translateY(0);transition:max-height .46s cubic-bezier(.2,.72,.22,1),opacity .31s ease,
+    transform .4s cubic-bezier(.2,.72,.22,1),visibility 0s,
+    padding .36s ease,margin .36s ease,border-width .36s ease!important;
+}
+.date-filters.animated-filter-panel.is-open{padding:17px 16px!important;margin:3px 0 2px!important;border-top-width:1px!important;border-bottom-width:1px!important}
+.tag-panel.animated-filter-panel.is-open{padding:14px!important;margin:0 0 24px!important;border-top-width:1px!important;border-bottom-width:1px!important}
+body[data-gallery-size="compact"] .masonry{column-gap:clamp(16px,2vw,27px)}
+body[data-gallery-size="small"] .masonry{column-gap:clamp(13px,1.8vw,23px)}
+body[data-gallery-size="compact"] .gallery-column{gap:clamp(22px,2.4vw,40px)}
+body[data-gallery-size="small"] .gallery-column{gap:clamp(18px,2vw,34px)}
+body[data-gallery-size="small"] .overlay-glass{padding:9px 10px;gap:4px}
+body[data-gallery-size="small"] .overlay-title{font-size:clamp(10px,.92vw,15px)}
+/* Two decoded images are crossfaded; the old image never disappears while loading. */
+.viewer-image-stage{position:absolute;inset:56px 70px 80px;display:grid;place-items:center;pointer-events:none;overflow:hidden}
+.viewer-image-stage .viewer-slide{grid-area:1/1;display:block;position:relative;min-width:0;max-width:100%;max-height:calc(100vh - 150px);height:auto;width:auto;object-fit:contain;
+  opacity:0;visibility:hidden;transition:opacity .24s cubic-bezier(.22,.65,.25,1),visibility 0s linear .24s;
+  box-shadow:0 28px 80px #0004}
+.viewer-image-stage .viewer-slide.is-active{opacity:1;visibility:visible;transition:opacity .24s cubic-bezier(.22,.65,.25,1),visibility 0s}
+.viewer-loading{position:absolute;z-index:2;left:50%;bottom:53px;width:22px;height:22px;
+  border:2px solid rgba(255,255,255,.22);border-top-color:var(--accent);border-radius:50%;
+  animation:viewer-spin .8s linear infinite;opacity:0;pointer-events:none;transition:opacity .2s}
+.viewer-loading.is-loading{opacity:1}
+@keyframes viewer-spin{to{transform:rotate(360deg)}}
+@media(max-width:850px){.viewer-image-stage{inset:60px 55px 45px}.viewer-image-stage .viewer-slide{max-height:55vh}.gallery-actions{width:100%}}
+@media(max-width:520px){.viewer-image-stage{inset:65px 43px 28px}.viewer-image-stage .viewer-slide{max-height:50vh}.gallery-actions{gap:9px}.size-picker{flex:1;min-width:128px}.size-select{width:100%;max-width:none}.gallery-actions>.sort{flex:1;min-width:130px}}
+@media(prefers-reduced-motion:reduce){.animated-filter-panel,.viewer-image-stage .viewer-slide,.viewer-loading{transition:none!important}.viewer-loading{animation:none!important}}
+
+
+/* V15 — refined controls, curated full-view metadata and a scroll-based night sky. */
+.sunset-environment{--sunset-progress:0;--stars-opacity:0;isolation:isolate}
+.sunset-night{position:absolute;inset:0;z-index:0;background:#000;opacity:var(--sunset-progress);transition:opacity .14s linear}
+.sunset-daylight{position:absolute;inset:0;z-index:1;opacity:calc(1 - var(--sunset-progress));transition:opacity .14s linear;pointer-events:none}
+.sunset-starfield{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:var(--stars-opacity);transition:opacity .18s linear;overflow:hidden}
+.night-star{position:absolute;display:block;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;
+  background:rgba(255,255,255,.98);box-shadow:0 0 7px 1px rgba(236,242,255,.57);opacity:var(--alpha);
+  animation:night-star-drift var(--duration) ease-in-out var(--delay) infinite alternate}
+@keyframes night-star-drift{
+  0%{transform:translate3d(calc(var(--dx) * -.55),calc(var(--dy) * -.5),0) scale(.72);opacity:calc(var(--alpha) * .48)}
+  100%{transform:translate3d(var(--dx),var(--dy),0) scale(1.18);opacity:var(--alpha)}
+}
+body:not([data-theme="golden"]) .night-star{animation-play-state:paused}
+/* The sun remains anchored in the upper portion of the viewport while the
+   day layer slowly recedes and white stars appear in the black sky. */
+body[data-theme="golden"] .sunset-environment{background:linear-gradient(180deg,#713316 0%,#291308 55%,#100805 100%)}
+body[data-theme="golden"] .sunset-daylight{background:
+  radial-gradient(ellipse 58% 55% at 80% 18%,rgba(255,172,63,.26),transparent 82%),
+  linear-gradient(180deg,rgba(113,50,16,.27),rgba(34,16,8,.48))}
+body[data-theme="golden"] .sunset-night{background:#000}
+/* A slightly more tactile, coherent control language. */
+:is(.site-tab,.filter-button,.clear-tag,.clear-dates,.tag-chip,.viewer-tag,.viewer-close,.viewer-arrow,.floating-first,.empty button){
+  border-radius:12px;letter-spacing:.015em;font-weight:650;
+  transition:color .22s ease,border-color .22s ease,background-color .22s ease,
+    box-shadow .28s cubic-bezier(.2,.7,.25,1),transform .25s cubic-bezier(.2,.7,.25,1),filter .24s ease}
+:is(.site-tab,.filter-button,.clear-tag,.clear-dates,.tag-chip,.viewer-tag,.viewer-close,.viewer-arrow,.floating-first,.empty button):hover:not(:disabled){
+  transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 24px rgba(0,0,0,.19);color:var(--fg)}
+:is(.site-tab,.filter-button,.clear-tag,.clear-dates,.tag-chip,.viewer-tag,.viewer-close,.viewer-arrow,.floating-first,.empty button):active:not(:disabled){transform:translateY(0) scale(.975);box-shadow:0 3px 9px rgba(0,0,0,.12)}
+:is(.filter-button,.clear-tag,.clear-dates,.viewer-tag,.viewer-arrow,.viewer-close,.floating-first){
+  background:color-mix(in srgb,var(--surface2) 72%,var(--bg));color:var(--fg);
+  border:1px solid color-mix(in srgb,var(--border) 74%,var(--accent) 26%)}
+.site-tab{border-radius:13px;color:var(--fg);font-weight:680}
+.site-tab[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 14%,var(--surface));border-color:color-mix(in srgb,var(--accent) 62%,var(--border));box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}
+.filter-button[aria-expanded="true"],.tag-chip[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 18%,transparent)}
+:is(.sort,.size-select,.theme-select,.language-select,.stat-select,.date-input){
+  border-radius:12px;min-height:41px;color:var(--fg);font-weight:600;
+  background-color:var(--surface);border:1px solid color-mix(in srgb,var(--border) 74%,var(--accent) 26%);
+  transition:border-color .2s ease,background-color .2s ease,box-shadow .2s ease}
+:is(.sort,.size-select,.theme-select,.language-select,.stat-select,.date-input):hover{
+  border-color:var(--accent);box-shadow:0 3px 16px rgba(0,0,0,.13)}
+:is(.sort,.size-select,.theme-select,.language-select,.stat-select,.date-input):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* Readable, intentionally structured details when opening an artwork. */
+.viewer-side{
+  background:linear-gradient(160deg,color-mix(in srgb,var(--surface) 91%,transparent),color-mix(in srgb,var(--bg) 97%,transparent));
+  border-left:1px solid color-mix(in srgb,var(--accent) 20%,var(--border));
+  box-shadow:-12px 0 50px rgba(0,0,0,.085);padding:91px 33px 36px;isolation:isolate}
+.viewer-side::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),transparent 85%);opacity:.84}
+.viewer-side .marker{display:inline-flex;align-self:flex-start;align-items:center;min-height:30px;
+  padding:7px 11px;border-radius:999px;background:color-mix(in srgb,var(--accent) 15%,var(--surface));
+  color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.16em}
+.viewer-side h2{font-size:clamp(25px,2.75vw,39px);font-weight:720;line-height:1.22;
+  letter-spacing:-.05em;margin:25px 0 14px;color:var(--fg);text-wrap:pretty}
+.viewer-side .desc{margin:12px 0 8px;padding:17px 18px;max-width:100%;width:100%;
+  color:var(--fg);font-size:14px;line-height:1.85;font-weight:480;
+  background:color-mix(in srgb,var(--surface2) 63%,transparent);
+  border:1px solid color-mix(in srgb,var(--accent) 19%,var(--border));
+  border-left:3px solid color-mix(in srgb,var(--accent) 75%,transparent);
+  border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.10)}
+.viewer-date{display:inline-flex;align-self:flex-start;margin-top:17px;padding:9px 13px;
+  border-radius:999px;background:color-mix(in srgb,var(--accent) 10%,var(--surface2));
+  border:1px solid color-mix(in srgb,var(--accent) 30%,var(--border));color:var(--fg);
+  font-size:12px;font-weight:680;letter-spacing:.02em}
+.viewer-date::before{content:"";width:7px;height:7px;margin:5px 9px 0 0;border-radius:50%;background:var(--accent);box-shadow:0 0 11px color-mix(in srgb,var(--accent) 45%,transparent)}
+.viewer-details{display:flex;gap:9px;margin-top:16px;flex-wrap:wrap}
+.viewer-details .software-badge,.viewer-details .work-info{display:inline-flex;align-items:center;
+  padding:9px 11px;border-radius:10px;font-size:11px;line-height:1.5;font-weight:690;color:var(--fg);
+  border:1px solid color-mix(in srgb,var(--border) 55%,var(--accent) 45%);
+  background:color-mix(in srgb,var(--surface2) 78%,transparent)}
+.viewer-tags{margin-top:21px;gap:8px}
+.viewer-tag{font-size:11px;padding:8px 12px;border-radius:999px;color:var(--fg)}
+.viewer-bottom{padding-top:24px;margin-top:auto;border-top:1px solid var(--border);font-size:11px;line-height:2}
+.viewer-close{z-index:6;width:42px;height:42px;border-radius:14px}
+.viewer-arrow{z-index:6;width:44px;height:44px;border-radius:14px}
+.viewer-side.viewer-info-update>*:not(.viewer-close){animation:viewer-text-appear .34s cubic-bezier(.2,.75,.25,1) both}
+@keyframes viewer-text-appear{from{opacity:.3;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+body[data-theme="light"] .viewer-side .desc{background:rgba(255,255,255,.78)}
+body[data-theme="golden"] .viewer-side{background:linear-gradient(145deg,rgba(47,25,11,.97),rgba(20,12,7,.99))}
+@media(max-width:850px){.viewer-side{padding:35px 27px 48px;border-left:0;border-top:1px solid var(--border)}.viewer-side h2{margin-top:20px}.viewer-bottom{display:none}}
+@media(max-width:520px){.viewer-side{padding:28px 19px 37px}.viewer-side .desc{padding:14px;font-size:13px}.viewer-side .marker{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.night-star{animation:none!important}
+  :is(.site-tab,.filter-button,.clear-tag,.clear-dates,.tag-chip,.viewer-tag,.viewer-close,.viewer-arrow,.floating-first,.empty button),
+  :is(.sort,.size-select,.theme-select,.language-select,.stat-select,.date-input){transition:none!important}
+  .viewer-side.viewer-info-update>*:not(.viewer-close){animation:none!important}}
+
+</style>
+</head>
+<body data-theme="ember" data-gallery-size="small">
+<div class="sunset-environment" aria-hidden="true"><div class="sunset-night"></div><div class="sunset-daylight"><div class="sunset-sun"></div><div class="sunset-wisp sunset-wisp-a"></div><div class="sunset-wisp sunset-wisp-b"></div><div class="sunset-dust-cloud"><i style="--x:92.99%;--y:47.78%;--size:1.4px;--dx:9.9px;--dy:-17.6px;--dur:9.94s;--delay:-2.67s;--alpha:0.75"></i><i style="--x:95.53%;--y:61.63%;--size:3.0px;--dx:2.5px;--dy:-7.7px;--dur:8.91s;--delay:-3.23s;--alpha:0.85"></i><i style="--x:80.20%;--y:59.52%;--size:2.5px;--dx:2.4px;--dy:-14.6px;--dur:16.97s;--delay:-5.33s;--alpha:0.58"></i><i style="--x:78.05%;--y:65.16%;--size:2.0px;--dx:-4.6px;--dy:-6.7px;--dur:7.89s;--delay:-12.31s;--alpha:0.83"></i><i style="--x:70.58%;--y:63.90%;--size:1.1px;--dx:-4.8px;--dy:-15.1px;--dur:10.65s;--delay:-3.72s;--alpha:0.53"></i><i style="--x:79.61%;--y:83.56%;--size:2.0px;--dx:16.6px;--dy:-8.7px;--dur:13.33s;--delay:-0.46s;--alpha:0.87"></i><i style="--x:62.80%;--y:70.57%;--size:3.0px;--dx:-10.1px;--dy:-6.7px;--dur:15.11s;--delay:-8.34s;--alpha:0.50"></i><i style="--x:66.38%;--y:87.16%;--size:3.0px;--dx:-7.5px;--dy:-12.8px;--dur:10.65s;--delay:-6.77s;--alpha:0.73"></i><i style="--x:57.71%;--y:69.31%;--size:1.1px;--dx:-12.1px;--dy:-15.5px;--dur:12.88s;--delay:-6.34s;--alpha:0.59"></i><i style="--x:58.09%;--y:88.07%;--size:3.0px;--dx:19.7px;--dy:-20.4px;--dur:15.14s;--delay:-6.14s;--alpha:0.51"></i><i style="--x:48.52%;--y:73.63%;--size:2.0px;--dx:-18.4px;--dy:-15.6px;--dur:8.22s;--delay:-15.00s;--alpha:0.71"></i><i style="--x:45.71%;--y:97.54%;--size:1.1px;--dx:21.2px;--dy:-14.8px;--dur:14.95s;--delay:-7.17s;--alpha:0.44"></i><i style="--x:40.66%;--y:89.12%;--size:2.5px;--dx:-11.8px;--dy:-7.3px;--dur:15.14s;--delay:-5.30s;--alpha:0.44"></i><i style="--x:31.70%;--y:82.19%;--size:3.0px;--dx:-18.7px;--dy:-6.5px;--dur:8.69s;--delay:-9.80s;--alpha:0.62"></i><i style="--x:27.19%;--y:89.90%;--size:2.5px;--dx:15.1px;--dy:-8.6px;--dur:10.58s;--delay:-14.12s;--alpha:0.53"></i><i style="--x:23.66%;--y:72.87%;--size:2.0px;--dx:-16.1px;--dy:-18.6px;--dur:8.79s;--delay:-9.97s;--alpha:0.68"></i><i style="--x:21.33%;--y:73.31%;--size:1.7px;--dx:19.6px;--dy:-21.0px;--dur:8.51s;--delay:-12.02s;--alpha:0.77"></i><i style="--x:11.27%;--y:73.22%;--size:1.1px;--dx:-21.4px;--dy:-18.3px;--dur:9.71s;--delay:-6.67s;--alpha:0.83"></i><i style="--x:26.76%;--y:60.40%;--size:2.0px;--dx:14.9px;--dy:-11.1px;--dur:16.81s;--delay:-9.62s;--alpha:0.57"></i><i style="--x:22.20%;--y:55.21%;--size:3.0px;--dx:-10.7px;--dy:-16.7px;--dur:13.62s;--delay:-8.48s;--alpha:0.71"></i><i style="--x:25.33%;--y:49.39%;--size:2.0px;--dx:7.5px;--dy:-8.9px;--dur:7.27s;--delay:-4.29s;--alpha:0.83"></i><i style="--x:14.04%;--y:42.41%;--size:3.0px;--dx:16.3px;--dy:-18.9px;--dur:12.60s;--delay:-6.79s;--alpha:0.72"></i><i style="--x:8.74%;--y:37.51%;--size:1.7px;--dx:-13.7px;--dy:-13.9px;--dur:15.90s;--delay:-6.32s;--alpha:0.49"></i><i style="--x:7.03%;--y:28.70%;--size:3.0px;--dx:-0.2px;--dy:-9.7px;--dur:8.61s;--delay:-9.93s;--alpha:0.50"></i><i style="--x:30.90%;--y:34.66%;--size:2.0px;--dx:17.5px;--dy:-6.5px;--dur:7.18s;--delay:-6.54s;--alpha:0.50"></i><i style="--x:25.47%;--y:29.01%;--size:1.1px;--dx:-9.2px;--dy:-12.0px;--dur:14.85s;--delay:-10.68s;--alpha:0.70"></i><i style="--x:30.13%;--y:25.37%;--size:2.0px;--dx:-21.2px;--dy:-8.7px;--dur:15.67s;--delay:-6.76s;--alpha:0.71"></i><i style="--x:30.51%;--y:6.01%;--size:1.4px;--dx:-4.2px;--dy:-9.4px;--dur:13.52s;--delay:-7.23s;--alpha:0.59"></i><i style="--x:34.38%;--y:7.07%;--size:1.1px;--dx:-3.0px;--dy:-7.1px;--dur:13.65s;--delay:-15.92s;--alpha:0.70"></i><i style="--x:42.65%;--y:17.97%;--size:3.0px;--dx:-3.7px;--dy:-10.1px;--dur:12.56s;--delay:-6.98s;--alpha:0.85"></i><i style="--x:53.73%;--y:5.82%;--size:2.5px;--dx:4.9px;--dy:-15.9px;--dur:7.61s;--delay:-13.00s;--alpha:0.41"></i><i style="--x:53.67%;--y:3.59%;--size:2.5px;--dx:8.6px;--dy:-17.9px;--dur:9.17s;--delay:-1.04s;--alpha:0.48"></i><i style="--x:63.75%;--y:3.28%;--size:1.1px;--dx:-17.1px;--dy:-21.2px;--dur:10.82s;--delay:-7.46s;--alpha:0.87"></i><i style="--x:64.42%;--y:13.68%;--size:1.7px;--dx:-4.4px;--dy:-15.3px;--dur:9.20s;--delay:-13.01s;--alpha:0.59"></i><i style="--x:65.55%;--y:28.54%;--size:2.5px;--dx:-19.9px;--dy:-6.9px;--dur:11.10s;--delay:-16.04s;--alpha:0.78"></i><i style="--x:75.82%;--y:24.01%;--size:1.7px;--dx:-16.3px;--dy:-12.4px;--dur:8.14s;--delay:-10.42s;--alpha:0.57"></i><i style="--x:67.98%;--y:38.85%;--size:2.5px;--dx:7.6px;--dy:-21.2px;--dur:9.69s;--delay:-13.71s;--alpha:0.81"></i><i style="--x:80.83%;--y:38.11%;--size:1.7px;--dx:-17.6px;--dy:-21.9px;--dur:15.28s;--delay:-0.08s;--alpha:0.51"></i><i style="--x:91.20%;--y:36.77%;--size:1.7px;--dx:16.2px;--dy:-8.5px;--dur:16.03s;--delay:-2.00s;--alpha:0.54"></i><i style="--x:94.39%;--y:43.62%;--size:3.0px;--dx:5.2px;--dy:-9.8px;--dur:16.53s;--delay:-1.78s;--alpha:0.58"></i></div></div><div id="night-stars" class="sunset-starfield"></div></div>
+  <div class="shell">
+    <header class="topbar" aria-label="Portfolio header" data-i18n-aria="headerAria"><a class="logo" href="#home" id="home-link" aria-label="Home" data-i18n-aria="home">0 3 0 <small data-i18n="visualArchive">Visual archive</small></a><nav class="site-tabs" aria-label="Portfolio sections" data-i18n-aria="sections"><button type="button" id="tab-gallery" class="site-tab" aria-pressed="true" data-i18n="gallery">Gallery</button><button type="button" id="tab-stats" class="site-tab" aria-pressed="false" data-i18n="statistics">Statistics</button></nav><select id="theme" class="theme-select" aria-label="Color theme" data-i18n-aria="themeLabel"><option value="ember" data-i18n="themeEmber">Ember</option><option value="light" data-i18n="themeLight">Light</option><option value="golden" data-i18n="themeGolden">Golden Hour</option></select><select id="language" class="language-select" aria-label="Interface language" data-i18n-aria="language"><option value="en">EN · English</option><option value="ja">日本語</option><option value="es">ES · Español</option><option value="fr">FR · Français</option><option value="zh-CN">简体中文</option><option value="uk">UA · Українська</option></select></header>
+    <main id="home">
+      <section class="intro" id="gallery-intro" aria-label="Introduction" data-i18n-aria="introduction">
+        <div><div class="eyebrow" data-i18n="eyebrowGallery">Digital illustration / Visual archive</div><h1><span data-i18n="hero1">Ideas turned</span><br><span data-i18n="hero2">into</span> <i data-i18n="hero3">images.</i></h1></div>
+        <div class="intro-side"><p data-i18n="intro">A place for digital drawings, illustrations and visual experiments. Nothing unnecessary — just art.</p></div>
+      </section>
+      <div class="rule" id="gallery-rule"></div>
+      <section id="work" aria-label="Artwork gallery" data-i18n-aria="galleryAria">
+        <div class="gallery-head"><div><div class="gallery-heading"><span data-i18n="selected">Selected works</span> <span id="count" class="count"></span></div><div class="gallery-sub" id="gallery-sub">Artworks, from newest to oldest</div></div><div class="gallery-actions"><select class="sort" id="sort" aria-label="Sort artworks" data-i18n-aria="sortAria"><option value="recent" data-i18n="newest">Newest first</option><option value="oldest" data-i18n="oldest">Oldest first</option></select><label class="size-picker"><span data-i18n="artworkSize">Artwork size</span><select id="gallery-size" class="size-select" aria-label="Artwork size" data-i18n-aria="artworkSize"><option value="normal" data-i18n="sizeNormal">Original</option><option value="compact" data-i18n="sizeCompact">Compact</option><option value="small" data-i18n="sizeSmall" selected>Smaller</option></select></label></div></div>
+        <div class="filter-row"><button type="button" id="toggle-dates" class="filter-button" aria-expanded="false" aria-controls="date-filters"><span data-i18n="filterDates">Filter by date</span><span id="dates-active" class="filter-active-dot" hidden></span> <span class="chevron" aria-hidden="true">⌄</span></button><div class="date-filters" id="date-filters" hidden><label class="filter-field"><span data-i18n="yearFilter">Year</span><select id="year-filter" class="date-input"><option value="all" data-i18n="allYears">All years</option></select></label><label class="filter-field"><span data-i18n="fromDate">From</span><input id="date-from" class="date-input" type="date"></label><label class="filter-field"><span data-i18n="toDate">To</span><input id="date-to" class="date-input" type="date"></label><button id="clear-dates" type="button" class="clear-dates" data-i18n="clearDates" hidden>Clear dates</button></div><button type="button" id="toggle-tags" class="filter-button" aria-expanded="false" aria-controls="tag-panel"><span data-i18n="filterTags">Filter by tags</span> <span class="chevron" aria-hidden="true">⌄</span></button><button id="clear-tag" type="button" class="clear-tag" hidden></button></div>
+        <div class="tag-panel" id="tag-panel" hidden><input class="tag-search" type="search" id="tag-search" aria-label="Search tags" data-i18n-aria="searchTags" placeholder="Find a tag…" data-i18n-placeholder="tagPlaceholder"><div class="tag-list" id="tag-list" role="group" aria-label="Tag filters" data-i18n-aria="tagFilters"></div></div>
+          <div id="gallery" class="masonry" aria-live="polite"></div>
+        <div id="empty" class="empty" hidden></div>
+        <div id="gallery-sentinel" class="gallery-sentinel" aria-hidden="true" hidden></div>
+        <div class="status" aria-live="polite"><span id="load-status" class="status-line loading">Loading artworks…</span><span id="updated"></span></div>
+      </section>
+      <section id="statistics" aria-label="Artwork statistics" data-i18n-aria="statsAria" hidden>
+        <div class="stats-intro"><div class="eyebrow" data-i18n="eyebrowStats">Art archive / Data overview</div><h1><span data-i18n="statHero1">Art in</span> <i data-i18n="statHero2">numbers.</i></h1><p data-i18n="statsIntro">An overview of creation dates and hashtags from your artworks.</p></div>
+        <div class="rule"></div>
+        <div class="stats-wrap">
+          <div class="stat-cards" id="stat-cards"></div>
+          <div class="stat-grid">
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="productivity">Monthly productivity</h3><div class="stat-help" id="months-hint"></div></div><select id="stats-year" class="stat-select" aria-label="Statistics year" data-i18n-aria="statsYear"></select></div><div id="months-bars" class="bars"></div></section>
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="topTags">Most used tags</h3><div class="stat-help" data-i18n="uniqueTagCount">Number of unique artworks with each tag</div></div></div><div class="bars" id="tags-bars"></div></section>
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="byYear">Artworks by year</h3><div class="stat-help" data-i18n="datedOnly">Only works with known creation dates</div></div></div><div class="bars" id="years-bars"></div></section>
+            <section class="stat-panel"><div class="stat-panel-head"><div><h3 data-i18n="aboutStats">About these statistics</h3></div></div><div class="stat-help" id="stats-explainer"></div></section>
+          </div>
+          <p class="stats-footnote" data-i18n="statsFootnote">Years and months use the artwork creation code (YYMMDD), not the publication date. Time and strokes are counted only when recorded, e.g. 1h 25m 9212s (s = strokes).</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>© <span id="year"></span> 0 3 0 · <span data-i18n="rights">All works belong to their creator.</span></span><span data-i18n="tagline">Made for the art, not the algorithm.</span></footer>
+  </div>
+  <button id="floating-first" class="floating-first" type="button" hidden><span aria-hidden="true">⇤</span> <span data-i18n="backToTop">Back to top</span></button>
+  <div id="viewer" class="viewer" role="dialog" aria-modal="true" aria-label="Artwork viewer" data-i18n-aria="viewerAria" aria-hidden="true">
+    <div class="viewer-art"><button type="button" class="viewer-arrow viewer-prev" id="prev" aria-label="Previous image" data-i18n-aria="prevImage">‹</button><div class="viewer-image-stage"><img id="viewer-img" class="viewer-slide is-active" alt=""><img id="viewer-img-next" class="viewer-slide" alt="" aria-hidden="true"></div><span id="viewer-loading" class="viewer-loading" aria-hidden="true"></span><button type="button" class="viewer-arrow viewer-next" id="next" aria-label="Next image" data-i18n-aria="nextImage">›</button><div id="viewer-step" class="viewer-step"></div></div>
+    <div class="viewer-side"><button class="viewer-close" type="button" id="close" aria-label="Close" data-i18n-aria="close">×</button><div class="marker" data-i18n="viewerMarker">Artwork / 0 3 0</div><h2 id="viewer-title"></h2><div class="desc" id="viewer-description"></div><div class="viewer-date" id="viewer-date"></div><div class="viewer-details" id="viewer-details" hidden></div><div class="viewer-tags" id="viewer-tags"></div><div class="viewer-bottom"><span data-i18n="viewerKeys">← → — another artwork or image</span><br><span data-i18n="viewerClose">Esc — close</span></div></div>
+  </div>
+<script>
+(() => {
+  'use strict';
+
+  const TRANSLATIONS = {"en":{"filterDates":"Filter by date","backToTop":"Back to top","headerAria":"Portfolio header","home":"Home","sections":"Portfolio sections","language":"Interface language","gallery":"Gallery","statistics":"Statistics","introduction":"Introduction","hero1":"Ideas turned","hero2":"into","hero3":"images.","intro":"A place for digital drawings, illustrations and visual experiments. Nothing unnecessary — just art.","galleryAria":"Artwork gallery","selected":"Selected works","gallerySub":"Artworks, from newest to oldest","sortAria":"Sort artworks","newest":"Newest first","oldest":"Oldest first","filterTags":"Filter by tags","searchTags":"Search tags","tagPlaceholder":"Find a tag…","tagFilters":"Tag filters","firstPage":"First page","previous":"Previous","next":"Next","statsAria":"Artwork statistics","statHero1":"Art in","statHero2":"numbers.","statsIntro":"An overview of creation dates and hashtags from your artworks.","productivity":"Monthly productivity","statsYear":"Statistics year","topTags":"Most used tags","uniqueTagCount":"Number of unique artworks with each tag","byYear":"Artworks by year","datedOnly":"Only works with known creation dates","aboutStats":"About these statistics","statsFootnote":"Years and months use the artwork creation code (YYMMDD), not the publication date. Time and strokes are counted only when recorded, e.g. 1h 25m 9212s (s = strokes).","rights":"All works belong to their creator.","tagline":"Made for the art, not the algorithm.","viewerAria":"Artwork viewer","prevImage":"Previous image","nextImage":"Next image","close":"Close","viewerKeys":"← → — another artwork or image","viewerClose":"Esc — close","allWorks":"All works","noTags":"No tags found","active":"Active","open":"Open","images":"images","unnamed":"Untitled","created":"Created","work":"Work","hours":"h","minutes":"min","strokes":"strokes","page":"Page","loadArt":"Loading artworks…","loadPosts":"Retrieving posts…","loadProgress":"Found {count} entries · scanning archive…","updated":"Updated: {date}","loadError":"Could not load the gallery","partial":"Loaded {count} artworks · incomplete archive","loaded":"{count} unique artworks","emptyLoading":"Loading gallery…","emptyError":"Unable to load artworks","emptyFiltered":"No artworks with this tag","emptyNoPosts":"The gallery is empty","emptyLoadInfo":"Retrieving posts.","emptyErrorInfo":"Check your connection and try again.","emptyFilteredInfo":"Choose another tag or clear the filter.","emptyNoPostsInfo":"Posts with artwork will appear here automatically.","retry":"Try again","total":"Total artworks","afterDuplicates":"After removing duplicates","bestMonth":"Most productive month","artCount":"{count} artworks","noDated":"No dated artworks yet","mostTag":"Most used tag","noTagsYet":"No tags yet","withDate":"With creation dates","withoutDate":"{count} without a creation date","drawingTime":"Drawing time","recordedTime":"Across {count} artworks with time data","totalStrokes":"Strokes drawn","recordedStrokes":"Across {count} artworks with stroke counts","topSoftware":"Most used software","noSoftware":"No software tags","creativeYears":"Active years","datedYears":"Years with dated artworks","unknownYears":"No known dates","allYears":"All years","top12Months":"12 most active months across all years","eachMonth":"Every month of {year}","notEnough":"Not enough data for this section yet.","statsExplain":"This gallery contains {total} unique artworks. {dated} have a valid YYMMDD creation date; {undated} do not. There are {tags} thematic tags (excluding #art, #digitalart and software tags). A work can have multiple tags, so tag totals can exceed artwork totals.","visualArchive":"Visual archive","eyebrowGallery":"Digital illustration / Visual archive","eyebrowStats":"Art archive / Data overview","viewerMarker":"Artwork / 0 3 0","gallerySubOldest":"Artworks, from oldest to newest","themeLabel":"Color theme","themeEmber":"Ember","themeLight":"Light","themeGolden":"Golden Hour","yearFilter":"Year","fromDate":"From","toDate":"To","clearDates":"Clear dates","lastPage":"Last page","artworkSize":"Artwork size","sizeNormal":"Original","sizeCompact":"Compact","sizeSmall":"Smaller"},"ja":{"filterDates":"日付で絞り込む","backToTop":"ページ上部へ","headerAria":"ポートフォリオのヘッダー","home":"ホーム","sections":"ページ","language":"表示言語","gallery":"ギャラリー","statistics":"統計","introduction":"はじめに","hero1":"アイデアを","hero2":"ひとつの","hero3":"絵に。","intro":"デジタル作品、イラスト、視覚的な実験を集めた場所。余計なものはなく、アートだけ。","galleryAria":"作品ギャラリー","selected":"作品一覧","gallerySub":"新しい作品から順に表示","sortAria":"作品の並べ替え","newest":"新しい順","oldest":"古い順","filterTags":"タグで絞り込む","searchTags":"タグを検索","tagPlaceholder":"タグを検索…","tagFilters":"タグフィルター","firstPage":"最初のページ","previous":"前へ","next":"次へ","statsAria":"作品の統計","statHero1":"数字で見る","statHero2":"アート。","statsIntro":"作品の制作日とハッシュタグから集計したデータ。","productivity":"月別の制作数","statsYear":"集計年","topTags":"よく使うタグ","uniqueTagCount":"タグを含む作品数","byYear":"年別作品数","datedOnly":"制作日がある作品のみ","aboutStats":"統計について","statsFootnote":"年月は投稿日ではなく、作品名の制作日コード（YYMMDD）を使用します。時間とストローク数は記録されている作品のみを集計します（例：1h 25m 9212s）。","rights":"すべての作品の権利は作者に帰属します。","tagline":"アルゴリズムより、アートのために。","viewerAria":"作品ビューアー","prevImage":"前の画像","nextImage":"次の画像","close":"閉じる","viewerKeys":"← → — 別の作品・画像","viewerClose":"Esc — 閉じる","allWorks":"すべての作品","noTags":"タグが見つかりません","active":"選択中","open":"開く","images":"枚の画像","unnamed":"無題","created":"制作日","work":"制作データ","hours":"時間","minutes":"分","strokes":"ストローク","page":"ページ","loadArt":"作品を読み込み中…","loadPosts":"投稿を取得中…","loadProgress":"{count} 件を取得 · アーカイブを確認中…","updated":"更新：{date}","loadError":"ギャラリーを読み込めませんでした","partial":"{count} 作品を取得 · 一部のみ","loaded":"作品数：{count}","emptyLoading":"読み込み中…","emptyError":"作品を読み込めません","emptyFiltered":"このタグの作品はありません","emptyNoPosts":"作品はまだありません","emptyLoadInfo":"投稿を取得しています。","emptyErrorInfo":"接続を確認して再試行してください。","emptyFilteredInfo":"別のタグを選ぶか、解除してください。","emptyNoPostsInfo":"作品のある投稿が自動表示されます。","retry":"再試行","total":"作品総数","afterDuplicates":"重複を除外","bestMonth":"最も制作した月","artCount":"{count} 作品","noDated":"日付のある作品はありません","mostTag":"最多タグ","noTagsYet":"タグなし","withDate":"制作日あり","withoutDate":"制作日なし：{count}","drawingTime":"制作時間","recordedTime":"時間が記録された {count} 作品","totalStrokes":"総ストローク数","recordedStrokes":"記録がある {count} 作品","topSoftware":"よく使うソフト","noSoftware":"ソフトのタグなし","creativeYears":"制作活動年数","datedYears":"日付がある作品の年数","unknownYears":"日付なし","allYears":"すべての年","top12Months":"全期間の制作数上位12か月","eachMonth":"{year}年の各月","notEnough":"表示できるデータがまだありません。","statsExplain":"重複を除いた作品数は {total} 件。制作日コード（YYMMDD）がある作品は {dated} 件、不明は {undated} 件。テーマタグは {tags} 種類です（#art、#digitalart とソフトのタグを除く）。複数タグがあるため、タグの合計は作品数を上回ることがあります。","visualArchive":"ビジュアルアーカイブ","eyebrowGallery":"デジタルイラスト / 作品アーカイブ","eyebrowStats":"作品アーカイブ / データ","viewerMarker":"作品 / 0 3 0","gallerySubOldest":"古い作品から順に表示","themeLabel":"カラーテーマ","themeEmber":"エンバー","themeLight":"ライト","themeGolden":"ゴールデンアワー","yearFilter":"年","fromDate":"開始日","toDate":"終了日","clearDates":"日付をクリア","lastPage":"最後のページ","artworkSize":"作品サイズ","sizeNormal":"標準","sizeCompact":"コンパクト","sizeSmall":"小さめ"},"es":{"filterDates":"Filtrar por fecha","backToTop":"Volver arriba","headerAria":"Cabecera del portafolio","home":"Inicio","sections":"Secciones del portafolio","language":"Idioma de la interfaz","gallery":"Galería","statistics":"Estadísticas","introduction":"Introducción","hero1":"Ideas hechas","hero2":"","hero3":"imágenes.","intro":"Un espacio para dibujos digitales, ilustraciones y experimentos visuales. Sin extras: solo arte.","galleryAria":"Galería de obras","selected":"Obras seleccionadas","gallerySub":"Obras de la más reciente a la más antigua","sortAria":"Ordenar obras","newest":"Más recientes","oldest":"Más antiguas","filterTags":"Filtrar por etiquetas","searchTags":"Buscar etiquetas","tagPlaceholder":"Buscar etiqueta…","tagFilters":"Filtros de etiquetas","firstPage":"Primera página","previous":"Anterior","next":"Siguiente","statsAria":"Estadísticas de obras","statHero1":"Arte en","statHero2":"cifras.","statsIntro":"Resumen de fechas de creación y etiquetas de las obras.","productivity":"Productividad mensual","statsYear":"Año de estadísticas","topTags":"Etiquetas más usadas","uniqueTagCount":"Número de obras distintas con cada etiqueta","byYear":"Obras por año","datedOnly":"Solo obras con fecha de creación conocida","aboutStats":"Sobre estas estadísticas","statsFootnote":"Los meses y años provienen del código de creación (YYMMDD), no de la fecha de publicación. El tiempo y los trazos se cuentan solo cuando constan, p. ej., 1h 25m 9212s (s = trazos).","rights":"Todas las obras pertenecen a su autor.","tagline":"Hecho para el arte, no para el algoritmo.","viewerAria":"Visor de obras","prevImage":"Imagen anterior","nextImage":"Imagen siguiente","close":"Cerrar","viewerKeys":"← → — otra obra o imagen","viewerClose":"Esc — cerrar","allWorks":"Todas las obras","noTags":"No se encontraron etiquetas","active":"Activo","open":"Abrir","images":"imágenes","unnamed":"Sin título","created":"Creado","work":"Trabajo","hours":"h","minutes":"min","strokes":"trazos","page":"Página","loadArt":"Cargando obras…","loadPosts":"Recuperando publicaciones…","loadProgress":"{count} entradas · revisando el archivo…","updated":"Actualizado: {date}","loadError":"No se pudo cargar la galería","partial":"{count} obras · archivo incompleto","loaded":"{count} obras únicas","emptyLoading":"Cargando galería…","emptyError":"No se pudieron cargar las obras","emptyFiltered":"No hay obras con esta etiqueta","emptyNoPosts":"La galería está vacía","emptyLoadInfo":"Recuperando publicaciones.","emptyErrorInfo":"Comprueba la conexión e inténtalo de nuevo.","emptyFilteredInfo":"Elige otra etiqueta o elimina el filtro.","emptyNoPostsInfo":"Aquí aparecerán las publicaciones con obras.","retry":"Reintentar","total":"Total de obras","afterDuplicates":"Sin duplicados","bestMonth":"Mes más productivo","artCount":"{count} obras","noDated":"Sin obras fechadas aún","mostTag":"Etiqueta más usada","noTagsYet":"Sin etiquetas","withDate":"Con fecha de creación","withoutDate":"{count} sin fecha","drawingTime":"Tiempo de dibujo","recordedTime":"De {count} obras con tiempo registrado","totalStrokes":"Trazos realizados","recordedStrokes":"De {count} obras con trazos registrados","topSoftware":"Programa más usado","noSoftware":"Sin etiquetas de programas","creativeYears":"Años de actividad","datedYears":"Años con obras fechadas","unknownYears":"Sin fechas conocidas","allYears":"Todos los años","top12Months":"Los 12 meses de mayor actividad","eachMonth":"Cada mes de {year}","notEnough":"Aún no hay datos suficientes.","statsExplain":"La galería contiene {total} obras únicas. {dated} tienen una fecha YYMMDD válida y {undated} no. Hay {tags} etiquetas temáticas (sin #art, #digitalart ni programas). Una obra puede tener varias etiquetas, por lo que sus recuentos pueden superar el total de obras.","visualArchive":"Archivo visual","eyebrowGallery":"Ilustración digital / Archivo visual","eyebrowStats":"Archivo de arte / Datos","viewerMarker":"Obra / 0 3 0","gallerySubOldest":"Obras de la más antigua a la más reciente","themeLabel":"Tema de color","themeEmber":"Brasa","themeLight":"Claro","themeGolden":"Hora dorada","yearFilter":"Año","fromDate":"Desde","toDate":"Hasta","clearDates":"Borrar fechas","lastPage":"Última página","artworkSize":"Tamaño de obras","sizeNormal":"Normal","sizeCompact":"Compacto","sizeSmall":"Más pequeño"},"fr":{"filterDates":"Filtrer par date","backToTop":"Retour en haut","headerAria":"En-tête du portfolio","home":"Accueil","sections":"Sections du portfolio","language":"Langue de l’interface","gallery":"Galerie","statistics":"Statistiques","introduction":"Introduction","hero1":"Des idées","hero2":"devenues","hero3":"images.","intro":"Un espace pour les dessins numériques, les illustrations et les expérimentations visuelles. Rien de superflu, juste l’art.","galleryAria":"Galerie d’œuvres","selected":"Œuvres sélectionnées","gallerySub":"De la plus récente à la plus ancienne","sortAria":"Trier les œuvres","newest":"Plus récentes","oldest":"Plus anciennes","filterTags":"Filtrer par tags","searchTags":"Rechercher des tags","tagPlaceholder":"Rechercher un tag…","tagFilters":"Filtres de tags","firstPage":"Première page","previous":"Précédent","next":"Suivant","statsAria":"Statistiques des œuvres","statHero1":"L’art en","statHero2":"chiffres.","statsIntro":"Aperçu des dates de création et des hashtags des œuvres.","productivity":"Production mensuelle","statsYear":"Année des statistiques","topTags":"Tags les plus fréquents","uniqueTagCount":"Nombre d’œuvres distinctes par tag","byYear":"Œuvres par année","datedOnly":"Uniquement les œuvres datées","aboutStats":"À propos des statistiques","statsFootnote":"Les mois et les années viennent du code de création (YYMMDD), pas de la date de publication. Le temps et les traits ne sont comptés que lorsqu’ils sont indiqués, par ex. 1h 25m 9212s (s = traits).","rights":"Toutes les œuvres appartiennent à leur créateur.","tagline":"Pour l’art, pas pour l’algorithme.","viewerAria":"Visionneuse d’œuvres","prevImage":"Image précédente","nextImage":"Image suivante","close":"Fermer","viewerKeys":"← → — autre œuvre ou image","viewerClose":"Esc — fermer","allWorks":"Toutes les œuvres","noTags":"Aucun tag trouvé","active":"Actif","open":"Ouvrir","images":"images","unnamed":"Sans titre","created":"Créée le","work":"Travail","hours":"h","minutes":"min","strokes":"traits","page":"Page","loadArt":"Chargement des œuvres…","loadPosts":"Récupération des publications…","loadProgress":"{count} entrées · analyse de l’archive…","updated":"Actualisé : {date}","loadError":"Impossible de charger la galerie","partial":"{count} œuvres · archive incomplète","loaded":"{count} œuvres uniques","emptyLoading":"Chargement de la galerie…","emptyError":"Impossible de charger les œuvres","emptyFiltered":"Aucune œuvre avec ce tag","emptyNoPosts":"La galerie est vide","emptyLoadInfo":"Récupération des publications.","emptyErrorInfo":"Vérifiez votre connexion et réessayez.","emptyFilteredInfo":"Choisissez un autre tag ou effacez le filtre.","emptyNoPostsInfo":"Les publications contenant des œuvres apparaîtront ici.","retry":"Réessayer","total":"Total des œuvres","afterDuplicates":"Après dédoublonnage","bestMonth":"Mois le plus productif","artCount":"{count} œuvres","noDated":"Pas encore d’œuvres datées","mostTag":"Tag le plus fréquent","noTagsYet":"Pas encore de tags","withDate":"Avec date de création","withoutDate":"{count} sans date","drawingTime":"Temps de dessin","recordedTime":"Sur {count} œuvres avec durée","totalStrokes":"Traits dessinés","recordedStrokes":"Sur {count} œuvres avec nombre de traits","topSoftware":"Logiciel le plus utilisé","noSoftware":"Aucun tag de logiciel","creativeYears":"Années d’activité","datedYears":"Années avec œuvres datées","unknownYears":"Aucune date connue","allYears":"Toutes les années","top12Months":"12 mois les plus actifs","eachMonth":"Chaque mois de {year}","notEnough":"Pas encore assez de données.","statsExplain":"La galerie contient {total} œuvres uniques. {dated} ont un code de création YYMMDD valide, {undated} n’en ont pas. Il y a {tags} tags thématiques (hors #art, #digitalart et tags de logiciels). Une œuvre pouvant porter plusieurs tags, leur total peut dépasser le nombre d’œuvres.","visualArchive":"Archives visuelles","eyebrowGallery":"Illustration numérique / Archives visuelles","eyebrowStats":"Archives d’art / Données","viewerMarker":"Œuvre / 0 3 0","gallerySubOldest":"De la plus ancienne à la plus récente","themeLabel":"Thème de couleur","themeEmber":"Braise","themeLight":"Clair","themeGolden":"Heure dorée","yearFilter":"Année","fromDate":"Du","toDate":"Au","clearDates":"Effacer les dates","lastPage":"Dernière page","artworkSize":"Taille des œuvres","sizeNormal":"Normal","sizeCompact":"Compact","sizeSmall":"Plus petit"},"zh-CN":{"filterDates":"按日期筛选","backToTop":"返回顶部","headerAria":"作品集页眉","home":"首页","sections":"作品集栏目","language":"界面语言","gallery":"画廊","statistics":"统计","introduction":"简介","hero1":"让想法","hero2":"化为","hero3":"画面。","intro":"这里收集数字绘画、插画和视觉实验。没有多余的东西，只有艺术。","galleryAria":"作品画廊","selected":"作品精选","gallerySub":"按创作日期从新到旧排序","sortAria":"作品排序","newest":"最新优先","oldest":"最早优先","filterTags":"按标签筛选","searchTags":"搜索标签","tagPlaceholder":"搜索标签…","tagFilters":"标签筛选","firstPage":"第一页","previous":"上一页","next":"下一页","statsAria":"作品统计","statHero1":"用数字","statHero2":"看艺术。","statsIntro":"根据作品创作日期和话题标签生成的统计。","productivity":"每月创作量","statsYear":"统计年份","topTags":"最常用标签","uniqueTagCount":"使用该标签的独立作品数","byYear":"每年作品数","datedOnly":"仅统计有创作日期的作品","aboutStats":"关于统计","statsFootnote":"月份和年份取自作品中的创作日期代码（YYMMDD），而非发布时间。时长与笔画数仅在作品中注明时统计，例如 1h 25m 9212s（s 表示笔画）。","rights":"所有作品版权归创作者所有。","tagline":"为艺术而作，而非算法。","viewerAria":"作品查看器","prevImage":"上一张图片","nextImage":"下一张图片","close":"关闭","viewerKeys":"← → — 切换作品或图片","viewerClose":"Esc — 关闭","allWorks":"所有作品","noTags":"未找到标签","active":"当前筛选","open":"打开","images":"张图片","unnamed":"无标题","created":"创作日期","work":"作品数据","hours":"小时","minutes":"分钟","strokes":"笔画","page":"第","loadArt":"正在加载作品…","loadPosts":"正在获取帖子…","loadProgress":"已获取 {count} 条记录 · 正在扫描…","updated":"更新于：{date}","loadError":"无法加载画廊","partial":"已加载 {count} 件作品 · 档案不完整","loaded":"共 {count} 件独立作品","emptyLoading":"正在加载画廊…","emptyError":"无法加载作品","emptyFiltered":"没有包含此标签的作品","emptyNoPosts":"画廊暂无作品","emptyLoadInfo":"正在获取帖子。","emptyErrorInfo":"请检查网络连接并重试。","emptyFilteredInfo":"请选择其他标签或清除筛选。","emptyNoPostsInfo":"包含作品的帖子会自动显示在这里。","retry":"重试","total":"作品总数","afterDuplicates":"去重后","bestMonth":"创作最多的月份","artCount":"{count} 件作品","noDated":"暂无带日期的作品","mostTag":"最常用标签","noTagsYet":"暂无标签","withDate":"有创作日期","withoutDate":"{count} 件无日期","drawingTime":"创作时长","recordedTime":"来自 {count} 件有时长记录的作品","totalStrokes":"总笔画数","recordedStrokes":"来自 {count} 件有笔画记录的作品","topSoftware":"最常用软件","noSoftware":"无软件标签","creativeYears":"创作年份数","datedYears":"有作品记录的年份","unknownYears":"暂无已知日期","allYears":"所有年份","top12Months":"历年来创作最多的12个月","eachMonth":"{year} 年每个月","notEnough":"目前没有足够的数据。","statsExplain":"画廊共有 {total} 件独立作品，其中 {dated} 件包含有效的 YYMMDD 创作日期，{undated} 件没有。共有 {tags} 个主题标签（不包括 #art、#digitalart 和软件标签）。一件作品可能有多个标签，因此标签统计总和可能超过作品数量。","visualArchive":"视觉档案","eyebrowGallery":"数字插画 / 视觉档案","eyebrowStats":"作品档案 / 数据概览","viewerMarker":"作品 / 0 3 0","gallerySubOldest":"按创作日期从旧到新排序","themeLabel":"颜色主题","themeEmber":"余烬","themeLight":"浅色","themeGolden":"黄金时刻","yearFilter":"年份","fromDate":"开始日期","toDate":"结束日期","clearDates":"清除日期","lastPage":"最后一页","artworkSize":"作品大小","sizeNormal":"标准","sizeCompact":"紧凑","sizeSmall":"更小"},"uk":{"filterDates":"Фільтр за датою","backToTop":"Нагору","headerAria":"Шапка портфоліо","home":"На початок","sections":"Розділи портфоліо","language":"Мова інтерфейсу","gallery":"Галерея","statistics":"Статистика","introduction":"Вступ","hero1":"Ідеї, що стали","hero2":"","hero3":"малюнками.","intro":"Простір для цифрових малюнків, ілюстрацій та візуальних експериментів. Нічого зайвого — лише мистецтво.","galleryAria":"Галерея робіт","selected":"Обрані роботи","gallerySub":"Від найновіших до найдавніших","sortAria":"Сортування робіт","newest":"Спочатку найновіші","oldest":"Спочатку найдавніші","filterTags":"Фільтр за тегами","searchTags":"Пошук тегів","tagPlaceholder":"Знайти тег…","tagFilters":"Фільтри тегів","firstPage":"Перша сторінка","previous":"Попередня","next":"Наступна","statsAria":"Статистика робіт","statHero1":"Мистецтво в","statHero2":"цифрах.","statsIntro":"Статистика дат створення малюнків і хештегів.","productivity":"Продуктивність за місяцями","statsYear":"Рік статистики","topTags":"Найчастіші теги","uniqueTagCount":"Кількість унікальних робіт із тегом","byYear":"Роботи за роками","datedOnly":"Лише за визначеними датами створення","aboutStats":"Про цю статистику","statsFootnote":"Роки й місяці визначаються датою створення YYMMDD, а не датою публікації. Час і штрихи враховуються лише там, де їх зазначено, наприклад 1h 25m 9212s (s — штрихи).","rights":"Усі роботи належать автору.","tagline":"Для мистецтва, а не алгоритму.","viewerAria":"Перегляд роботи","prevImage":"Попереднє зображення","nextImage":"Наступне зображення","close":"Закрити","viewerKeys":"← → — інша робота або зображення","viewerClose":"Esc — закрити","allWorks":"Усі роботи","noTags":"Тегів не знайдено","active":"Активний","open":"Відкрити","images":"зображень","unnamed":"Без назви","created":"Створено","work":"Робота","hours":"год","minutes":"хв","strokes":"штрихів","page":"Сторінка","loadArt":"Завантаження робіт…","loadPosts":"Отримуємо публікації…","loadProgress":"Отримано {count} записів · перевіряємо архів…","updated":"Оновлено: {date}","loadError":"Не вдалося завантажити галерею","partial":"Завантажено {count} робіт · неповний архів","loaded":"{count} унікальних робіт","emptyLoading":"Завантаження галереї…","emptyError":"Не вдалося завантажити роботи","emptyFiltered":"Робіт із цим тегом поки немає","emptyNoPosts":"Галерея поки порожня","emptyLoadInfo":"Отримуємо публікації.","emptyErrorInfo":"Перевір з’єднання та спробуй ще раз.","emptyFilteredInfo":"Обери інший тег або скинь фільтр.","emptyNoPostsInfo":"Публікації з малюнками з’являться тут автоматично.","retry":"Спробувати ще раз","total":"Усього робіт","afterDuplicates":"Після видалення повторів","bestMonth":"Найпродуктивніший місяць","artCount":"{count} робіт","noDated":"Ще немає датованих робіт","mostTag":"Найчастіший тег","noTagsYet":"Тегів поки немає","withDate":"Із визначеною датою","withoutDate":"{count} без дати створення","drawingTime":"Час малювання","recordedTime":"Із {count} робіт із записом часу","totalStrokes":"Зроблено штрихів","recordedStrokes":"Із {count} робіт із кількістю штрихів","topSoftware":"Найчастіша програма","noSoftware":"Немає тегів програм","creativeYears":"Років творчості","datedYears":"Роки з датованими роботами","unknownYears":"Без визначених дат","allYears":"Усі роки","top12Months":"12 найактивніших місяців за всі роки","eachMonth":"Кожен місяць {year} року","notEnough":"Поки недостатньо даних.","statsExplain":"У галереї {total} унікальних робіт. Із них {dated} мають коректний код дати YYMMDD, {undated} — без нього. Є {tags} тематичних тегів (без #art, #digitalart та тегів програм). Одна робота може мати кілька тегів, тому сума тегів може перевищувати кількість малюнків.","visualArchive":"Візуальний архів","eyebrowGallery":"Цифрова ілюстрація / Візуальний архів","eyebrowStats":"Архів малюнків / Статистика","viewerMarker":"Робота / 0 3 0","gallerySubOldest":"Від найдавніших до найновіших","themeLabel":"Кольорова тема","themeEmber":"Жар","themeLight":"Світла","themeGolden":"Золота година","yearFilter":"Рік","fromDate":"Від","toDate":"До","clearDates":"Очистити дати","lastPage":"Остання сторінка","artworkSize":"Розмір робіт","sizeNormal":"Звичайний","sizeCompact":"Компактний","sizeSmall":"Менший"}};
+  const localeMap={en:'en-US',ja:'ja-JP',es:'es-ES',fr:'fr-FR','zh-CN':'zh-CN',uk:'uk-UA'};
+  const langs=Object.keys(TRANSLATIONS);
+  let language='en';
+  try{const saved=localStorage.getItem('030-portfolio-lang');if(langs.includes(saved))language=saved;}catch(_){}
+  // V15: a viewport-based, scroll-driven day-to-night sky. Using a stable
+  // distance (rather than document height) prevents newly streamed artwork
+  // batches from unexpectedly reversing the transition.
+  let skyFrame=0;
+  function scheduleSkyUpdate(){
+    if(skyFrame)return;
+    skyFrame=requestAnimationFrame(()=>{
+      skyFrame=0;
+      const distance=Math.max(2000,window.innerHeight*3.35);
+      const progress=Math.min(1,Math.max(0,window.scrollY/distance));
+      const ease=progress*progress*(3-2*progress);
+      const stars=Math.min(1,Math.max(0,(progress-.42)/.53));
+      const starEase=stars*stars*(3-2*stars);
+      const scene=document.querySelector('.sunset-environment');
+      if(!scene)return;
+      scene.style.setProperty('--sunset-progress',ease.toFixed(4));
+      scene.style.setProperty('--stars-opacity',starEase.toFixed(4));
+    });
+  }
+  function buildNightStars(){
+    const field=document.getElementById('night-stars');
+    if(!field||field.children.length)return;
+    // Seeded positions prevent stars from teleporting between page loads.
+    let seed=301126;
+    const rand=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
+    const fragment=document.createDocumentFragment();
+    for(let i=0;i<108;i++){
+      const star=document.createElement('i');star.className='night-star';
+      const size=i%11===0?2.35:1.0+rand()*1.08;
+      star.style.cssText=`--x:${(rand()*100).toFixed(2)}%;--y:${(rand()*100).toFixed(2)}%;--size:${size.toFixed(2)}px;--alpha:${(.43+rand()*.54).toFixed(2)};--duration:${(4+rand()*7).toFixed(2)}s;--delay:${(-rand()*12).toFixed(2)}s;--dx:${(-5+rand()*10).toFixed(2)}px;--dy:${(-6+rand()*9).toFixed(2)}px`;
+      fragment.appendChild(star);
+    }
+    field.appendChild(fragment);
+  }
+  const themes=['ember','light','golden'];
+  let theme='ember';
+  try{const stored=localStorage.getItem('030-portfolio-theme');if(themes.includes(stored))theme=stored;}catch(_){}
+  function setTheme(value){
+    if(!themes.includes(value))return;
+    theme=value;document.body.dataset.theme=value;
+    document.documentElement.style.colorScheme=value==='light'?'light':'dark';
+    document.querySelector('meta[name="theme-color"]').content=({ember:'#100d0a',light:'#faf7f2',golden:'#341a0a'})[value];
+    $('#theme').value=value;
+    try{localStorage.setItem('030-portfolio-theme',value);}catch(_){}
+    scheduleSkyUpdate();
+  }
+  const t=(key,vars={})=>String(TRANSLATIONS[language]?.[key]??TRANSLATIONS.en[key]??key).replace(/\{(\w+)\}/g,(_,n)=>vars[n]??'');
+  const formatNumber=n=>new Intl.NumberFormat(localeMap[language]).format(n);
+  function localizeStatic(){
+    document.documentElement.lang=language;
+    for(const node of document.querySelectorAll('[data-i18n]'))node.textContent=t(node.dataset.i18n);
+    for(const node of document.querySelectorAll('[data-i18n-aria]'))node.setAttribute('aria-label',t(node.dataset.i18nAria));
+    for(const node of document.querySelectorAll('[data-i18n-placeholder]'))node.placeholder=t(node.dataset.i18nPlaceholder);
+    $('#language').value=language;
+    $('#theme').value=theme;
+    $('#gallery-size').value=gallerySize;
+  }
+  function setLanguage(value){
+    if(!langs.includes(value))return;
+    language=value;try{localStorage.setItem('030-portfolio-lang',language);}catch(_){}
+    localizeStatic();renderTags();renderGallery();renderStats();if(state.activeId)showViewerImage();updateStatus();
+  }
+  let fetchedAt=null, loadedCount=0, loadingStatus='';
+  function updateStatus(){
+    const status=$('#load-status');
+    if(state.loading){status.textContent=loadingStatus||t('loadArt');status.className='status-line loading';}
+    else if(state.error){status.textContent=state.items.length?t('partial',{count:state.items.length}):t('loadError');status.className='status-line warn';}
+    else {status.textContent=t('loaded',{count:state.items.length});status.className='status-line';}
+    $('#updated').textContent=fetchedAt?t('updated',{date:new Intl.DateTimeFormat(localeMap[language],{dateStyle:'short',timeStyle:'short'}).format(fetchedAt)}):'';
+  }
+
+  const HANDLE = 'zerothreezero.bsky.social';
+  const API = 'https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed';
+  const MAX_PAGES = 10;
+  const STREAM_BATCH = 32;
+  const GALLERY_SIZES=['normal','compact','small'];
+  let gallerySize='small';
+  try{const saved=localStorage.getItem('030-portfolio-size-v15');if(GALLERY_SIZES.includes(saved))gallerySize=saved;}catch(_){}
+  document.body.dataset.gallerySize=gallerySize;
+
+  const HIDDEN_POST_IDS = new Set([]);
+  const state = {items:[],tag:'',year:'all',dateFrom:'',dateTo:'',sort:'recent',view:'gallery',statsYear:'all',loading:true,error:false,activeId:null,pictureIndex:0};
+  const $ = s=>document.querySelector(s);
+  $('#gallery-size').value=gallerySize;
+  const gallery = $('#gallery'), viewer = $('#viewer');
+  const el = (tag, cls, text) => {const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
+  const unique = a=>[...new Set(a.filter(Boolean))];
+  // Radial spoiler reveal is driven in pixels, including in Firefox where
+  // animating unregistered CSS properties may otherwise jump between frames.
+  const revealStates=new WeakMap();
+  const activeReveals=new Set();
+  let revealFrame=0,lastRevealFrame=0;
+  function setRevealSize(button,state){
+    const radius=state.max*state.progress;
+    button.style.setProperty('--reveal-x',`${state.x.toFixed(1)}px`);
+    button.style.setProperty('--reveal-y',`${state.y.toFixed(1)}px`);
+    button.style.setProperty('--reveal-r',`${radius.toFixed(1)}px`);
+    const overlay=button.querySelector('.art-reveal');
+    if(overlay)overlay.style.clipPath=`circle(${radius.toFixed(1)}px at ${state.x.toFixed(1)}px ${state.y.toFixed(1)}px)`;
+  }
+  function startReveal(button,event,show){
+    let current=revealStates.get(button);
+    const rect=button.getBoundingClientRect();
+    if(!current){current={progress:0,target:0,x:rect.width/2,y:rect.height/2,max:0};revealStates.set(button,current);}
+    if(show&&event&&Number.isFinite(event.clientX)&&Number.isFinite(event.clientY)){
+      // Coordinates must account for scaled/translated artwork; a proportional
+      // conversion places the center on the actual pixel underneath the cursor.
+      current.x=Math.max(0,Math.min(rect.width,((event.clientX-rect.left)/Math.max(1,rect.width))*button.offsetWidth));
+      current.y=Math.max(0,Math.min(rect.height,((event.clientY-rect.top)/Math.max(1,rect.height))*button.offsetHeight));
+    }
+    const w=button.offsetWidth,h=button.offsetHeight;
+    current.max=Math.max(Math.hypot(current.x,current.y),Math.hypot(w-current.x,current.y),Math.hypot(current.x,h-current.y),Math.hypot(w-current.x,h-current.y))+18;
+    current.target=show?1:0;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){current.progress=current.target;setRevealSize(button,current);activeReveals.delete(button);return;}
+    activeReveals.add(button);
+    if(!revealFrame){lastRevealFrame=performance.now();revealFrame=requestAnimationFrame(animateReveals);}
+  }
+  function animateReveals(time){
+    revealFrame=0;const dt=Math.min(110,Math.max(1,time-lastRevealFrame));lastRevealFrame=time;
+    const eased=1-Math.exp(-dt/185);
+    for(const button of activeReveals){
+      if(!button.isConnected){activeReveals.delete(button);continue;}
+      const state=revealStates.get(button);if(!state){activeReveals.delete(button);continue;}
+      state.progress+=(state.target-state.progress)*eased;
+      if(Math.abs(state.target-state.progress)<.002){state.progress=state.target;activeReveals.delete(button);}
+      setRevealSize(button,state);
+    }
+    if(activeReveals.size)revealFrame=requestAnimationFrame(animateReveals);
+  }
+  // Render only visible spoiler particles, with a single animation loop for all cards.
+  // This is an original approximation of Telegram's shimmering media spoiler,
+  // not its proprietary implementation. CSS alone preserves a soft veil as a fallback.
+  const spoilerCanvases=new Map();
+  const spoilerVisible=new Set();
+  const spoilerMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let spoilerFrame=0,lastSpoilerTime=0;
+  const spoilerObserver=typeof IntersectionObserver==='function'?new IntersectionObserver(entries=>{
+    for(const entry of entries){
+      if(entry.isIntersecting)spoilerVisible.add(entry.target);
+      else spoilerVisible.delete(entry.target);
+    }
+    if(spoilerVisible.size&&!spoilerFrame&&!spoilerMotion.matches)spoilerFrame=requestAnimationFrame(drawSpoilers);
+  },{rootMargin:'100px 0px 100px 0px'}):null;
+  function attachSpoilerParticles(canvas,button){
+    const sparks=Array.from({length:/Firefox\//.test(navigator.userAgent)?105:140},()=>({
+      x:Math.random(),y:Math.random(),size:.45+Math.random()*1.4,
+      speed:.12+Math.random()*.32,phase:Math.random()*Math.PI*2,
+      glow:.2+Math.random()*.8,drift:(Math.random()-.5)*.015
+    }));
+    spoilerCanvases.set(canvas,{button,sparks,ctx:canvas.getContext('2d',{alpha:true})});
+    if(spoilerObserver)spoilerObserver.observe(canvas);
+    else spoilerVisible.add(canvas);
+    if(!spoilerFrame&&!spoilerMotion.matches)spoilerFrame=requestAnimationFrame(drawSpoilers);
+  }
+  function stopSpoilers(){
+    if(spoilerFrame)cancelAnimationFrame(spoilerFrame);
+    spoilerFrame=0;
+  }
+  function drawSpoilers(time){
+    spoilerFrame=0;
+    if(spoilerMotion.matches||document.hidden||!spoilerVisible.size)return;
+    // 30 frames per second is sufficient for the soft shimmer, and saves power.
+    if(time-lastSpoilerTime<33){spoilerFrame=requestAnimationFrame(drawSpoilers);return;}
+    lastSpoilerTime=time;
+    for(const canvas of spoilerVisible){
+      const data=spoilerCanvases.get(canvas);
+      if(!data||!data.ctx||!canvas.isConnected){spoilerVisible.delete(canvas);continue;}
+      const {button,sparks,ctx}=data;
+      if(revealStates.get(button)?.progress>=.998)continue;
+      const w=Math.round(canvas.clientWidth),h=Math.round(canvas.clientHeight);
+      if(!w||!h)continue;
+      // Native layout dimensions; we limit raster size for lower-end devices.
+      if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+      ctx.clearRect(0,0,w,h);
+      for(const p of sparks){
+        const twinkle=.46+.54*Math.sin(time*.0015*p.speed*10+p.phase);
+        const alpha=(.08+.52*p.glow)*Math.pow(Math.max(0,twinkle),2);
+        const x=(p.x+Math.sin(time*.00021+p.phase)*.025+p.drift+1)%1*w;
+        const y=(p.y-time*.0000045*p.speed%1+1)%1*h;
+        ctx.fillStyle=`rgba(248,249,255,${alpha.toFixed(3)})`;
+        ctx.fillRect(x,y,p.size,p.size);
+      }
+    }
+    if(spoilerVisible.size)spoilerFrame=requestAnimationFrame(drawSpoilers);
+  }
+  function clearSpoilerCanvases(){
+    stopSpoilers();
+    if(spoilerObserver)for(const canvas of spoilerCanvases.keys())spoilerObserver.unobserve(canvas);
+    spoilerVisible.clear();spoilerCanvases.clear();
+    if(revealFrame)cancelAnimationFrame(revealFrame);revealFrame=0;activeReveals.clear();
+  }
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)stopSpoilers();
+    else if(spoilerVisible.size&&!spoilerFrame&&!spoilerMotion.matches)spoilerFrame=requestAnimationFrame(drawSpoilers);
+  });
+  spoilerMotion.addEventListener?.('change',()=>{
+    if(spoilerMotion.matches)stopSpoilers();
+    else if(spoilerVisible.size&&!spoilerFrame)spoilerFrame=requestAnimationFrame(drawSpoilers);
+  });
+  const mediaURL = x=>typeof x==='string' && /^https:\/\//i.test(x)?x:'';
+  const normalizeID = x=>String(x||'').trim().toLowerCase();
+  const monthName = (m,long=false)=>new Intl.DateTimeFormat(localeMap[language],{month:long?'long':'short',timeZone:'UTC'}).format(new Date(Date.UTC(2026,m-1,1)));
+    function validDateCode(code){
+    if(!/^\d{6}$/.test(code||''))return '';
+    const year=2000+Number(code.slice(0,2)), month=Number(code.slice(2,4)), day=Number(code.slice(4,6));
+    const date=new Date(Date.UTC(year,month-1,day));
+    if(month<1||month>12||day<1||date.getUTCFullYear()!==year||date.getUTCMonth()!==month-1||date.getUTCDate()!==day)return '';
+    return date.toISOString().slice(0,10);
+  }
+  function findCode(text){
+    for(const match of String(text||'').matchAll(/(^|[^\d])(\d{6})(?!\d)/g)) {
+      if(validDateCode(match[2]))return match[2];
+    }
+    return '';
+  }
+  function formatDate(iso){
+    if(!iso)return '';
+    const [y,m,d]=iso.split('-').map(Number);
+    return new Intl.DateTimeFormat(localeMap[language],{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(y,m-1,d)));
+  }
+    function extractTags(record){
+    const caption=String(record?.text||'');
+    const found=[...caption.matchAll(/(^|[^\p{L}\p{N}_])#([\p{L}\p{N}_][\p{L}\p{N}_-]*)/gu)].map(m=>m[2]);
+    for(const facet of record?.facets||[])for(const feature of facet?.features||[])
+      if(feature?.$type==='app.bsky.richtext.facet#tag' && typeof feature.tag==='string')found.push(feature.tag);
+    if(Array.isArray(record?.tags))found.push(...record.tags);
+    return unique(found.map(t=>normalizeID(String(t).replace(/^#/,''))).filter(t=>t && t!=='art' && t!=='digitalart' && t.length<=48));
+  }
+  function cleanCaption(t){
+    return String(t||'').replace(/https?:\/\/\S+/g,'').replace(/(^|[^\p{L}\p{N}_])#[\p{L}\p{N}_][\p{L}\p{N}_-]*/gu,'$1')
+      .replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+  }
+  // Artist's convention: "s" denotes strokes, not seconds.
+  const SOFTWARE_ALIASES = {
+    procreate:'Procreate',procreatedreams:'Procreate Dreams',
+    clipstudio:'Clip Studio Paint',clipstudiopaint:'Clip Studio Paint',csp:'Clip Studio Paint',
+    krita:'Krita',photoshop:'Adobe Photoshop',adobephotoshop:'Adobe Photoshop',
+    ibispaint:'ibisPaint',ibispaintx:'ibisPaint',medibang:'MediBang Paint',medibangpaint:'MediBang Paint',
+    sai:'PaintTool SAI',painttoolsai:'PaintTool SAI',firealpaca:'FireAlpaca',
+    sketchbook:'Sketchbook',autodesksketchbook:'Sketchbook',fresco:'Adobe Fresco',adobefresco:'Adobe Fresco',
+    artstudiopro:'Artstudio Pro',affinityphoto:'Affinity Photo',affinitydesigner:'Affinity Designer',
+    gimp:'GIMP',blender:'Blender',aseprite:'Aseprite',infinitepainter:'Infinite Painter',
+    rebelle:'Rebelle',paintstorm:'Paintstorm Studio',paintstormstudio:'Paintstorm Studio',
+    heavypaint:'HeavyPaint',toonsquid:'ToonSquid',nomadsculpt:'Nomad Sculpt'
+  };
+  // Normalized spellings support #clip_studio_paint and #clip-studio-paint too.
+  function softwareName(tag){return SOFTWARE_ALIASES[String(tag||'').toLowerCase().replace(/[\s_\-]+/g,'')]||'';}
+  function getSoftware(tags){return unique(tags.map(softwareName));}
+  function parseWorkLine(line){
+    const compact=String(line||'').trim().replace(/[·|]/g,' ');
+    // Examples: 1h 25m 9212s, 2h 35m, 942s, 1h25m9,212s.
+    const match=/^(?:(\d+)\s*h\s*)?(?:(\d+)\s*m\s*)?(?:(\d[\d, ]*)\s*s\s*)?$/i.exec(compact);
+    if(!match||!(match[1]||match[2]||match[3]))return null;
+    const hours=match[1]!==undefined?Number(match[1]):null;
+    const minutes=match[2]!==undefined?Number(match[2]):null;
+    const strokes=match[3]!==undefined?Number(match[3].replace(/[, ]/g,'')):null;
+    if([hours,minutes,strokes].some(n=>n!==null&&(!Number.isSafeInteger(n)||n<0)))return null;
+    return {hours,minutes,strokes};
+  }
+  function formatWork(work){
+    if(!work)return '';
+    const units=[];
+    if(work.hours!==null)units.push(formatNumber(work.hours)+' '+t('hours'));
+    if(work.minutes!==null)units.push(formatNumber(work.minutes)+' '+t('minutes'));
+    if(work.strokes!==null)units.push(formatNumber(work.strokes)+' '+t('strokes'));
+    return units.join(' · ');
+  }
+    function parseArtworkText(raw,images){
+    const lines=String(raw||'').replace(/\r\n?/g,'\n').split('\n');
+    let code='';
+    // Prefer date on its own line or before a dash in the title; otherwise any valid code.
+    for(const line of lines){
+      const trimmed=line.trim();
+      if(/^\d{6}$/.test(trimmed)||/^\d{6}\s*[-–—:|]/.test(trimmed)){
+        const candidate=findCode(trimmed);if(candidate){code=candidate;break;}
+      }
+    }
+    if(!code){for(const line of lines){const candidate=findCode(line);if(candidate){code=candidate;break;}}}
+    if(!code){for(const image of images){const candidate=findCode(image.alt);if(candidate){code=candidate;break;}}}
+    const metricLines=new Set();let work=null;
+    for(let i=0;i<lines.length;i++){
+      const parsed=parseWorkLine(lines[i]);
+      if(parsed){metricLines.add(i);work=parsed;}
+    }
+    let titleIndex=-1;
+    for(let i=0;i<lines.length;i++){
+      const trimmed=lines[i].trim();
+      if(!trimmed||metricLines.has(i)||/^\d{6}$/.test(trimmed)||trimmed.startsWith('#'))continue;
+      if(cleanCaption(trimmed)){titleIndex=i;break;}
+    }
+    let base=titleIndex>=0?cleanCaption(lines[titleIndex]):'';
+    if(code)base=base.replace(new RegExp('(^|[^0-9])'+code+'(?![0-9])'), '$1')
+      .replace(/^[\s\-_.,:|•–—]+|[\s\-_.,:|•–—]+$/g,'').trim();
+    const title=code?(base?code+' - '+base:code):(base||'Untitled');
+    const description=cleanCaption(lines.filter((line,i)=>{
+      if(i===titleIndex||metricLines.has(i))return false;
+      if(/^\d{6}$/.test(line.trim())&&validDateCode(line.trim()))return false;
+      return true;
+    }).join('\n'));
+    return {code,title,date:validDateCode(code),description,work};
+  }
+  function mediaKey(image, recordImage){
+    const cid=recordImage?.image?.ref?.$link || recordImage?.image?.ref?.link || '';
+    if(cid)return String(cid);
+    const match=(image.fullsize||image.thumb||'').match(/\/(baf[a-z0-9]+)(?:@|\/|\?|$)/i);
+    return match ? match[1] : image.fullsize||image.thumb;
+  }
+  function normalizePost(entry){
+    const post=entry?.post;
+    if(!post||entry.reason||post.record?.reply||post.author?.handle?.toLowerCase()!==HANDLE)return null;
+    const id=post.uri?.split('/').pop();if(!id||HIDDEN_POST_IDS.has(id))return null;
+    const embedded=post.embed?.images||post.embed?.media?.images||[];
+    const original=post.record?.embed?.images||post.record?.embed?.media?.images||[];
+    const imageRows=[];const seenMedia=new Set();
+    embedded.forEach((image,i)=>{
+      const full=mediaURL(image.fullsize||image.thumb), thumb=mediaURL(image.thumb||image.fullsize);
+      if(!full)return;
+      const key=mediaKey({fullsize:full,thumb},original[i]);
+      if(seenMedia.has(key))return;
+      seenMedia.add(key);
+      const ar=image.aspectRatio||original[i]?.aspectRatio||{};
+      const w=Number(ar.width), h=Number(ar.height);
+      const ratio=w>0&&h>0&&Number.isFinite(w/h)&&w/h>=0.12&&w/h<=8?w/h:0.8;
+      imageRows.push({url:full,thumb,key,alt:String(image.alt||''),ratio,hasRatio:!!(w>0&&h>0)});
+    });
+    if(!imageRows.length)return null;
+    const raw=String(post.record?.text||'');
+    const identity=parseArtworkText(raw,imageRows);
+    const tags=extractTags(post.record);
+    return {id,code:identity.code,title:identity.title,date:identity.date,
+      dateRank:Date.parse(identity.date||post.record?.createdAt||post.indexedAt||'')||0,
+      description:identity.description,work:identity.work,software:getSoftware(tags),
+      tags,images:imageRows.map(x=>x.url),thumb:imageRows[0].thumb,
+      imageKeys:imageRows.map(x=>x.key),ratio:imageRows[0].ratio,hasRatio:imageRows[0].hasRatio,postedAt:String(post.record?.createdAt||post.indexedAt||'')};
+  }
+  function preferItem(a,b){
+    const score=x=>x.images.length*100+x.tags.length*4+Math.min(x.description.length,120)/60+(x.work?7:0)+(x.title.includes(" - ")?5:0);
+    if(score(a)!==score(b))return score(a)>score(b)?a:b;
+    return a.postedAt>=b.postedAt?a:b;
+  }
+  function deduplicate(posts){
+    const map=new Map();
+    for(const item of posts){
+      // First: globally unique six-digit artwork name. For unnamed posts: image CID.
+      const key=item.code?'code:'+item.code:'image:'+item.imageKeys[0];
+      const existing=map.get(key);
+      if(!existing)map.set(key,item);
+      else {
+        const chosen=preferItem(existing,item);
+        const tags=unique([...existing.tags,...item.tags]);
+        const other=chosen===existing?item:existing;
+        const betterTitle=chosen.title===chosen.code && other.title!==other.code ? other.title : chosen.title;
+        map.set(key,{...chosen,title:betterTitle,description:chosen.description||other.description,
+          tags,software:getSoftware(tags),work:chosen.work||other.work});
+      }
+    }
+    // A repost with a missing code can still duplicate a dated artwork.
+    const seenImages=new Set();
+    const dated=[...map.values()].filter(x=>x.code);
+    for(const art of dated)if(art.imageKeys[0])seenImages.add(art.imageKeys[0]);
+    return [...map.values()].filter(art=>art.code||!seenImages.has(art.imageKeys[0]));
+  }
+  function getDisplayed(){
+    return state.items.filter(x=>{
+      if(state.tag&&!x.tags.includes(state.tag))return false;
+      if(state.year!=='all'&&(!x.date||!x.date.startsWith(state.year+'-')))return false;
+      if(state.dateFrom&&(!x.date||x.date<state.dateFrom))return false;
+      if(state.dateTo&&(!x.date||x.date>state.dateTo))return false;
+      return true;
+    }).sort((a,b)=>{
+      // Creation dates order dated work; undated works sort by publication internally.
+      if(Boolean(a.date)!==Boolean(b.date))return a.date?-1:1;
+      return (state.sort==='recent'?b.dateRank-a.dateRank:a.dateRank-b.dateRank)||a.id.localeCompare(b.id);
+    });
+  }
+  function setTab(tab,scroll=true){
+    state.view=tab;
+    const isGallery=tab==='gallery';
+    $('#gallery-intro').hidden=!isGallery;$('#gallery-rule').hidden=!isGallery;$('#work').hidden=!isGallery;
+    $('#statistics').hidden=isGallery;
+    $('#tab-gallery').setAttribute('aria-pressed',String(isGallery));
+    $('#tab-stats').setAttribute('aria-pressed',String(!isGallery));
+    if(!isGallery)renderStats();updateBackToTop();
+    if(scroll)window.scrollTo({top:0,behavior:'instant'});
+  }
+  function setTag(tag){
+    state.tag=tag;
+    closeViewer();renderTags();renderGallery();
+    $('#work').scrollIntoView({block:'start',behavior:'smooth'});
+  }
+  function renderTags(){
+    const counts=new Map();
+    for(const item of state.items)for(const tag of item.tags)counts.set(tag,(counts.get(tag)||0)+1);
+    if(state.tag&&!counts.has(state.tag))state.tag='';
+    const filter=$('#tag-list');filter.replaceChildren();
+    const phrase=normalizeID($('#tag-search').value);
+    function chip(tag,label,count){
+      const b=el('button','tag-chip');b.type='button';b.dataset.tag=tag;
+      b.setAttribute('aria-pressed',String(tag===state.tag));b.append(document.createTextNode(label));
+      if(count!=null)b.append(el('span','chip-count',String(count)));
+      b.addEventListener('click',()=>{setTag(tag);toggleTagPanel(false);});return b;
+    }
+    if(!phrase||normalizeID(t('allWorks')).includes(phrase))filter.append(chip('',t('allWorks'),state.items.length));
+    for(const [tag,count] of [...counts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],localeMap[language])))
+      if(!phrase||tag.includes(phrase))filter.append(chip(tag,'#'+tag,count));
+    if(!filter.children.length)filter.append(el('div','stat-help',t('noTags')));
+    const clear=$('#clear-tag');clear.hidden=!state.tag;
+    clear.textContent=state.tag?t('active')+': #'+state.tag+'  ×':'';
+  }
+    function toggleTagPanel(open){
+    const panel=$('#tag-panel');panel.classList.toggle('is-open',open);
+    panel.setAttribute('aria-hidden',String(!open));panel.inert=!open;
+    $('#toggle-tags').setAttribute('aria-expanded',String(open));
+    if(open)$('#tag-search').focus();
+  }
+  function updateDateFilters(){
+    const years=[...new Set(state.items.map(x=>x.date?.slice(0,4)).filter(Boolean))].sort((a,b)=>b.localeCompare(a));
+    const select=$('#year-filter');
+    select.replaceChildren();
+    const all=el('option','',t('allYears'));all.value='all';select.append(all);
+    for(const year of years){const option=el('option','',year);option.value=year;select.append(option);}
+    if(state.year!=='all'&&!years.includes(state.year))state.year='all';
+    select.value=state.year;
+    $('#date-from').value=state.dateFrom;
+    $('#date-to').value=state.dateTo;
+    $('#clear-dates').hidden=state.year==='all'&&!state.dateFrom&&!state.dateTo;
+    $('#dates-active').hidden=state.year==='all'&&!state.dateFrom&&!state.dateTo;
+  }
+  function toggleDatePanel(open){
+    const panel=$('#date-filters');panel.classList.toggle('is-open',open);
+    panel.setAttribute('aria-hidden',String(!open));panel.inert=!open;
+    $('#toggle-dates').setAttribute('aria-expanded',String(open));
+    if(open)$('#year-filter').focus();
+  }
+  function changeDateFilter(){
+    state.year=$('#year-filter').value;
+    state.dateFrom=$('#date-from').value;
+    state.dateTo=$('#date-to').value;
+    closeViewer();updateDateFilters();renderGallery();
+  }
+  function galleryColumns(){
+    const width=window.innerWidth;
+    const base=width<=600?1:width<=850?2:width<=1250?3:4;
+    const extra=gallerySize==='normal'?0:gallerySize==='compact'?1:2;
+    return width<=600?Math.min(2,base+extra):width<=850?Math.min(3,base+extra):Math.min(6,base+extra);
+  }
+  let renderedColumns=0;
+  let galleryStreamItems=[],galleryStreamIndex=0,galleryHeights=[],galleryCols=[];
+  const streamSentinel=$('#gallery-sentinel');
+  let streamQueued=false;
+  const streamObserver=typeof IntersectionObserver==='function'?new IntersectionObserver(entries=>{
+    if(entries.some(entry=>entry.isIntersecting))queueGalleryBatch();
+  },{rootMargin:'1100px 0px 1100px 0px'}):null;
+  if(streamObserver)streamObserver.observe(streamSentinel);
+  function queueGalleryBatch(){
+    if(streamQueued||galleryStreamIndex>=galleryStreamItems.length||state.view!=='gallery')return;
+    streamQueued=true;
+    requestAnimationFrame(()=>{streamQueued=false;appendGalleryBatch();});
+  }
+  function appendGalleryBatch(){
+    if(state.view!=='gallery'||galleryStreamIndex>=galleryStreamItems.length)return;
+    const end=Math.min(galleryStreamIndex+STREAM_BATCH,galleryStreamItems.length);
+    for(let i=galleryStreamIndex;i<end;i++){
+      const item=galleryStreamItems[i],card=el('article','work'),button=el('button','art-button'),img=el('img','art-main'),backdrop=el('img','art-backdrop');
+      button.type='button';button.setAttribute('aria-label',t('open')+': '+item.title);
+      const ratio=Number.isFinite(item.ratio)&&item.ratio>0?item.ratio:0.8;
+      button.style.setProperty('--ratio',String(ratio));
+      img.loading=i<8?'eager':'lazy';img.decoding='async';img.alt=item.title;img.src=item.thumb;
+      // Both layers use the same cached artwork; the blurred one fills rotated edge pixels.
+      backdrop.loading='lazy';backdrop.decoding='async';backdrop.alt='';backdrop.setAttribute('aria-hidden','true');backdrop.src=item.thumb;
+      // Bluesky returns aspectRatio metadata, so space is reserved before any image loads.
+      img.onerror=()=>{
+        img.onerror=null;
+        if(img.dataset.fallback!=='1'&&item.images[0]!==img.src){img.dataset.fallback='1';img.src=item.images[0];backdrop.src=item.images[0];return;}
+        img.hidden=true;backdrop.hidden=true;button.append(el('span','image-unavailable',t('emptyError')));
+      };
+      // Fixed aspect ratio prevents any rearrangement while scrolling and loading images.
+      button.append(backdrop,img);
+      const isNsfw=item.tags.some(tag=>tag.includes('nsfw'));
+      if(isNsfw){
+        button.classList.add('is-nsfw');
+        button.setAttribute('aria-label','NSFW · '+button.getAttribute('aria-label'));
+        // Telegram-inspired spoiler: CSS blur under a lightweight shimmering particle canvas.
+        const reveal=el('img','art-reveal');
+        reveal.src=item.thumb;reveal.alt='';reveal.setAttribute('aria-hidden','true');
+        reveal.decoding='async';reveal.loading='lazy';
+        button.append(reveal);
+        const veil=el('span','spoiler-veil');
+        const particles=el('canvas','spoiler-particles');
+        particles.setAttribute('aria-hidden','true');veil.append(particles);button.append(veil);
+        attachSpoilerParticles(particles,button);
+        button.addEventListener('pointerenter',e=>{
+          if(e.pointerType==='mouse'||e.pointerType==='pen')startReveal(button,e,true);
+        });
+        button.addEventListener('pointerleave',e=>{
+          if(e.pointerType==='mouse'||e.pointerType==='pen')startReveal(button,e,false);
+        });
+        button.addEventListener('focus',()=>{
+          if(!window.matchMedia('(hover:none)').matches)startReveal(button,null,true);
+        });
+        button.addEventListener('blur',()=>{
+          if(!window.matchMedia('(hover:none)').matches)startReveal(button,null,false);
+        });
+        button.append(el('span','nsfw-indicator','NSFW'));
+      }
+      if(item.software.length){
+        const stack=el('div','software-stack');
+        for(const software of item.software)stack.append(el('span','software-badge',software));
+        button.append(stack);
+      }
+      const overlay=el('div','art-overlay'),glass=el('div','overlay-glass');
+      glass.append(el('div','overlay-title',item.title==='Untitled'?t('unnamed'):item.title));
+      if(item.date)glass.append(el('div','overlay-date',t('created')+': '+formatDate(item.date)));
+      if(item.description)glass.append(el('div','overlay-description',item.description));
+      if(item.work)glass.append(el('div','overlay-metrics',formatWork(item.work)));
+      // Tags belong only in the full-size viewer, never on gallery hover cards.
+      overlay.append(glass);button.append(overlay);
+      // Only multi-image posts get a small, permanently visible circular count.
+      if(item.images.length>=2){
+        const imageCount=el('span','image-count-badge',String(item.images.length));
+        imageCount.setAttribute('aria-label',`${item.images.length} ${t('images')}`);
+        imageCount.setAttribute('title',`${item.images.length} ${t('images')}`);
+        button.append(imageCount);
+      }
+      button.addEventListener('pointerenter',event=>{
+        if(event.pointerType==='mouse'||event.pointerType==='pen')prefetchViewerImage(item.images[0]);
+      });
+      button.addEventListener('focus',()=>prefetchViewerImage(item.images[0]));
+      button.addEventListener('click',(event)=>{
+        // On touch screens the first tap reveals a blurred NSFW thumbnail;
+        // a second tap opens the explicit full-image viewer.
+        if(isNsfw&&window.matchMedia('(hover:none)').matches&&!button.classList.contains('nsfw-revealed')){
+          button.classList.add('nsfw-revealed');startReveal(button,event,true);return;
+        }
+        openViewer(item.id);
+      });card.append(button);
+      const target=galleryHeights.indexOf(Math.min(...galleryHeights));galleryCols[target].append(card);
+      galleryHeights[target]+=1/ratio+0.105;
+    }
+    galleryStreamIndex=end;
+    streamSentinel.hidden=galleryStreamIndex>=galleryStreamItems.length;
+    // Newly appended content never replaces already-visible works.
+    // The next group is loaded just before the user reaches the gallery end.
+    if(motionEnabled.matches&&pointer){cacheMotionTiles();setMotionTargets();startMotionFrame();}
+    if(!streamObserver||(!streamSentinel.hidden&&streamSentinel.getBoundingClientRect().top<innerHeight+1100))queueGalleryBatch();
+  }
+  function renderGallery(){
+    updateDateFilters();
+    const items=getDisplayed();
+    $('#count').textContent=`/ ${items.length}`;
+    $('#gallery-sub').textContent=t(state.sort==='recent'?'gallerySub':'gallerySubOldest');
+    resetMotion(true);
+    clearSpoilerCanvases();
+    gallery.replaceChildren();
+    const n=galleryColumns();renderedColumns=n;
+    gallery.style.setProperty('--columns',String(n));
+    galleryStreamItems=items;
+    galleryStreamIndex=0;
+    galleryHeights=Array(n).fill(0);
+    galleryCols=Array.from({length:n},()=>el('div','gallery-column'));
+    gallery.append(...galleryCols);
+    const empty=$('#empty');empty.hidden=!!items.length;
+    if(!items.length){empty.replaceChildren();empty.append(el('h3','',state.loading?t('emptyLoading'):state.error?t('emptyError'):state.tag?t('emptyFiltered'):t('emptyNoPosts')),
+      el('div','',state.loading?t('emptyLoadInfo'):state.error?t('emptyErrorInfo'):state.tag?t('emptyFilteredInfo'):t('emptyNoPostsInfo')));
+      if(state.error){const retry=el('button','',t('retry'));retry.type='button';retry.addEventListener('click',loadPortfolio);empty.append(retry);}}
+    streamSentinel.hidden=!items.length;
+    if(items.length)appendGalleryBatch();
+    updateBackToTop();
+  }
+    function currentItem(){return getDisplayed().find(x=>x.id===state.activeId);}
+  /* Keep a bounded cache of full-resolution downloads decoded ahead of navigation.
+     Missing/slow images never blank the already visible slide. */
+  const viewerPreloads=new Map();
+  const MAX_VIEWER_CACHE=9;
+  function prefetchViewerImage(src,priority='low'){
+    if(!src)return Promise.resolve(false);
+    if(viewerPreloads.has(src)){
+      const cached=viewerPreloads.get(src);
+      if(priority==='high')cached.image.fetchPriority='high';
+      viewerPreloads.delete(src);viewerPreloads.set(src,cached);
+      return cached.promise;
+    }
+    const image=new Image();image.decoding='async';image.fetchPriority=priority;
+    const promise=new Promise(resolve=>{
+      image.onload=async()=>{try{if(image.decode)await image.decode();}catch(_){}resolve(true);};
+      image.onerror=()=>resolve(false);
+      image.src=src;
+    });
+    viewerPreloads.set(src,{image,promise});
+    while(viewerPreloads.size>MAX_VIEWER_CACHE){
+      const key=viewerPreloads.keys().next().value;
+      viewerPreloads.delete(key);
+    }
+    return promise;
+  }
+  function prefetchViewerNeighbors(item){
+    if(!item||!viewer.classList.contains('open'))return;
+    const pictures=item.images;
+    const around=[pictures[state.pictureIndex+1],pictures[state.pictureIndex-1]];
+    const visible=getDisplayed();const index=visible.findIndex(x=>x.id===item.id);
+    if(index>=0&&visible.length>1){
+      around.push(visible[(index+1)%visible.length].images[0]);
+      around.push(visible[(index-1+visible.length)%visible.length].images[0]);
+    }
+    for(const src of new Set(around.filter(Boolean)))prefetchViewerImage(src);
+  }
+  let viewerRequest=0,activeSlide=0,loaderTimeout=0;
+  const viewerSlides=[$('#viewer-img'),$('#viewer-img-next')];
+  function showViewerImage(){
+    const item=currentItem();if(!item){closeViewer();return;}
+    state.pictureIndex=Math.max(0,Math.min(item.images.length-1,state.pictureIndex));
+    const full=item.images[state.pictureIndex],request=++viewerRequest;
+    clearTimeout(loaderTimeout);$('#viewer-loading').classList.remove('is-loading');
+    // Show an already-fetched thumbnail immediately on first opening.
+    if(!viewerSlides[activeSlide].getAttribute('src')&&item.thumb){
+      const preview=viewerSlides[activeSlide];preview.src=item.thumb;preview.alt=item.title;
+      preview.classList.add('is-active');
+    }
+    if(viewerSlides[activeSlide].dataset.fullSrc!==full){
+      loaderTimeout=setTimeout(()=>{if(request===viewerRequest)$('#viewer-loading').classList.add('is-loading');},150);
+      const nextIndex=1-activeSlide,next=viewerSlides[nextIndex];
+      prefetchViewerImage(full,'high').then(async ok=>{
+        if(request!==viewerRequest||!viewer.classList.contains('open'))return;
+        if(!ok){$('#viewer-loading').classList.remove('is-loading');return;}
+        next.fetchPriority='high';next.src=full;next.alt=item.title;
+        try{if(next.decode)await next.decode();}catch(_){}
+        if(request!==viewerRequest||!viewer.classList.contains('open'))return;
+        next.dataset.fullSrc=full;next.classList.add('is-active');
+        viewerSlides[activeSlide].classList.remove('is-active');
+        activeSlide=nextIndex;
+        clearTimeout(loaderTimeout);$('#viewer-loading').classList.remove('is-loading');
+      });
+    }
+    $('#viewer-title').textContent=item.title==='Untitled'?t('unnamed'):item.title;
+    $('#viewer-description').textContent=item.description;$('#viewer-description').hidden=!item.description;
+    $('#viewer-date').textContent=item.date?t('created')+': '+formatDate(item.date):'';$('#viewer-date').hidden=!item.date;
+    const details=$('#viewer-details');details.replaceChildren();
+    for(const software of item.software)details.append(el('span','software-badge',software));
+    if(item.work)details.append(el('span','work-info',t('work')+': '+formatWork(item.work)));
+    details.hidden=!details.children.length;
+    const tags=$('#viewer-tags');tags.replaceChildren();
+    for(const tag of item.tags.slice(0,8)){
+      const b=el('button','viewer-tag','#'+tag);b.type='button';b.addEventListener('click',()=>{setTab('gallery',false);setTag(tag);});tags.append(b);
+    }
+    tags.hidden=!item.tags.length;
+    // Re-trigger a subtle metadata entrance only when the artwork changes.
+    const side=$('.viewer-side');
+    if(side.dataset.displayedArtwork!==item.id){
+      side.dataset.displayedArtwork=item.id;
+      side.classList.remove('viewer-info-update');
+      void side.offsetWidth;
+      side.classList.add('viewer-info-update');
+    }
+
+    const visible=getDisplayed(),i=visible.findIndex(x=>x.id===item.id);
+    $('#viewer-step').textContent=`${i+1} / ${visible.length}`+(item.images.length>1?`     ·     ${state.pictureIndex+1} / ${item.images.length}`:'');
+    prefetchViewerNeighbors(item);
+  }
+  function openViewer(id){
+    state.activeId=id;state.pictureIndex=0;
+    ++viewerRequest;clearTimeout(loaderTimeout);
+    viewerSlides.forEach(img=>{img.removeAttribute('src');delete img.dataset.fullSrc;img.classList.remove('is-active');});
+    activeSlide=0;
+    viewer.classList.add('open');viewer.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');showViewerImage();$('#close').focus();
+  }
+  function closeViewer(){
+    ++viewerRequest;clearTimeout(loaderTimeout);$('#viewer-loading').classList.remove('is-loading');
+    viewer.classList.remove('open');viewer.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');state.activeId=null;
+  }
+  function step(dir){
+    const item=currentItem();if(!item)return;
+    const index=state.pictureIndex+dir;
+    if(index>=0&&index<item.images.length)state.pictureIndex=index;
+    else {const displayed=getDisplayed();const i=displayed.findIndex(x=>x.id===item.id);if(!displayed.length)return;
+      state.activeId=displayed[(i+dir+displayed.length)%displayed.length].id;state.pictureIndex=0;}
+    showViewerImage();
+  }
+  function goTop(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
+  function updateBackToTop(){$('#floating-first').hidden=state.view!=='gallery'||window.scrollY<850;}
+  function renderStats(){
+    const dated=state.items.filter(x=>x.date);
+    const monthTotals=new Map(),yearTotals=new Map(),tagTotals=new Map(),softwareTotals=new Map();
+    let totalMinutes=0,totalStrokes=0,worksWithTime=0,worksWithStrokes=0;
+    for(const item of state.items){
+      for(const tag of item.tags)if(!softwareName(tag))tagTotals.set(tag,(tagTotals.get(tag)||0)+1);
+      for(const program of item.software)softwareTotals.set(program,(softwareTotals.get(program)||0)+1);
+      if(item.work){
+        if(item.work.hours!==null||item.work.minutes!==null){totalMinutes+=(item.work.hours||0)*60+(item.work.minutes||0);worksWithTime++;}
+        if(item.work.strokes!==null){totalStrokes+=item.work.strokes;worksWithStrokes++;}
+      }
+      if(item.date){const month=item.date.slice(0,7),year=item.date.slice(0,4);
+        monthTotals.set(month,(monthTotals.get(month)||0)+1);yearTotals.set(year,(yearTotals.get(year)||0)+1);}
+    }
+    const topMonth=[...monthTotals].sort((a,b)=>b[1]-a[1]||b[0].localeCompare(a[0]))[0];
+    const topTag=[...tagTotals].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],localeMap[language]))[0];
+    const topSoftware=[...softwareTotals].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],localeMap[language]))[0];
+    const monthText=topMonth?`${monthName(Number(topMonth[0].slice(5)),true)} ${topMonth[0].slice(0,4)}`:'—';
+    const cards=[
+      [t('total'),formatNumber(state.items.length),t('afterDuplicates')],
+      [t('bestMonth'),monthText,topMonth?t('artCount',{count:formatNumber(topMonth[1])}):t('noDated')],
+      [t('mostTag'),topTag?'#'+topTag[0]:'—',topTag?t('artCount',{count:formatNumber(topTag[1])}):t('noTagsYet')],
+      [t('withDate'),formatNumber(dated.length),t('withoutDate',{count:formatNumber(state.items.length-dated.length)})],
+      [t('drawingTime'),worksWithTime?`${formatNumber(Math.floor(totalMinutes/60))} ${t('hours')} ${formatNumber(totalMinutes%60)} ${t('minutes')}`:'—',t('recordedTime',{count:formatNumber(worksWithTime)})],
+      [t('totalStrokes'),worksWithStrokes?formatNumber(totalStrokes):'—',t('recordedStrokes',{count:formatNumber(worksWithStrokes)})],
+      [t('topSoftware'),topSoftware?topSoftware[0]:'—',topSoftware?t('artCount',{count:formatNumber(topSoftware[1])}):t('noSoftware')],
+      [t('creativeYears'),formatNumber(yearTotals.size),yearTotals.size?t('datedYears'):t('unknownYears')]
+    ];
+    const area=$('#stat-cards');area.replaceChildren();
+    for(const [label,value,note] of cards){const c=el('div','stat-card');c.append(el('div','stat-label',label),el('div','stat-value',String(value)),el('div','stat-note',note));area.append(c);}
+    const years=[...yearTotals.keys()].sort((a,b)=>b.localeCompare(a));
+    const ysel=$('#stats-year');ysel.replaceChildren();
+    const opt=(value,label)=>{const o=el('option','',label);o.value=value;return o;};
+    ysel.append(opt('all',t('allYears')));for(const year of years)ysel.append(opt(year,year));
+    if(state.statsYear!=='all'&&!years.includes(state.statsYear))state.statsYear='all';
+    ysel.value=state.statsYear;ysel.hidden=!years.length;
+    const monthSeries=state.statsYear==='all'
+      ? [...monthTotals].sort((a,b)=>b[1]-a[1]||b[0].localeCompare(a[0])).slice(0,12).map(([month,n])=>[monthName(Number(month.slice(5))),month.slice(0,4),n])
+      : Array.from({length:12},(_,i)=>[monthName(i+1),state.statsYear,monthTotals.get(state.statsYear+'-'+String(i+1).padStart(2,'0'))||0]);
+    $('#months-hint').textContent=state.statsYear==='all'?t('top12Months'):t('eachMonth',{year:state.statsYear});
+    makeBars($('#months-bars'),monthSeries.map(([m,y,n])=>[m+' '+y,n]));
+    makeBars($('#tags-bars'),[...tagTotals].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],localeMap[language])).slice(0,10).map(([tag,n])=>['#'+tag,n]));
+    makeBars($('#years-bars'),[...yearTotals].sort((a,b)=>b[0].localeCompare(a[0])));
+    $('#stats-explainer').textContent=t('statsExplain',{total:formatNumber(state.items.length),dated:formatNumber(dated.length),undated:formatNumber(state.items.length-dated.length),tags:formatNumber(tagTotals.size)});
+  }
+    function makeBars(target,data){
+    target.replaceChildren();if(!data.length){target.append(el('div','stats-empty',t('notEnough')));return;}
+    const max=Math.max(1,...data.map(x=>x[1]));
+    for(const [label,count] of data){const row=el('div','bar-row'),line=el('div','bar-line'),track=el('div','bar-track'),fill=el('div','bar-fill');
+      line.append(el('span','',label),el('span','bar-count',String(count)));fill.style.width=(count/max*100)+'%';track.append(fill);row.append(line,track);target.append(row);}
+  }
+  $('#tab-gallery').addEventListener('click',()=>setTab('gallery'));
+  $('#tab-stats').addEventListener('click',()=>setTab('stats'));
+  $('#home-link').addEventListener('click',e=>{e.preventDefault();setTab('gallery');});
+  $('#sort').addEventListener('change',e=>{state.sort=e.target.value;closeViewer();renderGallery();});
+  $('#gallery-size').addEventListener('change',e=>{
+    if(!GALLERY_SIZES.includes(e.target.value))return;
+    gallerySize=e.target.value;document.body.dataset.gallerySize=gallerySize;
+    try{localStorage.setItem('030-portfolio-size-v15',gallerySize);}catch(_){}
+    // A conscious density change relays out the gallery only once.
+    renderGallery();
+  });
+  $('#toggle-tags').addEventListener('click',()=>toggleTagPanel(!$('#tag-panel').classList.contains('is-open')));
+  $('#tag-search').addEventListener('input',renderTags);
+  $('#clear-tag').addEventListener('click',()=>setTag(''));
+  $('#floating-first').addEventListener('click',goTop);
+  $('#toggle-dates').addEventListener('click',()=>toggleDatePanel(!$('#date-filters').classList.contains('is-open')));
+  $('#year-filter').addEventListener('change',changeDateFilter);
+  $('#date-from').addEventListener('change',changeDateFilter);
+  $('#date-to').addEventListener('change',changeDateFilter);
+  $('#clear-dates').addEventListener('click',()=>{state.year='all';state.dateFrom='';state.dateTo='';updateDateFilters();changeDateFilter();});
+  $('#theme').addEventListener('change',e=>setTheme(e.target.value));
+  $('#language').addEventListener('change',e=>setLanguage(e.target.value));
+  $('#stats-year').addEventListener('change',e=>{state.statsYear=e.target.value;renderStats();});
+  $('#close').addEventListener('click',closeViewer);$('#prev').addEventListener('click',()=>step(-1));$('#next').addEventListener('click',()=>step(1));
+  viewer.addEventListener('click',e=>{if(e.target===viewer)closeViewer();});
+  document.addEventListener('keydown',e=>{if(!viewer.classList.contains('open'))return;if(e.key==='Escape')closeViewer();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
+  $('#year').textContent=new Date().getFullYear();
+  async function loadPortfolio(){
+    state.loading=true;state.error=false;state.items=[];state.tag='';
+    loadingStatus='';fetchedAt=null;renderGallery();renderTags();renderStats();updateStatus();
+    let cursor='',pages=0;const seenIds=new Set(),seenCursors=new Set(),raw=[];
+    try {
+      do {
+        const params=new URLSearchParams({actor:HANDLE,filter:'posts_with_media',limit:'100',includePins:'false'});
+        if(cursor)params.set('cursor',cursor);
+        const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),18000);
+        let response;
+        try{response=await fetch(API+'?'+params.toString(),{headers:{Accept:'application/json'},signal:controller.signal});}
+        finally{clearTimeout(timeout);}
+        if(!response.ok)throw new Error('API '+response.status);
+        const data=await response.json();if(!Array.isArray(data.feed))throw new Error('Unexpected API response');
+        for(const entry of data.feed){const item=normalizePost(entry);if(item&&!seenIds.has(item.id)){seenIds.add(item.id);raw.push(item);}}
+        pages++;cursor=typeof data.cursor==='string'?data.cursor:'';
+        if(cursor&&seenCursors.has(cursor))break;
+        if(cursor)seenCursors.add(cursor);
+        loadedCount=raw.length;loadingStatus=t('loadProgress',{count:formatNumber(loadedCount)});updateStatus();
+      }while(cursor&&pages<MAX_PAGES);
+      fetchedAt=new Date();
+    }catch(error){console.warn('Incomplete artwork archive:',error);state.error=true;}
+    finally{state.items=deduplicate(raw);state.loading=false;loadingStatus='';updateStatus();renderTags();renderGallery();renderStats();}
+  }
+  // V11: spring-damped multi-tile proximity field. No hard 37px neighbour snap.
+  // Read the *stationary* .work layout, not moving art-button rectangles.
+  const motionEnabled=window.matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)');
+  const ZOOM_RADIUS=405, PUSH_RADIUS=600, FLIGHT_RADIUS=480, FLIGHT_FACTOR=.325;
+  let pointer=null,motionFrame=0,motionLast=0,motionTiles=[],activeWork=null;
+  const smoothstep=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t);};
+  const fields=['x','y','scale','rx','ry'];
+  function cacheMotionTiles(){
+    const previous=new Map(motionTiles.map(tile=>[tile.work,tile]));
+    const next=[];
+    for(const work of gallery.querySelectorAll('.work')){
+      const rect=work.getBoundingClientRect();
+      if(rect.bottom<-850||rect.top>innerHeight+850)continue;
+      let tile=previous.get(work);
+      if(!tile){
+        const button=work.querySelector('.art-button');
+        tile={work,button,curr:{x:0,y:0,scale:1,rx:0,ry:0},vel:{x:0,y:0,scale:0,rx:0,ry:0},target:{x:0,y:0,scale:1,rx:0,ry:0}};
+      }
+      tile.rect=rect;tile.cx=rect.left+rect.width/2;tile.cy=rect.top+rect.height/2;
+      next.push(tile);
+    }
+    motionTiles=next;
+  }
+  function edgeDistance(x,y,r){return Math.hypot(Math.max(0,r.left-x,x-r.right),Math.max(0,r.top-y,y-r.bottom));}
+  function setMotionTargets(){
+    if(!motionTiles.length)cacheMotionTiles();
+    const valid=pointer&&motionEnabled.matches&&state.view==='gallery'&&!viewer.classList.contains('open');
+    let closest=null;
+    if(valid)for(const tile of motionTiles){
+      tile.dist=edgeDistance(pointer.x,pointer.y,tile.rect);
+      if(!closest||tile.dist<closest.dist)closest=tile;
+    }
+    const focus=closest&&closest.dist<ZOOM_RADIUS?closest:null;
+    if(activeWork!==focus?.work){
+      activeWork?.classList.remove('is-focal');activeWork=focus?.work||null;
+      activeWork?.classList.add('is-focal');
+    }
+    // Each nearby tile emits a smooth, distance-weighted repulsion field.
+    // Summing these gentle fields avoids hard switches when nearest tile changes.
+    for(const tile of motionTiles){
+      const target=tile.target;target.x=0;target.y=0;target.scale=1;target.rx=0;target.ry=0;
+      if(!valid)continue;
+      const near=1-smoothstep(tile.dist/ZOOM_RADIUS);
+      const focalScale=tile===focus?0.0525:0.0105;
+      target.scale+=focalScale*Math.pow(near,1.3);
+      const dx=pointer.x-tile.cx,dy=pointer.y-tile.cy;
+      const flight=Math.pow(1-smoothstep(tile.dist/FLIGHT_RADIUS),1.2)*FLIGHT_FACTOR;
+      const nx=Math.max(-1,Math.min(1,dx/Math.max(1,tile.rect.width/2)));
+      const ny=Math.max(-1,Math.min(1,dy/Math.max(1,tile.rect.height/2)));
+      target.x+=nx*7*flight;target.y+=(-5+ny*5.8)*flight;
+      target.rx=-ny*2.2*flight;target.ry=nx*2.2*flight;
+      target.scale*=1+0.023*flight;
+      let repelX=0,repelY=0;
+      for(const source of motionTiles){
+        if(source===tile)continue;
+        const sourceStrength=1-smoothstep(source.dist/ZOOM_RADIUS);
+        if(sourceStrength<.002)continue;
+        const vx=tile.cx-source.cx,vy=tile.cy-source.cy;
+        const dist=Math.hypot(vx,vy)||1;
+        const influence=1-smoothstep(dist/PUSH_RADIUS);
+        const pressure=19*Math.pow(sourceStrength,1.6)*influence*influence;
+        repelX+=vx/dist*pressure;repelY+=vy/dist*pressure;
+      }
+      const mag=Math.hypot(repelX,repelY);
+      if(mag>19){repelX*=19/mag;repelY*=19/mag;}
+      target.x+=repelX;target.y+=repelY;
+    }
+  }
+  function updateMotion(time){
+    motionFrame=0;
+    const dt=Math.min(.04,Math.max(.001,(time-motionLast)/1000));motionLast=time;
+    // Damped spring: smooth acceleration, deceleration and slight physical settling.
+    const stiffness=112,damping=20.5;
+    let moving=false;
+    for(const tile of motionTiles){
+      if(!tile.button.isConnected)continue;
+      for(const f of fields){
+        const error=tile.target[f]-tile.curr[f];
+        tile.vel[f]+=(stiffness*error-damping*tile.vel[f])*dt;
+        tile.curr[f]+=tile.vel[f]*dt;
+        if(Math.abs(error)>.00035||Math.abs(tile.vel[f])>.002)moving=true;
+        else {tile.curr[f]=tile.target[f];tile.vel[f]=0;}
+      }
+      const c=tile.curr,b=tile.button;
+      b.style.setProperty('--push-x',`${c.x.toFixed(3)}px`);
+      b.style.setProperty('--push-y',`${c.y.toFixed(3)}px`);
+      b.style.setProperty('--flight-x','0px');b.style.setProperty('--flight-y','0px');
+      b.style.setProperty('--flight-rx',`${c.rx.toFixed(3)}deg`);
+      b.style.setProperty('--flight-ry',`${c.ry.toFixed(3)}deg`);
+      b.style.setProperty('--combined-scale',c.scale.toFixed(5));
+    }
+    if(moving)motionFrame=requestAnimationFrame(updateMotion);
+  }
+  function startMotionFrame(){if(motionFrame)return;motionLast=performance.now();motionFrame=requestAnimationFrame(updateMotion);}
+  function resetMotion(immediate=false){
+    pointer=null;
+    if(!motionTiles.length)return;
+    for(const tile of motionTiles){Object.assign(tile.target,{x:0,y:0,scale:1,rx:0,ry:0});}
+    activeWork?.classList.remove('is-focal');activeWork=null;
+    if(immediate){
+      if(motionFrame)cancelAnimationFrame(motionFrame);motionFrame=0;
+      for(const tile of motionTiles){
+        tile.button.style.removeProperty('--push-x');tile.button.style.removeProperty('--push-y');
+        tile.button.style.removeProperty('--flight-x');tile.button.style.removeProperty('--flight-y');
+        tile.button.style.removeProperty('--flight-rx');tile.button.style.removeProperty('--flight-ry');
+        tile.button.style.removeProperty('--combined-scale');
+      }
+      motionTiles=[];
+    } else startMotionFrame();
+  }
+  document.addEventListener('pointermove',e=>{
+    if(!motionEnabled.matches||(e.pointerType!=='mouse'&&e.pointerType!=='pen'))return;
+    pointer={x:e.clientX,y:e.clientY};
+    setMotionTargets();startMotionFrame();
+  },{passive:true});
+  document.addEventListener('pointerleave',()=>resetMotion());
+  let scrollMotionFrame=0;
+  window.addEventListener('scroll',()=>{
+    updateBackToTop();scheduleSkyUpdate();
+    if(!scrollMotionFrame)scrollMotionFrame=requestAnimationFrame(()=>{
+      scrollMotionFrame=0;
+      if(motionEnabled.matches&&state.view==='gallery'){
+        cacheMotionTiles();setMotionTargets();startMotionFrame();
+      }
+      if(!streamObserver&&!streamSentinel.hidden&&streamSentinel.getBoundingClientRect().top<innerHeight+1100)queueGalleryBatch();
+    });
+  },{passive:true});
+  window.addEventListener('resize',()=>{
+    scheduleSkyUpdate();resetMotion(true);
+    if(galleryColumns()!==renderedColumns&&state.items.length)renderGallery();
+  },{passive:true});
+  motionEnabled.addEventListener?.('change',()=>resetMotion(true));
+  for(const panel of [$('#date-filters'),$('#tag-panel')]){
+    panel.hidden=false;
+    panel.classList.add('animated-filter-panel');
+    panel.setAttribute('aria-hidden','true');
+    panel.inert=true;
+  }
+  buildNightStars();
+  setTheme(theme);
+  scheduleSkyUpdate();
+  localizeStatic();
+  loadPortfolio();
+})();
+
+</script>
+</body>
+</html>
