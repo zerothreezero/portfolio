@@ -599,6 +599,82 @@ body[data-theme="golden"] .viewer-side{background:linear-gradient(145deg,rgba(47
   .viewer-side.viewer-info-update>*:not(.viewer-close){animation:none!important}}
 
 
+.art-search {
+  order: -1;
+  min-width: 0;
+  width: min(100%, 22rem);
+  padding: 10px 14px;
+  min-height: 41px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-size: 14px;
+}
+.art-search::placeholder { color: var(--muted); }
+.art-search:focus-visible, .series-image:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+dialog.viewer { margin: 0; padding: 0; border: 0; width: 100%; height: 100%; max-width: none; max-height: none; color: var(--fg); }
+.series { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 14px; }
+.series-image {
+  width: 50px; height: 50px; padding: 3px; border-radius: 9px;
+  background: var(--surface2); border: 1px solid var(--border); cursor: pointer;
+}
+.series-image img { display: block; width: 100%; height: 100%; border-radius: 5px; object-fit: cover; }
+.series-image[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.viewer-error {
+  position: absolute; bottom: 52px; left: 50%; transform: translateX(-50%);
+  padding: 8px 12px; border-radius: 8px; background: var(--surface); color: var(--fg); font-size: 13px;
+}
+#retry-feed[hidden], .series[hidden] { display: none; }
+@media (max-width: 600px) { .art-search { width: 100%; } }
+
+.shell > .topbar {
+  display: flex; justify-content: flex-start; flex-wrap: nowrap; align-items: center;
+  height: auto; min-height: 58px; padding: 6px 0; gap: clamp(10px, 2vw, 28px);
+  position: relative; z-index: 12;
+}
+.topbar .logo { flex: none; }
+.topbar .site-tabs { margin: 0; order: 0; gap: 2px; }
+.site-tabs .site-tab { border-radius: 7px; padding: 9px 12px; }
+.site-tab .count { margin-left: 4px; font-variant-numeric: tabular-nums; }
+.site-tab .count:empty { display: none; }
+.preferences { position: relative; margin-left: auto; }
+.preferences summary {
+  display: flex; align-items: center; gap: 7px; min-height: 42px; padding: 0 6px;
+  list-style: none; cursor: pointer; color: var(--muted); font-size: 12px;
+}
+.preferences summary::-webkit-details-marker { display: none; }
+.preferences summary:hover, .preferences[open] summary { color: var(--fg); }
+.preferences summary:focus-visible { outline: 2px solid var(--accent); border-radius: 6px; }
+.settings-icon { font: 20px/1 "Segoe UI Symbol", sans-serif; }
+.preferences-panel {
+  position: absolute; top: calc(100% + 5px); right: 0; width: min(270px, calc(100vw - 32px));
+  padding: 14px; display: grid; gap: 12px; background: var(--surface);
+  color: var(--fg); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 22px #0003;
+}
+.preferences-panel label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); }
+.topbar .preferences-panel select { width: 100%; min-width: 0; max-width: none; appearance: auto; grid-area: auto; }
+.archive-toolbar {
+  display: grid; grid-template-columns: minmax(10rem, 25rem) auto auto minmax(0, 1fr);
+  align-items: center; gap: 8px; padding: 14px 0;
+}
+.archive-toolbar .art-search { width: 100%; order: 0; }
+.archive-toolbar #toggle-tags, .archive-toolbar #toggle-dates { order: 0; }
+.archive-toolbar .sort { justify-self: end; min-width: 0; max-width: 100%; }
+.archive-toolbar :is(input, button, select) { min-height: 42px; border-radius: 8px; }
+#clear-tag:not([hidden]) { margin: 0 0 12px; }
+#date-filters.is-open { margin-bottom: 14px !important; }
+.stats-wrap { padding-top: 16px; }
+@media (max-width: 650px) {
+  .archive-toolbar { grid-template-columns: auto auto minmax(0, 1fr); gap: 6px; padding: 10px 0 12px; }
+  .archive-toolbar .art-search { grid-column: 1 / -1; }
+  .archive-toolbar .sort { width: min(100%, 12rem); }
+  .site-tabs .site-tab { padding: 8px; }
+  .settings-label { display: none; }
+  .preferences summary { min-width: 42px; justify-content: center; }
+}
+
 /* Static particle positions extracted from the original HTML. */
 .sunset-particle-01{--x:92.99%;--y:47.78%;--size:1.4px;--dx:9.9px;--dy:-17.6px;--dur:9.94s;--delay:-2.67s;--alpha:0.75}
 .sunset-particle-02{--x:95.53%;--y:61.63%;--size:3.0px;--dx:2.5px;--dy:-7.7px;--dur:8.91s;--delay:-3.23s;--alpha:0.85}
