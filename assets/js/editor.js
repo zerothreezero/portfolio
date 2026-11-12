@@ -9,7 +9,7 @@ function installEditor(c){
     'Google login has not been configured.':'Вхід через Google ще не налаштовано.','Viewing only':'Лише перегляд','Basics':'Основні дані','Details':'Додаткові дані','Display':'Відображення',
     'Title':'Назва','Description':'Опис','Creation date':'Дата створення','Alternative text':'Альтернативний текст','Tags':'Теги','Software':'Програми',
     'Drawing time (minutes)':'Час малювання (хв)','Strokes':'Кількість штрихів','Text blocks (one per line)':'Текстові блоки (по одному на рядок)',
-    'Links (label | URL, one per line)':'Посилання (підпис | URL, по одному на рядок)','Notes':'Нотатки','Palette (#RRGGBB)':'Палітра (#RRGGBB)',
+    'Links (label | URL, one per line)':'Посилання (підпис | URL, по одному на рядок)','Notes':'Нотатки',
     'Featured':'Вибрана робота','Hidden':'Прихована робота','Featured order':'Порядок вибраних','Images':'Зображення','Cover':'Обкладинка',
     'Collections':'Колекції','Reset to source':'Повернути початкове значення','Undo':'Скасувати','Redo':'Повторити','Choose images':'Вибрати зображення',
     'Load current version and discard this draft?':'Завантажити актуальну версію й відкинути цю чернетку?','Discard this draft?':'Відкинути цю чернетку?',
@@ -17,10 +17,10 @@ function installEditor(c){
     'Archive updated':'Архів оновлено','Source post unavailable':'Вихідний допис недоступний','No pending publication':'Публікацій у черзі немає'
   };
   const moreLabels={
-    fr:'Mode édition|Gérer les œuvres|Gérer les collections|Publication|Ajouter une œuvre|Modifier|Enregistrer|Abandonner|Aperçu|Modifications non enregistrées|Enregistrement|Enregistré sur GitHub|Déploiement|Recharger depuis GitHub|Reconnectez-vous|Portfolio public des illustrations numériques de 0 3 0.|La connexion Google reste à configurer.|Lecture seule|Informations|Détails|Affichage|Titre|Description|Date de création|Texte alternatif|Tags|Logiciels|Durée (minutes)|Traits|Blocs de texte (un par ligne)|Liens (libellé ＆ URL séparés par une barre verticale)|Notes|Palette (#RRGGBB)|À la une|Masquée|Ordre de sélection|Images|Couverture|Collections|Restaurer la source|Annuler|Rétablir|Choisir les images|Recharger et abandonner ce brouillon ?|Abandonner ce brouillon ?|Aucune modification|Vérifier la publication|Nouvelle collection|Retirer|Erreur|Archive mise à jour|Publication source indisponible|Aucune publication en attente',
-    es:'Modo edición|Gestionar obras|Gestionar colecciones|Estado de publicación|Añadir obra|Editar|Guardar cambios|Descartar cambios|Vista previa|Cambios sin guardar|Guardando|Guardado en GitHub|Publicando|Recargar desde GitHub|Vuelve a iniciar sesión|Portafolio público de ilustraciones digitales de 0 3 0.|El acceso de Google aún no está configurado.|Solo lectura|Información básica|Detalles|Visualización|Título|Descripción|Fecha de creación|Texto alternativo|Etiquetas|Programas|Tiempo (minutos)|Trazos|Bloques de texto (uno por línea)|Enlaces (etiqueta y URL separados por barra vertical)|Notas|Paleta (#RRGGBB)|Destacada|Oculta|Orden de destacadas|Imágenes|Portada|Colecciones|Restaurar original|Deshacer|Rehacer|Elegir imágenes|¿Recargar y descartar el borrador?|¿Descartar este borrador?|Sin cambios|Verificar publicación|Nueva colección|Quitar|Error|Archivo actualizado|Publicación de origen no disponible|Sin publicación pendiente',
-    ja:'編集モード|作品管理|コレクション管理|公開状況|作品を追加|編集|変更を保存|変更を破棄|プレビュー|未保存の変更|保存中|GitHub に保存済み|公開処理中|GitHub から再読込|再ログインしてください|0 3 0 のデジタルイラスト作品集。|Google ログインは未設定です。|閲覧のみ|基本情報|詳細|表示|タイトル|説明|制作日|代替テキスト|タグ|ソフトウェア|制作時間（分）|ストローク数|テキスト（1 行 1 項目）|リンク（ラベルと URL を縦線で区切る）|メモ|パレット (#RRGGBB)|注目作品|非表示|注目作品の順序|画像|表紙|コレクション|元に戻す|取り消す|やり直す|画像を選択|最新版を読み込み下書きを破棄しますか？|下書きを破棄しますか？|変更なし|公開を確認|新規コレクション|削除|エラー|更新しました|元の投稿がありません|公開待ちはありません',
-    'zh-CN':'编辑模式|管理作品|管理合集|发布状态|添加作品|编辑|保存更改|放弃更改|预览|有未保存的更改|正在保存|已提交至 GitHub|正在部署|从 GitHub 重新加载|请重新登录|0 3 0 的数码插画作品集。|尚未配置 Google 登录。|只读|基本信息|详情|显示|标题|描述|创作日期|替代文本|标签|软件|绘画时间（分钟）|笔画数|文本段落（每行一段）|链接（每行一项，标签和网址用竖线分隔）|备注|调色板 (#RRGGBB)|精选|隐藏|精选顺序|图片|封面|合集|还原来源值|撤销|重做|选择图片|重新加载最新版并放弃草稿？|放弃此草稿？|无更改|检查发布状态|新合集|移除|错误|已更新|来源帖子不可用|没有待发布的更改'
+    fr:'Mode édition|Gérer les œuvres|Gérer les collections|Publication|Ajouter une œuvre|Modifier|Enregistrer|Abandonner|Aperçu|Modifications non enregistrées|Enregistrement|Enregistré sur GitHub|Déploiement|Recharger depuis GitHub|Reconnectez-vous|Portfolio public des illustrations numériques de 0 3 0.|La connexion Google reste à configurer.|Lecture seule|Informations|Détails|Affichage|Titre|Description|Date de création|Texte alternatif|Tags|Logiciels|Durée (minutes)|Traits|Blocs de texte (un par ligne)|Liens (libellé ＆ URL séparés par une barre verticale)|Notes|À la une|Masquée|Ordre de sélection|Images|Couverture|Collections|Restaurer la source|Annuler|Rétablir|Choisir les images|Recharger et abandonner ce brouillon ?|Abandonner ce brouillon ?|Aucune modification|Vérifier la publication|Nouvelle collection|Retirer|Erreur|Archive mise à jour|Publication source indisponible|Aucune publication en attente',
+    es:'Modo edición|Gestionar obras|Gestionar colecciones|Estado de publicación|Añadir obra|Editar|Guardar cambios|Descartar cambios|Vista previa|Cambios sin guardar|Guardando|Guardado en GitHub|Publicando|Recargar desde GitHub|Vuelve a iniciar sesión|Portafolio público de ilustraciones digitales de 0 3 0.|El acceso de Google aún no está configurado.|Solo lectura|Información básica|Detalles|Visualización|Título|Descripción|Fecha de creación|Texto alternativo|Etiquetas|Programas|Tiempo (minutos)|Trazos|Bloques de texto (uno por línea)|Enlaces (etiqueta y URL separados por barra vertical)|Notas|Destacada|Oculta|Orden de destacadas|Imágenes|Portada|Colecciones|Restaurar original|Deshacer|Rehacer|Elegir imágenes|¿Recargar y descartar el borrador?|¿Descartar este borrador?|Sin cambios|Verificar publicación|Nueva colección|Quitar|Error|Archivo actualizado|Publicación de origen no disponible|Sin publicación pendiente',
+    ja:'編集モード|作品管理|コレクション管理|公開状況|作品を追加|編集|変更を保存|変更を破棄|プレビュー|未保存の変更|保存中|GitHub に保存済み|公開処理中|GitHub から再読込|再ログインしてください|0 3 0 のデジタルイラスト作品集。|Google ログインは未設定です。|閲覧のみ|基本情報|詳細|表示|タイトル|説明|制作日|代替テキスト|タグ|ソフトウェア|制作時間（分）|ストローク数|テキスト（1 行 1 項目）|リンク（ラベルと URL を縦線で区切る）|メモ|注目作品|非表示|注目作品の順序|画像|表紙|コレクション|元に戻す|取り消す|やり直す|画像を選択|最新版を読み込み下書きを破棄しますか？|下書きを破棄しますか？|変更なし|公開を確認|新規コレクション|削除|エラー|更新しました|元の投稿がありません|公開待ちはありません',
+    'zh-CN':'编辑模式|管理作品|管理合集|发布状态|添加作品|编辑|保存更改|放弃更改|预览|有未保存的更改|正在保存|已提交至 GitHub|正在部署|从 GitHub 重新加载|请重新登录|0 3 0 的数码插画作品集。|尚未配置 Google 登录。|只读|基本信息|详情|显示|标题|描述|创作日期|替代文本|标签|软件|绘画时间（分钟）|笔画数|文本段落（每行一段）|链接（每行一项，标签和网址用竖线分隔）|备注|精选|隐藏|精选顺序|图片|封面|合集|还原来源值|撤销|重做|选择图片|重新加载最新版并放弃草稿？|放弃此草稿？|无更改|检查发布状态|新合集|移除|错误|已更新|来源帖子不可用|没有待发布的更改'
   };
   const keys=Object.keys(labels);
   const L=s=>document.documentElement.lang==='uk'?(labels[s]||s):moreLabels[document.documentElement.lang]?.split('|')[keys.indexOf(s)]||s;
@@ -36,12 +36,13 @@ function installEditor(c){
       const edit=menuAction(L('Edit mode'),()=>{editing=!editing;c.renderGallery();refresh();});
       edit.setAttribute('aria-pressed',String(editing));
       menu.append(edit,menuAction(L('Manage artworks'),manage),menuAction(L('Manage collections'),collections),menuAction(L('Publish status'),statusDialog));
-    }else if(!guest)menu.append(menuAction(word('login'),signIn));
+    }
     if(guest)menu.append(el('span','',L('Viewing only')));
-    if(token||guest)menu.append(menuAction(word('logout'),signOut));
+    $('#admin-access').textContent=token||guest?word('logout'):'Admin';
     menu.append(menuAction(word('about'),()=>notify('0 3 0',L('Public portfolio of digital illustrations by 0 3 0.'))),
       menuAction(word('clearCache'),async()=>{try{await c.clearCache();}catch(e){notify(L('Error'),e.message);}}));
   }
+  $('#admin-access').addEventListener('click',()=>token||guest?signOut():signIn());
   async function api(path,body){
     const r=await fetch(new URL('/'+path,config.workerOrigin),{method:body?'POST':'GET',headers:{...(body?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{})},
       credentials:'omit',cache:'no-store',body:body&&JSON.stringify(body),signal:AbortSignal.timeout(45000)});
@@ -164,7 +165,7 @@ function installEditor(c){
   function editor(id,isNew=false){
     const saved=c.content.manualArtworks.find(a=>a.id===id),manual=!!saved||isNew;
     const base=manual?null:c.base(id);
-    const initial=structuredClone(manual?(saved||{media:[]}):(c.content.artworks[id]||{}));delete initial.id;
+    const initial=structuredClone(manual?(saved||{media:[]}):(c.content.artworks[id]||{}));delete initial.id;delete initial.palette;
     let draft=structuredClone(initial),undo=[],redo=[],uploading=false,conflict=false;
     const baseSha=sha,pendingFiles=new Map();
     const d=toolDialog(L(isNew?'Add artwork':'Edit')),form=el('div','editor-fields'),msg=el('p'),actions=el('div','tool-group');
@@ -240,6 +241,7 @@ function installEditor(c){
             for(const f of file.files){
               if(!asCover&&draft.media.length>=12)throw Error('Maximum 12 images');
               const upload=await optimizeImage(f);
+              if(!asCover&&!draft.title){const parsed=parseArtworkTitle(f.name);if(parsed){change('title',parsed.title);change('date',parsed.date);}}
               if(!d.open){URL.revokeObjectURL(upload.url);return;}
               if(!asCover&&draft.media.some(m=>m.path===upload.path)){URL.revokeObjectURL(upload.url);continue;}
               if([...pendingFiles.values()].reduce((sum,x)=>sum+x.base64.length,upload.base64.length)>5900000){URL.revokeObjectURL(upload.url);throw Error('Upload limit: 4 MiB per save');}
@@ -260,7 +262,7 @@ function installEditor(c){
     function draw(){
       form.replaceChildren();const basics=section('Basics'),details=section('Details'),display=section('Display'),media=section('Images');
       for(const args of [['title','Title'],['description','Description','area'],['date','Creation date','date'],['alt','Alternative text','area'],['tags','Tags','list'],['software','Software','list'],['drawingMinutes','Drawing time (minutes)','integer'],['strokes','Strokes','integer']])input(basics,...args);
-      for(const args of [['blocks','Text blocks (one per line)','lines'],['links','Links (label | URL, one per line)','links'],['notes','Notes','area'],['palette','Palette (#RRGGBB)','list']])input(details,...args);
+      for(const args of [['blocks','Text blocks (one per line)','lines'],['links','Links (label | URL, one per line)','links'],['notes','Notes','area']])input(details,...args);
       for(const args of [['featured','Featured','flag'],['featuredOrder','Featured order','integer'],['hidden','Hidden','flag'],['nsfw','NSFW','flag']])input(display,...args);
       for(const col of c.content.collections){
         const cb=el('input');cb.type='checkbox';cb.checked=draft.collectionIds?.includes(col.id)||false;

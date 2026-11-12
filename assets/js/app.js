@@ -105,7 +105,7 @@
   const MAX_PAGES = 10;
   const STREAM_BATCH = 32;
   const GALLERY_SIZES=['normal','compact','small'];
-  let gallerySize='small';
+  let gallerySize='normal';
   try{const saved=localStorage.getItem('030-portfolio-size-v15');if(GALLERY_SIZES.includes(saved))gallerySize=saved;}catch(_){}
   document.body.dataset.gallerySize=gallerySize;
 
@@ -307,16 +307,8 @@
   }
     function parseArtworkText(raw,images){
     const lines=String(raw||'').replace(/\r\n?/g,'\n').split('\n');
-    let code='';
-    // Prefer date on its own line or before a dash in the title; otherwise any valid code.
-    for(const line of lines){
-      const trimmed=line.trim();
-      if(/^\d{6}$/.test(trimmed)||/^\d{6}\s*[-–—:|]/.test(trimmed)){
-        const candidate=findCode(trimmed);if(candidate){code=candidate;break;}
-      }
-    }
-    if(!code){for(const line of lines){const candidate=findCode(line);if(candidate){code=candidate;break;}}}
-    if(!code){for(const image of images){const candidate=findCode(image.alt);if(candidate){code=candidate;break;}}}
+    const identity=lines.map(line=>parseArtworkTitle(cleanCaption(line))).find(Boolean)||images.map(image=>parseArtworkTitle(image.alt)).find(Boolean);
+    const code=identity?.code||'';
     const metricLines=new Set();let work=null;
     for(let i=0;i<lines.length;i++){
       const parsed=parseWorkLine(lines[i]);
@@ -328,10 +320,7 @@
       if(!trimmed||metricLines.has(i)||/^\d{6}$/.test(trimmed)||trimmed.startsWith('#'))continue;
       if(cleanCaption(trimmed)){titleIndex=i;break;}
     }
-    let base=titleIndex>=0?cleanCaption(lines[titleIndex]):'';
-    if(code)base=base.replace(new RegExp('(^|[^0-9])'+code+'(?![0-9])'), '$1')
-      .replace(/^[\s\-_.,:|•–—]+|[\s\-_.,:|•–—]+$/g,'').trim();
-    const title=code?(base?code+' - '+base:code):(base||'Untitled');
+    const title=identity?.title||(titleIndex>=0?cleanCaption(lines[titleIndex]):'Untitled');
     const description=cleanCaption(lines.filter((line,i)=>{
       if(i===titleIndex||metricLines.has(i))return false;
       if(/^\d{6}$/.test(line.trim())&&validDateCode(line.trim()))return false;
@@ -487,13 +476,10 @@
     closeViewer();updateDateFilters();renderGallery();
   }
   function galleryColumns(){
-    const width=window.innerWidth;
-    const base=width<=600?1:width<=850?2:width<=1250?3:4;
-    const extra=gallerySize==='normal'?0:gallerySize==='compact'?1:2;
-    return width<=600?Math.min(2,base+extra):width<=850?Math.min(3,base+extra):Math.min(6,base+extra);
+    return Math.round(gallery.clientWidth);
   }
   let renderedColumns=0;
-  let galleryStreamItems=[],galleryStreamIndex=0,galleryHeights=[],galleryCols=[];
+  let galleryStreamItems=[],galleryStreamIndex=0,layoutGroups=[],layoutGroupIndex=0;
   const streamSentinel=$('#gallery-sentinel');
   let streamQueued=false;
   const streamObserver=typeof IntersectionObserver==='function'?new IntersectionObserver(entries=>{
@@ -505,16 +491,27 @@
     streamQueued=true;
     requestAnimationFrame(()=>{streamQueued=false;appendGalleryBatch();});
   }
-  function appendGalleryBatch(){
+  function appendGalleryBatch(batchSize=STREAM_BATCH){
     if(state.view!=='gallery'||galleryStreamIndex>=galleryStreamItems.length)return;
-    const end=Math.min(galleryStreamIndex+STREAM_BATCH,galleryStreamItems.length);
+    const requested=Math.min(galleryStreamIndex+batchSize,galleryStreamItems.length);
+    const layouts=new Map();
+    let end=galleryStreamIndex;
+    while(end<requested&&layoutGroupIndex<layoutGroups.length){
+      const group=layoutGroups[layoutGroupIndex++];
+      const node=el('div','mosaic-group');node.style.height=group.height+'px';gallery.append(node);
+      for(const column of group.columns){
+        const stack=el('div','mosaic-stack');stack.style.width=column.width+'px';node.append(stack);
+        for(const index of column.indices)layouts.set(index,{node:stack,width:column.width});
+      }
+      end+=group.count;
+    }
     for(let i=galleryStreamIndex;i<end;i++){
       const item=galleryStreamItems[i],card=el('article','work'),button=el('button','art-button'),img=el('img','art-main'),backdrop=el('img','art-backdrop');
       button.type='button';button.setAttribute('aria-label',t('open')+': '+item.title);
       button.dataset.artId=item.id;
       const ratio=Number.isFinite(item.ratio)&&item.ratio>0?item.ratio:0.8;
       button.style.setProperty('--ratio',String(ratio));
-      img.loading=i<renderedColumns?'eager':'lazy';img.decoding='async';img.alt=item.alts[0]||item.title;img.src=item.thumb;
+      img.loading=i<4?'eager':'lazy';img.decoding='async';img.alt=item.alts[0]||item.title;img.src=item.thumb;
       // Both layers use the same cached artwork; the blurred one fills rotated edge pixels.
       backdrop.loading='lazy';backdrop.decoding='async';backdrop.alt='';backdrop.setAttribute('aria-hidden','true');backdrop.src=item.thumb;
       // Bluesky returns aspectRatio metadata, so space is reserved before any image loads.
@@ -583,8 +580,8 @@
         openViewer(item.id);
       });card.append(button);
       admin.decorate(card,item);
-      const target=galleryHeights.indexOf(Math.min(...galleryHeights));galleryCols[target].append(card);
-      galleryHeights[target]+=1/ratio+0.105;
+      const layout=layouts.get(i);card.style.width=layout.width+'px';
+      button.style.height=(layout.width/ratio)+'px';layout.node.append(card);
     }
     galleryStreamIndex=end;
     streamSentinel.hidden=galleryStreamIndex>=galleryStreamItems.length;
@@ -593,7 +590,8 @@
     if(motionEnabled.matches&&pointer){cacheMotionTiles();setMotionTargets();startMotionFrame();}
     if(!streamSentinel.hidden&&streamSentinel.getBoundingClientRect().top<innerHeight+1100)queueGalleryBatch();
   }
-  function renderGallery(){
+  function renderGallery(batchSize=STREAM_BATCH){
+    if(!Number.isFinite(batchSize))batchSize=STREAM_BATCH;
     updateDateFilters();
     const items=getDisplayed();
     $('#count').textContent=state.loading&&!items.length?'':formatNumber(items.length);
@@ -604,9 +602,7 @@
     gallery.style.setProperty('--columns',String(n));
     galleryStreamItems=items;
     galleryStreamIndex=0;
-    galleryHeights=Array(n).fill(0);
-    galleryCols=Array.from({length:n},()=>el('div','gallery-column'));
-    gallery.append(...galleryCols);
+    layoutGroups=mosaicLayout(items,gallery.clientWidth||$('.shell').clientWidth,gallerySize);layoutGroupIndex=0;
     const empty=$('#empty');empty.hidden=!!items.length;
     if(!items.length){
       empty.replaceChildren();
@@ -624,7 +620,7 @@
       }
     }
     streamSentinel.hidden=!items.length;
-    if(items.length)appendGalleryBatch();
+    if(items.length)appendGalleryBatch(batchSize);
     updateBackToTop();
   }
   function currentItem(){return galleryStreamItems.find(x=>x.id===state.activeId);}
@@ -660,7 +656,7 @@
     const visible=galleryStreamItems;const index=visible.indexOf(item);
     if(index>=0&&visible.length>1){
       around.push(visible[(index+1)%visible.length].images[0]);
-      around.push(visible[(index-1+visible.length)%visible.length].images[0]);
+      around.push(visible[(index-1+visible.length)%visible.length].images.at(-1));
     }
     for(const src of new Set(around.filter(Boolean)))prefetchViewerImage(src);
   }
@@ -695,12 +691,14 @@
     renderSeries(item);
     const message=$('#viewer-error'),alt=item.alts[state.pictureIndex]||item.title;
     message.hidden=true;
-    if(viewerSlides[activeSlide].dataset.fullSrc!==full){
+    if(!viewerSlides[activeSlide].getAttribute('src')){
       const preview=viewerSlides[activeSlide];
       delete preview.dataset.fullSrc;
       preview.src=item.thumbnails[state.pictureIndex];preview.alt=alt;
       preview.removeAttribute('aria-hidden');
       preview.classList.add('is-active');
+    }
+    if(viewerSlides[activeSlide].dataset.fullSrc!==full){
       loaderTimeout=setTimeout(()=>{if(request===viewerRequest)$('#viewer-loading').classList.add('is-loading');},150);
       const nextIndex=1-activeSlide,next=viewerSlides[nextIndex];
       prefetchViewerImage(full,'high').then(async ok=>{
@@ -709,10 +707,10 @@
           clearTimeout(loaderTimeout);$('#viewer-loading').classList.remove('is-loading');
           message.textContent=t('imageError');message.hidden=false;return;
         }
-        next.fetchPriority='high';next.src=full;next.alt=alt;
-        try{if(next.decode)await next.decode();}catch(_){}
+        const decoded=new Image();decoded.src=full;
+        try{await decoded.decode();}catch(_){return;}
         if(request!==viewerRequest||!viewer.classList.contains('open'))return;
-        next.dataset.fullSrc=full;next.classList.add('is-active');
+        next.src=full;next.alt=alt;next.dataset.fullSrc=full;next.classList.add('is-active');
         next.removeAttribute('aria-hidden');viewerSlides[activeSlide].setAttribute('aria-hidden','true');
         viewerSlides[activeSlide].classList.remove('is-active');
         activeSlide=nextIndex;
@@ -735,9 +733,7 @@
     const side=$('.viewer-side');
     if(side.dataset.displayedArtwork!==item.id){
       side.dataset.displayedArtwork=item.id;
-      side.classList.remove('viewer-info-update');
-      void side.offsetWidth;
-      side.classList.add('viewer-info-update');
+
     }
 
     const visible=galleryStreamItems,i=visible.indexOf(item);
@@ -1046,7 +1042,7 @@
   },{passive:true});
   window.addEventListener('resize',()=>{
     scheduleSkyUpdate();resetMotion(true);
-    if(galleryColumns()!==renderedColumns&&state.items.length)renderGallery();
+    if(galleryColumns()!==renderedColumns&&state.items.length)renderGallery(Math.max(STREAM_BATCH,galleryStreamIndex));
   },{passive:true});
   motionEnabled.addEventListener?.('change',()=>resetMotion(true));
   for(const panel of [$('#date-filters'),$('#tag-panel')]){

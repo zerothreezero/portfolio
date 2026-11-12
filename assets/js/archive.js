@@ -1,7 +1,8 @@
 'use strict';
 const PortfolioArchive=(()=>{
   const empty=()=>({version:1,revision:'initial',artworks:{},manualArtworks:[],collections:[],settings:{}});
-  const cacheName='030-metadata-v1-'+location.pathname.replace(/index\.html$/,'');
+  const cacheName='030-metadata-v2-'+location.pathname.replace(/index\.html$/,'');
+  void globalThis.caches?.delete(cacheName.replace('v2-','v1-')).catch(()=>{});
   const localImages=new Map();
   const imagePath=/^assets\/uploads\/[a-f0-9]{64}\.webp$/;
   async function cached(key,value){
@@ -27,7 +28,7 @@ const PortfolioArchive=(()=>{
       imageKeys:media.map(m=>m.path),images,thumbnails:images,alts:images.map(()=>''),ratios:media.map(m=>m.width/m.height),ratio:media[0].width/media[0].height};
   }
   function merge(base,override={}){
-    const item={...base,...override};
+    const item={...base,...override};delete item.palette;
     const order=[...new Set([...(override.order||[]),...base.imageKeys])].map(key=>base.imageKeys.indexOf(key)).filter(i=>i>=0);
     for(const key of ['images','thumbnails','alts','imageKeys'])item[key]=order.map(i=>base[key][i]);
     if(Object.hasOwn(override,'alt'))item.alts=item.images.map(()=>override.alt);

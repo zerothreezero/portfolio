@@ -13,7 +13,7 @@ const fields={
   date:x=>typeof x==='string'&&(x===''||(/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x))&&new Date(x).toISOString().startsWith(x))),
   tags:x=>strings(x,40,64), software:x=>strings(x,20,80), blocks:x=>list(x,16,v=>str(v,2000)),
   links:x=>list(x,16,l=>record(l)&&str(l.label,160)&&str(l.url,2048)&&/^https?:\/\/[^\s]+$/i.test(l.url)&&URL.canParse(l.url)),
-  palette:x=>list(x,5,c=>typeof c==='string'&&/^#[a-f0-9]{6}$/i.test(c)), collectionIds:x=>list(x,32,uuid),
+  collectionIds:x=>list(x,32,uuid),
   featured:x=>typeof x==='boolean', hidden:x=>typeof x==='boolean', nsfw:x=>typeof x==='boolean',
   drawingMinutes:x=>number(x,1000000), strokes:x=>number(x,1000000000), featuredOrder:x=>number(x,999999),
   cover:x=>str(x,1024), coverMedia:image, order:x=>strings(x,16,1024)
@@ -22,6 +22,9 @@ export function applyChange(source,op,uploads){
   ensure(source?.version===1,409,'Unsupported document version');
   check(record(op),'Invalid change');
   const content=structuredClone(source);
+  for(const item of [...Object.values(content.artworks),...content.manualArtworks])delete item.palette;
+  op=structuredClone(op);
+  if(op.value)delete op.value.palette;
   const allowedFiles=new Set(content.manualArtworks.flatMap(a=>a.media.map(x=>x.path)));
   for(const art of [...Object.values(content.artworks),...content.manualArtworks])if(art.coverMedia)allowedFiles.add(art.coverMedia.path);
   uploads.forEach(u=>allowedFiles.add(u.path));

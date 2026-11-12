@@ -2,22 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import worker,{SessionRegistry} from '../src/index.js';
 import {applyChange,validateUploads} from '../src/validation.js';
-import {thumbnail} from '../src/thumbnail.js';
 import {readFile} from 'node:fs/promises';
 const origin='https://zerothreezero.github.io';
 const initial=JSON.parse(await readFile(new URL('../../data/portfolio-content.json',import.meta.url)));
 test('image and metadata boundaries',async()=>{
   await assert.rejects(validateUploads([{path:'assets/uploads/photo.jpg',base64:'photo'}]),/Invalid upload/);
   await assert.rejects(validateUploads([{path:'assets/uploads/'+'a'.repeat(64)+'.webp',base64:'aGVsbG8='}]),/WebP/);
-  await assert.rejects(thumbnail('not-a-cid',{}),/Invalid image ID/);
   const op={id:'at://did:plc:artist/app.bsky.feed.post/one',kind:'override'};
-  for(const value of [{date:'2026-02-30'},{palette:[['#eeeeee']]},{hidden:1},{links:[{label:'Invalid',url:'invalid'}]}]){
+  for(const value of [{date:'2026-02-30'},{hidden:1},{links:[{label:'Invalid',url:'invalid'}]}]){
     assert.throws(()=>applyChange(initial,{...op,value},[]),/Invalid field/);
   }
   const original=applyChange(initial,{...op,value:{hidden:true,featured:true}},[]);
   const reverted=applyChange(original,{...op,value:{}},[]);
   assert.ok(original.artworks[op.id].hidden);
   assert.equal(reverted.artworks[op.id],undefined);
+  const migrated=applyChange({...initial,artworks:{[op.id]:{palette:['#ffffff'],title:'Keep'}}},{...op,value:{palette:['#000000'],title:'Changed'}},[]);
+  assert.equal(migrated.artworks[op.id].palette,undefined);
+  assert.equal(migrated.artworks[op.id].title,'Changed');
 });
 test('signed Google identity, session, atomic commit, stale writes and sign-out',async t=>{
   const rsa=await crypto.subtle.generateKey({name:'RSASSA-PKCS1-v1_5',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'},true,['sign','verify']);
@@ -59,4 +60,7 @@ test('signed Google identity, session, atomic commit, stale writes and sign-out'
   const res=await call('save',op,session);assert.equal(res.status,200);assert.equal((await res.json()).content.artworks[op.change.id].title,'Edited');
   assert.deepEqual(writes.map(x=>x[0]),['git/trees','git/commits','git/refs/heads/main']);assert.equal(writes[2][1].force,false);
   assert.equal((await call('logout',{},session)).status,200);assert.equal((await call('content',null,session)).status,401);
+  const nextSession=(await (await call('login',{credential:token})).json()).session;
+  const now=Date.now();t.mock.method(Date,'now',()=>now+3600000);
+  assert.equal((await call('content',null,nextSession)).status,401);
 });

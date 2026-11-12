@@ -1,6 +1,5 @@
 import {authorize,login,ensure,Failure} from './auth.js';
 import {readContent,commit} from './github.js';
-import {thumbnail} from './thumbnail.js';
 export {SessionRegistry} from './auth.js';
 
 async function json(request,limit){
@@ -29,9 +28,8 @@ export default {
       headers['Access-Control-Allow-Methods']='GET, POST, OPTIONS';
       if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
       const path=endpoint.pathname;
-      const bucket=path==='/thumbnail'?'color:':'admin:';
+      const bucket='admin:';
       ensure((await env.LIMITER.limit({key:bucket+(request.headers.get('CF-Connecting-IP')||'local')})).success,429,'Too many requests');
-      if(request.method==='GET'&&path==='/thumbnail')return await thumbnail(endpoint.searchParams.get('cid'),headers);
       let result;
       if(request.method==='POST'&&path==='/login')result=await login((await json(request,18000)).credential,env);
       else{
