@@ -5,7 +5,7 @@
   "workers_dev": true,
   "vars": {
     "ALLOWED_ORIGINS": "https://zerothreezero.github.io",
-    "GOOGLE_CLIENT_ID": ""
+    "GOOGLE_CLIENT_ID": "528256575980-22c6kue570e692jc4i4olkthkua0mu65.apps.googleusercontent.com"
   },
   "durable_objects": { "bindings": [{ "name": "SESSIONS", "class_name": "SessionRegistry" }] },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["SessionRegistry"] }],
