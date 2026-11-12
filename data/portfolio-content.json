@@ -1,7 +1,11 @@
 {
   "version": 1,
-  "revision": "initial",
-  "artworks": {},
+  "revision": "3e598a1f-3717-4b8f-a34f-456aebc3f6d9",
+  "artworks": {
+    "at://did:plc:peerdka6xgmy6dglaswqrw6b/app.bsky.feed.post/3lzv5ne67n22i": {
+      "nsfw": true
+    }
+  },
   "manualArtworks": [],
   "collections": [],
   "settings": {}
